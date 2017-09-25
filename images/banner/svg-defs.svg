@@ -1,0 +1,7 @@
+<svg id="svg-defs" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+    <defs>
+        <clipPath id="labelClip">
+            <rect id="clipping" width="1400" height="800" x="-1350" y="0" />
+        </clipPath>
+    </defs>
+</svg>

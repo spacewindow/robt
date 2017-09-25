@@ -1,0 +1,9 @@
+<svg id="svg-grain" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+    
+    <pattern id="grain" patternUnits="userSpaceOnUse" width="250" height="250">
+        <image xlink:href="images/banner/grain.png" x="0" y="0" width="250" height="250" />
+      </pattern>
+
+    <rect class="grain" width="800" height="800" fill="url(#grain)" />
+
+</svg>
