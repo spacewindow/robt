@@ -920,21 +920,29 @@ footer p {
   display: block;
   position: absolute;
   width: 141%;
-  height: 139%;
-  top: -17.5%;
+  height: 138%;
+  top: -16.5%;
   left: -20%;
-  background: url(../images/phone2.png);
+  background-image: url(../images/phone2.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+#slider-hangtime-demo:before {
+  background-image: url(../images/phone-sketch.png);
 }
 .slider__nav {
   display: flex;
   justify-content: flex-start;
 }
+.slider__nav.start .slider__arrow--left {
+  fill: #efefef;
+}
+.slider__nav.end .slider__arrow--right {
+  fill: #efefef;
+}
 .slider__arrow {
-  color: white;
-  background: black;
+  fill: #333333;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -993,4 +1001,49 @@ element.style {
 }
 .project__header__title {
   justify-content: space-between;
+}
+.intro {
+  background: #fafafa;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.intro__text p {
+  font-size: 0.9331rem;
+  font-family: 'Graphik', sans-serif;
+  line-height: 1.5;
+  font-weight: 700;
+}
+.credits h3 {
+  font-family: 'Graphik', serif;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #333333;
+  margin: 0;
+}
+.credits p {
+  font-size: 0.525rem;
+  color: #aaaaaa;
+  margin: 0;
+  padding: 0;
+}
+.divider {
+  width: 100%;
+}
+.divider:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 80%;
+  margin-left: 10%;
+  border-top: 2px solid green;
+}
+#metric-icons {
+  display: none;
+}
+.hangtime-intro {
+  background-image: url(../images/ads-ht-diagram1.jpg), url(../images/ads-ht-diagram2.jpg);
+  background-size: contain;
+  background-position: left center,
+    right center;
+  background-repeat: no-repeat;
 }

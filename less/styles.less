@@ -8,24 +8,37 @@
       display: block;
       position: absolute;
       width: 141%;
-      height: 139%;
-      top: -17.5%;
+      height: 138%;
+      top: -16.5%;
       left: -20%;
-      background: url(../images/phone2.png);
+      background-image: url(../images/phone2.png);
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
   }
 }
 
+#slider-hangtime-demo:before{
+  background-image: url(../images/phone-sketch.png);
+}
+
 .slider__nav{
   display:flex;
   justify-content: flex-start;
+  &.start{
+    .slider__arrow--left{
+      fill:@lightgrey;
+    }
+  }
+  &.end{
+    .slider__arrow--right{
+      fill:@lightgrey;
+    }
+  }
 }
 
 .slider__arrow{
-  color:white;
-  background:black;
+  fill: @darkgrey;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -87,4 +100,62 @@ element.style {
 }
 .project__header__title{
   justify-content: space-between;
+}
+
+.intro{
+  background: @palegrey;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.intro__text{
+  p{
+    font-size: @size-1;
+    font-family: 'Graphik', sans-serif;
+    line-height: 1.5;
+    font-weight: 700;
+  }
+}
+
+.credits{
+  h3{
+    font-family: 'Graphik', serif;
+    font-size: @size-0;
+    font-weight: bold;
+    color: @darkgrey;
+    margin: 0;
+  }
+  p{
+    font-size: @size-small;
+    color: @midgrey;
+    margin:0;
+    padding: 0;
+  }
+}
+
+.divider{
+  width:100%;
+  &:before{
+    content:'';
+    display:block;
+    position: absolute;
+    width: 80%;
+    margin-left: 10%;
+    border-top: 2px solid green;
+  }
+}
+
+#metric-icons{
+  display:none;
+}
+
+.hangtime-intro{
+  background-image:
+    url(../images/ads-ht-diagram1.jpg),
+    url(../images/ads-ht-diagram2.jpg);
+  background-size: contain;
+  background-position:
+    left center,
+    right center;
+  background-repeat: no-repeat;
 }
