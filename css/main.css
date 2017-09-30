@@ -872,6 +872,7 @@ button.icon-only svg {
 }
 .footer-links {
   justify-content: space-between;
+  height: 3rem;
 }
 .footer-links a {
   position: relative;
@@ -879,6 +880,10 @@ button.icon-only svg {
   height: 3rem;
   padding-top: 1rem;
   overflow: visible;
+}
+.footer-links a.previous {
+  position: absolute;
+  left: 0;
 }
 .footer-links a.previous:before {
   position: absolute;
@@ -890,6 +895,10 @@ button.icon-only svg {
   top: -1rem;
   left: 0;
   padding: 1rem;
+}
+.footer-links a.next {
+  position: absolute;
+  right: 0;
 }
 .footer-links a.next:before {
   position: absolute;
@@ -939,6 +948,22 @@ img {
   border: 1rem solid #aaaaaa;
   border-radius: 0.5rem;
 }
+.slider--desktop.rsFullscreen {
+  border: 0;
+  border-radius: 0;
+  background: black;
+}
+.slider--desktop.rsFullscreen .video-slide {
+  width: 80%;
+  margin-left: 10%;
+  align-items: center;
+}
+.slider--desktop.rsFullscreen .image-slide {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 5%;
+  align-items: center;
+}
 #slider-hangtime-demo:before {
   background-image: url(../images/phone-sketch.png);
 }
@@ -950,10 +975,10 @@ img {
   justify-content: flex-end;
 }
 .slider__nav.start .slider__arrow--left {
-  fill: #efefef;
+  fill: #aaaaaa;
 }
 .slider__nav.end .slider__arrow--right {
-  fill: #efefef;
+  fill: #aaaaaa;
 }
 .slider__arrow {
   fill: #333333;
@@ -1099,8 +1124,23 @@ element.style {
 }
 .slider__fullscreen-button {
   position: absolute;
-  bottom: 0;
+  top: 0;
   right: 0;
   width: 2rem;
   height: 2rem;
+}
+.rsSlide {
+  background: black;
+}
+.rsArrow {
+  opacity: 0;
+}
+.rsFullscreen .rsArrow {
+  opacity: 1;
+}
+.rsFullscreenBtn {
+  opacity: 0;
+}
+.rsFullscreen .rsFullscreenBtn {
+  opacity: 1;
 }

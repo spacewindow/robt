@@ -42,13 +42,13 @@
 
         </div>
 
-        <div class="slider__fullscreen-button" id="slider-campaigns-fullscreen">
-          <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-            <use x="0" y="0" href="#zoom"></use>
-          </svg>
-        </div>
     </div>
     <div class="grid-cell grid6">
+      <div  id="slider-campaigns-fullscreen" class="slider__fullscreen-button">
+        <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+          <use x="0" y="0" href="#zoom"></use>
+        </svg>
+      </div>
       <div id="slider-campaigns" class="slider--desktop">
 
         <div class="image-slide">
@@ -84,6 +84,11 @@
 
   <section class="block grid">
     <div class="grid-cell grid6" style="background: #666">
+      <div class="slider__fullscreen-button" id="slider-charts-fullscreen">
+        <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+          <use x="0" y="0" href="#zoom"></use>
+        </svg>
+      </div>
 
       <div id="slider-charts" class="slider--desktop">
 
@@ -145,53 +150,54 @@
 
       </div>
 
-      <div class="slider__fullscreen-button" id="slider-charts-fullscreen">
-        <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-          <use x="0" y="0" href="#zoom"></use>
-        </svg>
-      </div>
-
     </div>
 
   </section>
 
-  <section class="grid">
+  <section class="grid block">
     <div class="grid-cell grid6">
       <div class="top-content">
-        <h2>Store Locator</h2>
+        <h3>Report Download</h3>
+        <div class="slider__captions" id="slider-download-captions">
+          <p><strong>Download Data</strong> Client can download all data for the Campaign</p>
+          <p><strong>Formatted Custom Report</strong> I created easy-to-read formatted custom reports.</p>
+        </div>
+      </div>
 
-        <p>Playground needed a 'store locator' ad template, which would use the customer's location to alert them to retail offers nearby, and hopefully increase footfall in the advertisers stores.</p>
+      <div class="slider__nav" id="slider-download-nav">
 
-        <p>We knew from our data that users were generally reluctant to share their location, so we used Google Geolocation to estimate user location to give the ad unit would have its immediate impact. Users could then optionally share their precise location for more accurate results.</p>
+        <svg class="slider__arrow slider__arrow--left" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+          <use x="0" y="0" href="#arrow-left"></use>
+        </svg>
 
-        <p>I designed the ad units, plotted the user journey through experience, then prototyped the store locator (HTML/CSS/JS + the Google Maps API).</p>
+        <svg class="slider__arrow slider__arrow--right" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+          <use x="0" y="0" href="#arrow-right"></use>
+        </svg>
 
       </div>
     </div>
     <div class="grid-cell grid6">
-      <div id="slider-hangtime-demo" class="slider--mobile">
+
+      <div id="slider-download" class="slider--desktop">
+
         <!-- image and content -->
         <div class="video-slide">
-          <video autoplay loop muted playsinline style="border: 1px solid black;">
-            <source src="/video/ads-store-locator.mp4">
+          <video autoplay loop muted playsinline>
+            <source src="/video/5-download.mp4">
             <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
             <!-- <img src="image.gif"> -->
           </video>
         </div>
+        <div class="image-slide">
+          <img src="/images/reporting/download-sheet.png" alt="">
+        </div>
 
 
       </div>
+
     </div>
-
   </section>
 
-  <section class="grid image-frame">
-      <div class="grid-cell grid10">
-        <img src="/images/ads/ads-mock1.jpg" alt="">
-        <img src="/images/ads/ads-mock2.jpg" alt="">
-      </div>
-
-  </section>
 
 
   <% include ../partials/footer.html.ejs %>

@@ -16,6 +16,7 @@
 
 .footer-links{
 	justify-content: space-between;
+	height: 3rem;
 	a{
 		position: relative;
 		font-size: @size-0;
@@ -23,6 +24,8 @@
 		padding-top: 1rem;
 		overflow:visible;
 		&.previous{
+			position: absolute;
+			left:0;
 			&:before{
 				position: absolute;
 				display:block;
@@ -36,6 +39,8 @@
 			}
 		}
 		&.next{
+			position: absolute;
+			right:0;
 			&:before{
 				position: absolute;
 				display:block;

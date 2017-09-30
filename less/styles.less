@@ -32,19 +32,23 @@ img{
   // box-sizing: content-box;
   border: 1rem solid @midgrey;
   border-radius: 0.5rem;
-  // &:before{
-  //   content: '';
-  //     display: block;
-  //     position: absolute;
-  //     width: 141%;
-  //     height: 138%;
-  //     top: -16.5%;
-  //     left: -20%;
-  //     background-image: url(../images/phone2.png);
-  //     background-position: center;
-  //     background-repeat: no-repeat;
-  //     background-size: contain;
-  // }
+  &.rsFullscreen{
+    border: 0;
+    border-radius: 0;
+    background: black;
+    .video-slide{
+      width: 80%;
+      margin-left: 10%;
+      align-items: center;
+    }
+    .image-slide{
+      width: 80%;
+      margin-left: 10%;
+      margin-top: 5%;
+      align-items: center;
+    }
+  }
+
 }
 
 #slider-hangtime-demo:before{
@@ -59,12 +63,12 @@ img{
   }
   &.start{
     .slider__arrow--left{
-      fill:@lightgrey;
+      fill:@midgrey;
     }
   }
   &.end{
     .slider__arrow--right{
-      fill:@lightgrey;
+      fill:@midgrey;
     }
   }
 }
@@ -237,8 +241,26 @@ element.style {
 
 .slider__fullscreen-button{
   position: absolute;
-  bottom: 0;
+  top: 0;
   right: 0;
   width: 2rem;
   height: 2rem;
+}
+
+.rsSlide{
+  background: black;
+}
+
+.rsArrow{
+  opacity:0;
+  .rsFullscreen &{
+    opacity:1;
+  }
+}
+
+.rsFullscreenBtn{
+  opacity:0;
+  .rsFullscreen &{
+    opacity:1;
+  }
 }

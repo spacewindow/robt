@@ -6,11 +6,11 @@ function makeSlider(divID) {
   var slider = $("#" + divID).royalSlider({
     imageScaleMode: 'fit',
     controlNavigation: 'none',
-    arrowsNav: false,
+    arrowsNav: true,
     fullscreen: {
   		// fullscreen options go gere
   		enabled: true,
-  		nativeFS: false,
+  		nativeFS: true,
       buttonFS: true
   	}
   }).data('royalSlider');
@@ -91,6 +91,7 @@ $(document).ready(function() {
   var sliderHangtime = makeSlider("slider-hangtime");
   var sliderCampaigns = makeSlider("slider-campaigns");
   var sliderCharts = makeSlider("slider-charts");
+  var sliderCharts = makeSlider("slider-download");
 
 
 });
