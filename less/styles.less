@@ -18,6 +18,29 @@
   }
 }
 
+.slider--desktop{
+  position:relative;
+  width: 44vw;
+  height: 28.5vw;
+  margin:auto;
+  // box-sizing: content-box;
+  border: 1rem solid @midgrey;
+  border-radius: 0.5rem;
+  // &:before{
+  //   content: '';
+  //     display: block;
+  //     position: absolute;
+  //     width: 141%;
+  //     height: 138%;
+  //     top: -16.5%;
+  //     left: -20%;
+  //     background-image: url(../images/phone2.png);
+  //     background-position: center;
+  //     background-repeat: no-repeat;
+  //     background-size: contain;
+  // }
+}
+
 #slider-hangtime-demo:before{
   background-image: url(../images/phone-sketch.png);
 }
@@ -55,10 +78,16 @@
   justify-content: center;
 }
 
-.video-slide video{
+.slider--mobile .video-slide video{
   position:relative;
   height:100%;
   width:auto;
+}
+
+.slider--desktop .video-slide video{
+  position:relative;
+  width:100%;
+  height:auto;
 }
 
 element.style {
@@ -158,4 +187,30 @@ element.style {
     left center,
     right center;
   background-repeat: no-repeat;
+}
+
+.image-frame{
+  margin-bottom: 2rem;
+}
+
+.image-frame .grid-cell{
+  flex-direction: row;
+  align-items: flex-start;
+  margin-left: ~"calc(100% * 0.08333333)";
+  border: 1px solid @darkgrey;
+  img:nth-of-type(1){
+      width: 45.5%;
+  }
+  img:nth-of-type(2){
+      width: 54.8%;
+  }
+}
+
+.image-slide{
+  width: 100%;
+  img{
+    display:block;
+    width:100%;
+    height: auto;
+  }
 }

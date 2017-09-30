@@ -1,4 +1,8 @@
 function makeSlider(divID) {
+  var sliderDiv = $("#" + divID);
+  if (sliderDiv.length === 0) {
+    return null;
+  }
   var slider = $("#" + divID).royalSlider({
     imageScaleMode: 'fit',
     controlNavigation: 'none',
@@ -20,12 +24,12 @@ function makeSlider(divID) {
 
   // set Nav state
 
-  slider.ev.on('rsAfterSlideChange', function(){
-    if (slider.currSlideId === 0){
+  slider.ev.on('rsAfterSlideChange', function() {
+    if (slider.currSlideId === 0) {
       customNav.attr('class', 'slider__nav start');
-    }else if(slider.currSlideId === (slider.numSlides - 1)){
+    } else if (slider.currSlideId === (slider.numSlides - 1)) {
       customNav.attr('class', 'slider__nav end');
-    }else{
+    } else {
       customNav.attr('class', 'slider__nav middle');
     }
   });
@@ -49,6 +53,7 @@ function makeSlider(divID) {
   playSlideVideo();
 
   return slider;
+
 }
 
 
@@ -56,6 +61,7 @@ function makeSlider(divID) {
 $(document).ready(function() {
 
   var slider1 = makeSlider("slider-hangtime");
+  var slider2 = makeSlider("slider-campaigns");
 
 
 });

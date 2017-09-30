@@ -928,6 +928,14 @@ footer p {
   background-repeat: no-repeat;
   background-size: contain;
 }
+.slider--desktop {
+  position: relative;
+  width: 44vw;
+  height: 28.5vw;
+  margin: auto;
+  border: 1rem solid #aaaaaa;
+  border-radius: 0.5rem;
+}
 #slider-hangtime-demo:before {
   background-image: url(../images/phone-sketch.png);
 }
@@ -956,10 +964,15 @@ footer p {
   display: flex;
   justify-content: center;
 }
-.video-slide video {
+.slider--mobile .video-slide video {
   position: relative;
   height: 100%;
   width: auto;
+}
+.slider--desktop .video-slide video {
+  position: relative;
+  width: 100%;
+  height: auto;
 }
 element.style {
   cursor: -webkit-grabbing;
@@ -1046,4 +1059,27 @@ element.style {
   background-position: left center,
     right center;
   background-repeat: no-repeat;
+}
+.image-frame {
+  margin-bottom: 2rem;
+}
+.image-frame .grid-cell {
+  flex-direction: row;
+  align-items: flex-start;
+  margin-left: calc(100% * 0.08333333);
+  border: 1px solid #333333;
+}
+.image-frame .grid-cell img:nth-of-type(1) {
+  width: 45.5%;
+}
+.image-frame .grid-cell img:nth-of-type(2) {
+  width: 54.8%;
+}
+.image-slide {
+  width: 100%;
+}
+.image-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
