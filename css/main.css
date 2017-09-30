@@ -909,6 +909,9 @@ footer h4,
 footer p {
   text-align: center;
 }
+img {
+  position: relative;
+}
 .slider--mobile {
   position: relative;
   height: 50vh;
@@ -942,6 +945,9 @@ footer p {
 .slider__nav {
   display: flex;
   justify-content: flex-start;
+}
+.slider__nav.align-right {
+  justify-content: flex-end;
 }
 .slider__nav.start .slider__arrow--left {
   fill: #efefef;
@@ -1024,7 +1030,7 @@ element.style {
   font-size: 0.9331rem;
   font-family: 'Graphik', sans-serif;
   line-height: 1.5;
-  font-weight: 700;
+  font-weight: 400;
 }
 .credits h3 {
   font-family: 'Graphik', serif;
@@ -1050,7 +1056,7 @@ element.style {
   margin-left: 10%;
   border-top: 2px solid green;
 }
-#metric-icons {
+#icons {
   display: none;
 }
 .hangtime-intro {
@@ -1082,4 +1088,19 @@ element.style {
   display: block;
   width: 100%;
   height: auto;
+}
+.slider__captions > * {
+  transition: opacity 0.5s ease-in;
+}
+.slider__captions > *:not(.current) {
+  opacity: 0.5;
+  font-size: 0.525rem;
+  line-height: 1.4em;
+}
+.slider__fullscreen-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
 }

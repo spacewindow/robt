@@ -4,16 +4,17 @@
     <div class="grid-cell grid8 intro__text">
       <div class="top-content" style="color: <%= pageData.current.color %>">
         <p>Playground XYZ offer a full-service mobile advertising platform, where advertisers can design, deploy and monitor mobile advertising campaigns.</p>
-        <p>As part of the service platform we are developing I designed and prototyped the Campaign Management dashboard and Campaign Reporting screens. I worked in some basic analytics functionality to allow users to gain some data insights before downloading the completed data.</p>
+        <img src="/images/reporting/top-thumbs.png" alt="" style="max-width: 80%">
+        <p>As part of our service platform, I designed and prototyped the <strong>Campaign Management Dashboard</strong> and <strong>Campaign Reporting and Analtyics</strong> screens.</p>
       </div>
 
     </div>
     <div class="grid-cell grid4 credits">
-      <h3>UX Design</h3>
+      <div class="top-content"><h3>UX Design</h3>
       <p>Rob Thwaites</p>
 
       <h3>Design / Prototype</h3>
-      <p>Rob Thwaites</p>
+      <p>Rob Thwaites</p></div>
 
     </div>
   </section>
@@ -21,25 +22,38 @@
   <section class="grid">
     <div class="grid-cell grid6">
       <div class="top-content">
-        <h3>Overview</h3>
-
-        <p>The dashboard allowed users to quickly ascertain what campaigns were currently active, and which were scheduled</p>
-
+        <h3>Campaigns Dashboard</h3>
+        <div class="slider__captions" id="slider-campaigns-captions">
+          <p>Users to quickly ascertain what campaigns were currently active, and which are scheduled.</p>
+          <p>User can expand the Campaigns view for a detailed breakdown of ad placements, which audience they are targetting</p>
+          <p>See placement performance at a glance by key metrics, and get alerts for poor performance.</p>
+          <p>Users can open a quick preview of the various add creatives attached to each campaign.</p>
+        </div>
       </div>
+      <div class="slider__nav" id="slider-campaigns-nav">
+
+          <svg class="slider__arrow slider__arrow--left" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+            <use x="0" y="0" href="#arrow-left"></use>
+          </svg>
+
+          <svg class="slider__arrow slider__arrow--right" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+            <use x="0" y="0" href="#arrow-right"></use>
+          </svg>
+
+        </div>
+
+        <div class="slider__fullscreen-button" id="slider-campaigns-fullscreen">
+          <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+            <use x="0" y="0" href="#zoom"></use>
+          </svg>
+        </div>
     </div>
     <div class="grid-cell grid6">
-      <!-- image and content -->
-      <div class="image-slide">
-        <img src="/images/reporting/overview.png" alt="">
-      </div>
-    </div>
-
-  </section>
-
-  <section class="block grid">
-    <div class="grid-cell grid6" style="background: #666">
-
       <div id="slider-campaigns" class="slider--desktop">
+
+        <div class="image-slide">
+          <img src="/images/reporting/overview.png" alt="">
+        </div>
 
         <!-- image and content -->
         <div class="video-slide">
@@ -49,10 +63,41 @@
             <!-- <img src="image.gif"> -->
           </video>
         </div>
+
+        <div class="image-slide">
+          <img src="/images/reporting/placement-metrics-detail.png" alt="">
+        </div>
+
+        <div class="video-slide">
+          <video autoplay loop muted playsinline>
+            <source src="/video/4-preview.mp4">
+            <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
+            <!-- <img src="image.gif"> -->
+          </video>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="block grid">
+    <div class="grid-cell grid6" style="background: #666">
+
+      <div id="slider-charts" class="slider--desktop">
+
         <!-- image and content -->
         <div class="video-slide">
           <video autoplay loop muted playsinline>
             <source src="/video/2-charts.mp4">
+            <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
+            <!-- <img src="image.gif"> -->
+          </video>
+        </div>
+        <div class="video-slide">
+          <video autoplay loop muted playsinline>
+            <source src="/video/2-animation.mp4">
             <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
             <!-- <img src="image.gif"> -->
           </video>
@@ -66,25 +111,44 @@
           </video>
         </div>
 
+        <div class="video-slide">
+          <video autoplay loop muted playsinline>
+            <source src="/video/4-split.mp4">
+            <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
+            <!-- <img src="image.gif"> -->
+          </video>
+        </div>
+
       </div>
 
     </div>
     <div class="grid-cell grid6">
       <div class="top-content">
-        <h3>Detailed breakdown</h3>
-        <p>Campaigns show the Playground ads the client has purchased, shows a quick preview of the creative, and lists the audience-targetted placements that are running for each ad.</p>
-      </div>
-      <div class="slider__nav" id="slider-campaigns-nav">
-
-          <svg class="slider__arrow slider__arrow--left" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-            <use x="0" y="0" href="#arrow-left"></use>
-          </svg>
-
-          <svg class="slider__arrow slider__arrow--right" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-            <use x="0" y="0" href="#arrow-right"></use>
-          </svg>
-
+        <h3>Campaign Analytics</h3>
+        <div class="slider__captions" id="slider-charts-captions">
+          <p><strong>Visualised breakdown</strong> Client can open up the campaign reporting dashboard for a detailed visual breakdown of campaign performance.</p>
+          <p><strong>Functional animation</strong> Transitions in the data quickly display how the data from two groupings compare. Colour coding helps users to track which ad creative data they are currently viewing.</p>
+          <p><strong>Annotations and Notes</strong> regarding camapign optimisations that were made along the way, and included as chart annotations.</p>
+          <p><strong>Meaningful comparisons</strong> the interface is designed so that clients can split and group their campaign data to develop key insights about audiences and their response to the campaign.</p>
         </div>
+      </div>
+
+      <div class="slider__nav" id="slider-charts-nav">
+
+        <svg class="slider__arrow slider__arrow--left" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+          <use x="0" y="0" href="#arrow-left"></use>
+        </svg>
+
+        <svg class="slider__arrow slider__arrow--right" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+          <use x="0" y="0" href="#arrow-right"></use>
+        </svg>
+
+      </div>
+
+      <div class="slider__fullscreen-button" id="slider-charts-fullscreen">
+        <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+          <use x="0" y="0" href="#zoom"></use>
+        </svg>
       </div>
 
     </div>

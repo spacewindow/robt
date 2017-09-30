@@ -6,14 +6,26 @@ function makeSlider(divID) {
   var slider = $("#" + divID).royalSlider({
     imageScaleMode: 'fit',
     controlNavigation: 'none',
-    arrowsNav: false
+    arrowsNav: false,
+    fullscreen: {
+  		// fullscreen options go gere
+  		enabled: true,
+  		nativeFS: false,
+      buttonFS: true
+  	}
   }).data('royalSlider');
 
-  var customNav = $("#" + divID + '-nav');
-  sliderLeft = customNav.children(".slider__arrow--left");
-  sliderRight = customNav.children(".slider__arrow--right");
+  // add rsDefault styles
+
+  sliderDiv.addClass('royalSlider rsDefault');
 
   // slider Nav
+
+  var customNav = $("#" + divID + '-nav');
+  // init style
+  customNav.addClass('start');
+  sliderLeft = customNav.children(".slider__arrow--left");
+  sliderRight = customNav.children(".slider__arrow--right");
 
   sliderLeft.click(function() {
     slider.prev();
@@ -22,9 +34,14 @@ function makeSlider(divID) {
     slider.next();
   });
 
+  // Captions
+
+  var captions = $("#" + divID + '-captions');
+  // init styles
+  captions.children().first().addClass('current');
   // set Nav state
 
-  slider.ev.on('rsAfterSlideChange', function() {
+  slider.ev.on('rsBeforeAnimStart', function() {
     if (slider.currSlideId === 0) {
       customNav.attr('class', 'slider__nav start');
     } else if (slider.currSlideId === (slider.numSlides - 1)) {
@@ -32,7 +49,18 @@ function makeSlider(divID) {
     } else {
       customNav.attr('class', 'slider__nav middle');
     }
+    //remove current class from all captions, then add to current
+    captions.children().removeClass('current').eq(slider.currSlideId).addClass('current');
   });
+
+  // fullscreen
+
+  var fsButton = $("#" + divID + '-fullscreen');
+
+  fsButton.on('click', function(){
+    slider.enterFullscreen();
+  });
+
 
   // play Videos on slide
 
@@ -60,8 +88,9 @@ function makeSlider(divID) {
 
 $(document).ready(function() {
 
-  var slider1 = makeSlider("slider-hangtime");
-  var slider2 = makeSlider("slider-campaigns");
+  var sliderHangtime = makeSlider("slider-hangtime");
+  var sliderCampaigns = makeSlider("slider-campaigns");
+  var sliderCharts = makeSlider("slider-charts");
 
 
 });
