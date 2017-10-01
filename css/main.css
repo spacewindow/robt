@@ -918,13 +918,16 @@ footer h4,
 footer p {
   text-align: center;
 }
+video {
+  width: 100%;
+}
 img {
   position: relative;
 }
 .slider--mobile {
   position: relative;
-  height: 50vh;
-  width: 28.125vh;
+  height: 55vh;
+  width: 30.93vh;
   margin: 2rem auto;
 }
 .slider--mobile:before {
@@ -942,11 +945,22 @@ img {
 }
 .slider--desktop {
   position: relative;
-  width: 55vw;
-  height: 35.475vw;
+  width: 80%;
+  height: auto;
+  box-sizing: content-box;
   margin: auto;
   border: 1rem solid #aaaaaa;
   border-radius: 0.5rem;
+}
+.slider--desktop:before {
+  content: '';
+  opacity: 0;
+  z-index: -1;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 0;
+  padding-top: 62.5%;
 }
 .slider--desktop.rsFullscreen {
   border: 0;
@@ -954,15 +968,17 @@ img {
   background: black;
 }
 .slider--desktop.rsFullscreen .video-slide {
-  width: 80%;
-  margin-left: 10%;
-  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
 }
 .slider--desktop.rsFullscreen .image-slide {
-  width: 80%;
-  margin-left: 10%;
-  margin-top: 5%;
-  align-items: center;
+  width: 100%;
+}
+.slider--desktop .rsOverflow {
+  position: absolute;
+  top: 0;
 }
 #slider-hangtime-demo:before {
   background-image: url(../images/phone-sketch.png);
@@ -989,21 +1005,15 @@ img {
   height: 2rem;
 }
 .video-slide {
-  position: relative;
+  position: absolute;
   height: 100%;
+  top: 0;
   width: 100%;
-  display: flex;
-  justify-content: center;
 }
-.slider--mobile .video-slide video {
-  position: relative;
-  height: 100%;
-  width: auto;
-}
-.slider--desktop .video-slide video {
-  position: relative;
-  width: 100%;
+.video-slide video {
+  position: absolute;
   height: auto;
+  width: 100%;
 }
 element.style {
   cursor: -webkit-grabbing;

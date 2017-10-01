@@ -1,0 +1,79 @@
+<% include ../partials/header.html.ejs %>
+
+  <section class="grid intro">
+    <div class="grid-cell grid8 intro__text">
+      <div class="top-content" style="color: <%= pageData.current.color %>">
+        <p>Playground XYZ's branding includes several characters to help tell the story of its products. Some of these characters required animation.</p>
+        <p>Below are three examples of characters I created and animated using the Greensock Javascript animation library.</p>
+      </div>
+
+    </div>
+    <div class="grid-cell grid4 credits">
+      <h3>Character Design, Javascript Animation, Video Capture and GIF output</h3>
+      <p>Rob Thwaites</p>
+
+      <p>Stock assets for Hangtime and Wizard from Shutterstock</p>
+
+    </div>
+  </section>
+
+  <section class="grid block">
+    <div class="grid-cell grid6">
+      <div class="video-slide">
+        <video autoplay loop muted playsinline>
+          <source src="/video/wizard.mp4">
+        </video>
+      </div>
+    </div>
+    <div class="grid-cell grid6">
+      <div class="slider--desktop">
+        <div class="video-slide">
+          <video autoplay loop muted playsinline>
+            <source src="/video/wizard-context_1.mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="grid block">
+    <div class="grid-cell grid6" style="background: #333; justify-content: center;">
+      <div class="slider--mobile">
+        <div class="video-slide">
+          <video autoplay loop muted playsinline>
+            <source src="/video/player-context.mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+    <div class="grid-cell grid6">
+      <div class="video-slide">
+        <video autoplay loop muted playsinline>
+          <source src="/video/player.mp4">
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <section class="grid block">
+    <div class="grid-cell grid6">
+      <div class="video-slide">
+        <video autoplay loop muted playsinline>
+          <source src="/video/runner.mp4">
+        </video>
+      </div>
+    </div>
+    <div class="grid-cell grid6" style="background: #333; justify-content: center;">
+      <div class="slider--mobile">
+        <div class="video-slide">
+          <video autoplay loop muted playsinline>
+            <source src="/video/runner-context.mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <% include ../partials/footer.html.ejs %>
