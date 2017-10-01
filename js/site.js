@@ -91,7 +91,13 @@ $(document).ready(function() {
   var sliderHangtime = makeSlider("slider-hangtime");
   var sliderCampaigns = makeSlider("slider-campaigns");
   var sliderCharts = makeSlider("slider-charts");
-  var sliderCharts = makeSlider("slider-download");
+  var sliderDownload = makeSlider("slider-download");
+  var sliderWattyl1 = makeSlider("slider-wattyl1");
+  var sliderWattyl2 = makeSlider("slider-wattyl2");
+
+  $('#wattyl-video').on('click', function(){
+    $(this).removeClass('placeholder').children('video').get(0).play();
+  });
 
 
 });

@@ -1,0 +1,115 @@
+<% include ../partials/header.html.ejs %>
+
+  <section class="grid intro">
+    <div class="grid-cell grid8 intro__text">
+      <div class="top-content" style="color: <%= pageData.current.color %>">
+        <p>Playground XYZ's branding includes several characters to help tell the story of its products. Some of these characters required animation.</p>
+        <p>Below are three examples of characters I created and animated using the Greensock Javascript animation library.</p>
+      </div>
+
+    </div>
+    <div class="grid-cell grid4 credits">
+      <h3>Character Design, Javascript Animation, Video Capture and GIF output</h3>
+      <p>Rob Thwaites</p>
+
+      <p>Stock assets for Hangtime and Wizard from Shutterstock</p>
+
+    </div>
+  </section>
+
+  <section class="grid block">
+    <div class="grid-cell grid4">
+
+      <div class="top-content">
+        <h3>Social strategy</h3>
+        <div class="slider__captions" id="slider-wattyl1-captions">
+          <p>We used Wattyl 100 brandmark as a foundation for the site design, bringing the iconic Wattly brand to life with fresh colours and typography.</p>
+          <p>Archival photos and video formed the basis for a historical timeline of the brand.</p>
+          <p>I used the Facebook and Twitter APIs to make each item in the timeline sharable on social media.</p>
+        </div>
+      </div>
+      <div class="slider__nav" id="slider-wattyl1-nav">
+
+          <svg class="slider__arrow slider__arrow--left" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+            <use x="0" y="0" href="#arrow-left"></use>
+          </svg>
+
+          <svg class="slider__arrow slider__arrow--right" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+            <use x="0" y="0" href="#arrow-right"></use>
+          </svg>
+      </div>
+
+    </div>
+    <div class="grid-cell grid8">
+      <div class="slider--desktop" id="slider-wattyl1">
+        <div class="image-slide">
+          <img src="/images/wattyl/wattyl-1.png" alt="">
+        </div>
+        <div class="image-slide">
+          <img src="/images/wattyl/wattyl-2.png" alt="">
+        </div>
+        <div class="image-slide">
+          <img src="/images/wattyl/wattyl-3.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="grid block">
+    <div class="grid-cell grid6" style="background: #333; justify-content: center;">
+      <div id="slider-wattyl2" class="slider--mobile">
+
+        <!-- image and content -->
+        <div class="image-slide">
+          <img src="/images/wattyl/wattyl-mobile-1.png" alt="">
+        </div>
+        <!-- image and content -->
+        <div class="image-slide">
+          <img src="/images/wattyl/wattyl-mobile-2.png" alt="">
+        </div>
+
+        <div class="image-slide">
+          <img src="/images/wattyl/wattyl-mobile-3.png" alt="">
+        </div>
+
+      </div>
+    </div>
+    <div class="grid-cell grid6">
+      <div class="top-content">
+        <h3>Responsive design</h3>
+        <div class="slider__captions" id="slider-wattyl2-captions">
+          <p>Navigation of the timeline adapted to portrait mobile layout.</p>
+          <p>Users entered the competition by submitting their own DIY painting tips.</p>
+          <p>I implemented careful form validation to ensure the lead-capture objectives of the campaign. Entries were submitted to the competition and Wattyl's Marketo system.</p>
+        </div>
+      </div>
+      <div class="slider__nav" id="slider-wattyl2-nav">
+
+          <svg class="slider__arrow slider__arrow--left" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+            <use x="0" y="0" href="#arrow-left"></use>
+          </svg>
+
+          <svg class="slider__arrow slider__arrow--right" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+            <use x="0" y="0" href="#arrow-right"></use>
+          </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="grid block" style="justify-content: center;">
+    <div class="grid-cell grid8">
+      <!-- <div class="slider--desktop"> -->
+        <div class="video-slide placeholder" id="wattyl-video">
+          <video playsinline >
+            <source src="/video/wattyl.mp4">
+          </video>
+        </div>
+      <!-- </div> -->
+    </div>
+  </section>
+
+
+
+
+  <% include ../partials/footer.html.ejs %>
