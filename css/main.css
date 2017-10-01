@@ -549,7 +549,7 @@ section {
   justify-content: flex-start;
 }
 section.block {
-  height: 70vh;
+  height: 80vh;
 }
 @font-face {
   font-family: 'Playfair';
@@ -942,8 +942,8 @@ img {
 }
 .slider--desktop {
   position: relative;
-  width: 44vw;
-  height: 28.5vw;
+  width: 55vw;
+  height: 35.475vw;
   margin: auto;
   border: 1rem solid #aaaaaa;
   border-radius: 0.5rem;
@@ -1113,6 +1113,16 @@ element.style {
   display: block;
   width: 100%;
   height: auto;
+}
+.hero-slide {
+  flex-direction: row;
+  justify-content: center;
+}
+.hero-slide .image-slide {
+  height: auto;
+  width: 80%;
+  border-radius: 0.5rem;
+  border: 1rem solid #aaaaaa;
 }
 .slider__captions > * {
   transition: opacity 0.5s ease-in;
