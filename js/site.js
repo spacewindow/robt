@@ -157,8 +157,6 @@ function progress(element, offsetStart){ // element is the selector string
 
 
 
-
-
 $(document).ready(function() {
 
   var sliderHangtime = makeSlider("slider-hangtime");
@@ -184,6 +182,10 @@ $(document).ready(function() {
     opacity:0,
     delay: 1.5
   }, 1.5, 'start');
+
+  $('.app__menu__button').click(function(){
+    $('.app__menu').toggleClass('show');
+  });
 
 
 });
