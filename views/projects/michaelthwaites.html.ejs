@@ -1,0 +1,121 @@
+<% include ../partials/header.html.ejs %>
+
+<!-- <section class="preloader">
+  <div id="status"></div>
+</section> -->
+
+  <section class="grid intro">
+    <div class="grid-cell grid8 intro__text">
+      <div class="top-content" style="color: <%= pageData.current.color %>">
+        <p>Michael Thwaites, my grandfather, was a distinguished Australia poet. He won the Kings Gold Medal for poetry, wrote the Bicentennial hymn for the opening of New Parliament House, and other notable achievements.</p>
+        <p>The foundation that manages his estate contracted me to provide an appropriate web presence for his work. The project was a deeply personal one for me, giving me the chance to explore the imagery of my grandfather's work in a contemporary style, without losing its link to the life of the author.</p>
+      </div>
+
+    </div>
+    <div class="grid-cell grid4 credits">
+      <h3>Design, Coding, CMS</h3>
+      <p>Rob Thwaites</p>
+
+    </div>
+  </section>
+
+
+  <section class="grid">
+    <div class="grid-cell grid8" style="margin-left: 20% ">
+      <div class="slider--desktop" style="border-color: #333;">
+          <div class="image-slide" style="position: absolute; top:0;">
+            <img src="/images/thwaites/hero.jpg" alt="">
+          </div>
+        </div>
+    </div>
+  </section>
+
+
+  <section class="grid">
+    <div class="grid-cell grid5">
+      <div class="top-content">
+        <h3>Features</h3>
+        <div class="slider__captions" id="slider-poetry-captions">
+          <p>Family albums were raided to create an iconic image for each poem. Poems with audio display an icon in the visual navigation.</p>
+          <p>Each poem was carefully and clearly typeset so that the visual appeal and extra features of the site did not interfere with the power of the words alone.</p>
+        </div>
+
+      </div>
+      <div class="slider__nav" id="slider-poetry-nav">
+
+          <svg class="slider__arrow slider__arrow--left" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+            <use x="0" y="0" href="#arrow-left"></use>
+          </svg>
+
+          <svg class="slider__arrow slider__arrow--right" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+            <use x="0" y="0" href="#arrow-right"></use>
+          </svg>
+
+        </div>
+    </div>
+
+    <div class="grid-cell grid7">
+      <div  id="slider-poetry-fullscreen" class="slider__fullscreen-button">
+        <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+          <use x="0" y="0" href="#zoom"></use>
+        </svg>
+      </div>
+      <div id="slider-poetry" class="slider--desktop">
+        <!-- image and content -->
+        <div class="video-slide">
+          <video autoplay loop muted playsinline>
+            <source src="/video/mrt-nav.mp4">
+            <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
+            <!-- <img src="image.gif"> -->
+          </video>
+        </div>
+
+        <div class="video-slide">
+          <video autoplay loop muted playsinline>
+            <source src="/video/mrt-poem.mp4">
+            <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
+            <!-- <img src="image.gif"> -->
+          </video>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="grid">
+
+    <div class="grid-cell grid7">
+      <div class="image-slide">
+        <img src="/images/thwaites/06.jpg" alt="">
+      </div>
+    </div>
+    <div class="grid-cell grid5">
+      <div class="top-content">
+        <p>A playlist of poems from a Concert of Poetry and Music could be listened to on the site, or downloaded from iTunes as a podcast. The author's publications are is also for sale on the website.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="grid">
+
+    <div class="grid-cell grid6">
+      <div class="top-content">
+        <p>Site content is managed with a custom Wordpress backend, enabling family members to update notes and add new content easily.</p>
+      </div>
+    </div>
+
+    <div class="grid-cell grid6">
+      <div class="image-slide">
+        <img src="/images/thwaites/interface.jpg" alt="">
+      </div>
+    </div>
+
+  </section>
+
+  <!-- <script src="/js/birds_loop.js"></script> -->
+
+
+  <% include ../partials/footer.html.ejs %>
