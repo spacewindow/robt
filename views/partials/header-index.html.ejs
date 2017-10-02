@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rob Thwaites : UX and Interaction Designer</title>
-  <link rel="shortcut icon" href="/images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" type="text/css" href="/css/royalslider.css">
-	<link rel="stylesheet" type="text/css" href="/css/skins/default/rs-default.css">
+	<!-- <link rel="stylesheet" type="text/css" href="/css/skins/default/rs-default.css"> -->
   <link rel="stylesheet" href="/css/main.css">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/images/favicon/apple-icon-57x57.png">
@@ -38,41 +38,14 @@
   <script src="/js/jquery.royalslider.min.js"></script>
   <script src="/js/site.js"></script>
 
+
 </head>
-<body class="<%= pageData.current.id %>">
+
+
+<body>
 
   <% include ../../images/icons.svg %>
 
   <% include app-menu.html.ejs %>
 
   <div class="app__body">
-    <style>
-      h1,h2,h3{
-        color: <%= pageData.current.color %>;
-      }
-      .project__header__title h1,
-      .project__header__title h2,
-      .project__header__title h3,
-      .project__header__title p{
-        color: white;
-      }
-
-      a{
-        color: <%= pageData.current.color %>;
-      }
-
-    </style>
-
-    <section class="project__header grid" style="background: <%= pageData.current.color %>">
-      <div class="grid-cell grid5 project__header__title">
-        <header>
-          <h1><%- pageData.current.title %></h1>
-          <h3><%= pageData.current.client %></h3>
-          <p></p>
-        </header>
-        <p><%= pageData.current.description %></p>
-      </div>
-      <div class="grid-cell grid7 project__header__hero">
-        <img src="./images/hero-<%= pageData.current.id %>.png" alt="">
-      </div>
-    </section>
