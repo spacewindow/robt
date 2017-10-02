@@ -84,6 +84,79 @@ function makeSlider(divID) {
 
 }
 
+// scrolling animation
+
+var lastScroll = 0;
+
+var scrollDirection = function(section) {
+  if (section.scrollTop > lastScroll) {
+    lastScroll = section.scrollTop;
+    return 'down';
+  } else {
+    lastScroll = section.scrollTop;
+    return 'up';
+  }
+};
+
+var cgu_mod_TL = new TimelineMax({paused: true});
+
+$(window).on('load', function() {
+
+  cgu_mod_TL
+    .from('[src*="mod-block-1"]', 1, {
+      x: '-50%',
+      y: '-100%'
+    }, 'start+=0.3')
+    .from('[src*="mod-block-2"]', 1, {
+      x: '20%',
+      y: '-20%'
+    }, 'start')
+    .from('[src*="mod-block-3"]', 1, {
+      x: '50%',
+      y: '-150%'
+    }, 'start+=0.3')
+    .from('[src*="mod-block-4"]', 1, {
+      x: '50%',
+      y: '70%'
+    }, 'start+=0.6')
+  ;
+
+  $(window).on('scroll', function(){
+    // modular blocks animation
+    var cgu_mod_progress = progress('#email-main', 200);
+    cgu_mod_TL.progress(cgu_mod_progress);
+
+    // mobile mail animation
+    var cgu_mail_progress = progress('#cgu-mobile-edm', 400);
+    console.log(cgu_mail_progress);
+    $('#cgu-mobile-edm').css('transform', 'translateY(-' + 32 * cgu_mail_progress + '%)');
+
+  });
+
+});
+
+
+function progress(element, offsetStart){ // element is the selector string
+
+  var scrollElement= $(element);
+  var scrollTopStart = scrollElement.offset().top - offsetStart;
+  var scrollTopEnd = scrollElement.height() / 2 + scrollTopStart;
+
+  var currentPosition = window.scrollY;
+  var progress;
+  if (currentPosition < scrollTopStart) {
+      progress = 0;
+  } else if (currentPosition > scrollTopEnd) {
+      progress = 100;
+  } else {
+      progress = ((currentPosition - scrollTopStart) / (scrollTopEnd - scrollTopStart));
+  }
+  return progress;
+
+}
+
+
+
 
 
 $(document).ready(function() {
@@ -98,6 +171,18 @@ $(document).ready(function() {
   $('#wattyl-video').on('click', function(){
     $(this).removeClass('placeholder').children('video').get(0).play();
   });
+
+  var redHighlights = $('[src*="email-red"]');
+  var redTL = new TimelineMax({repeat: -1});
+
+  redTL
+  .staggerFrom(redHighlights, 0.4, {
+    opacity:0
+  }, 1.5, 'start')
+  .staggerTo(redHighlights, 0.4, {
+    opacity:0,
+    delay: 1.5
+  }, 1.5, 'start');
 
 
 });

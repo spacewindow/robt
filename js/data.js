@@ -41,7 +41,7 @@ const data = [
   },
   {
     id: "e-newsletters",
-    title: "Salesforce E-Newsletters",
+    title: "Salesforce E&#8209;Newsletters",
     client: "CGU Insurance",
     description: "Drag-and-drop email templates leveraging the power of Salesforce Marketing Cloud",
     color: "#0aa945"

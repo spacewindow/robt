@@ -551,6 +551,9 @@ section {
 section.block {
   height: 80vh;
 }
+section.tall {
+  height: 100vh;
+}
 @font-face {
   font-family: 'Playfair';
   src: url('../fonts/pf-reg.ttf') format('truetype');
@@ -918,6 +921,9 @@ footer h4,
 footer p {
   text-align: center;
 }
+body {
+  background: #fafafa;
+}
 video {
   width: 100%;
 }
@@ -1057,7 +1063,7 @@ element.style {
   justify-content: space-between;
 }
 .intro {
-  background: #fafafa;
+  background: #efefef;
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
@@ -1177,4 +1183,87 @@ element.style {
   background-position: top center;
   background-repeat: no-repeat;
   z-index: 2;
+}
+.edm-grid {
+  background-image: url(../images/email/email-litmus-grid.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.highlight {
+  position: absolute;
+  height: 5%;
+  border: 1px solid red;
+  width: 50%;
+  top: 30%;
+  left: 18%;
+  z-index: 2;
+}
+#email-personalised {
+  position: relative;
+}
+#email-personalised img[src*="red"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+.grid-cell-overflow {
+  overflow: visible;
+}
+.grid-cell-overflow .image-slide {
+  position: relative;
+  display: block;
+  height: auto;
+  width: 100%;
+  overflow: visible;
+  bottom: 0;
+  margin-top: -90%;
+}
+.grid-cell-overflow .image-slide img {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.grid-cell-overflow .image-slide img[src*="mod-block-1"] {
+  position: absolute;
+  top: 49%;
+  left: 14.1%;
+  width: 70.5%;
+  height: auto;
+  z-index: 2;
+}
+.grid-cell-overflow .image-slide img[src*="mod-block-2"] {
+  position: absolute;
+  top: 30.8%;
+  left: 14.1%;
+  width: 70.5%;
+  height: auto;
+  z-index: 2;
+}
+.grid-cell-overflow .image-slide img[src*="mod-block-3"] {
+  position: absolute;
+  top: 63.6%;
+  left: 13.9%;
+  width: 70.7%;
+  height: auto;
+  z-index: 2;
+}
+.grid-cell-overflow .image-slide img[src*="mod-block-4"] {
+  position: absolute;
+  top: 66.6%;
+  left: 49.7%;
+  width: 35%;
+  height: auto;
+  z-index: 2;
+}
+.slide-wrapper {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
