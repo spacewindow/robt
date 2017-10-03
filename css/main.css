@@ -696,7 +696,7 @@ a {
   height: 1.75em;
 }
 p {
-  padding-right: 2rem;
+  padding-right: 0.5rem;
 }
 .labelled-input {
   display: flex;
@@ -919,6 +919,7 @@ footer {
 }
 footer h4,
 footer p {
+  width: 70%;
   text-align: center;
 }
 body {
@@ -992,6 +993,7 @@ img {
 .slider__nav {
   display: flex;
   justify-content: flex-start;
+  margin-left: 0.4rem;
 }
 .slider__nav.align-right {
   justify-content: flex-end;
@@ -1037,6 +1039,10 @@ element.style {
   position: relative;
   color: white;
   overflow: hidden;
+  height: 50vh;
+  background-size: cover;
+  background-position: right:center;
+  background-repeat: no-repeat;
 }
 .project__header:before {
   content: '';
@@ -1075,14 +1081,14 @@ element.style {
 }
 .credits h3 {
   font-family: 'Graphik', serif;
-  font-size: 0.7rem;
+  font-size: 0.9331rem;
   font-weight: bold;
   color: #333333;
   margin: 0;
 }
 .credits p {
-  font-size: 0.525rem;
-  color: #aaaaaa;
+  font-size: 0.7rem;
+  color: #333333;
   margin: 0;
   padding: 0;
 }
@@ -1099,13 +1105,6 @@ element.style {
 }
 #icons {
   display: none;
-}
-.hangtime-intro {
-  background-image: url(../images/ads-ht-diagram1.jpg), url(../images/ads-ht-diagram2.jpg);
-  background-size: contain;
-  background-position: left center,
-    right center;
-  background-repeat: no-repeat;
 }
 .image-frame {
   margin-bottom: 2rem;
@@ -1141,11 +1140,17 @@ element.style {
   border: 1rem solid #aaaaaa;
 }
 .slider__captions > * {
-  transition: opacity 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  margin: 1rem 0;
+}
+.slider__captions > * strong {
+  font-size: 1.1em;
+  display: inline-block;
+  margin-right: 0.2em;
 }
 .slider__captions > *:not(.current) {
   opacity: 0.5;
-  font-size: 0.525rem;
+  transform: translateX(1em);
   line-height: 1.4em;
 }
 .slider__fullscreen-button {
@@ -1314,4 +1319,38 @@ element.style {
 .app__menu a {
   color: white;
   display: block;
+}
+.me-pic {
+  align-self: center;
+  border-radius: 50%;
+}
+.thumbs {
+  align-self: center;
+  width: 75%;
+}
+.thumbs a {
+  position: relative;
+  display: block;
+  height: 10rem;
+  overflow: hidden;
+}
+.thumbs img {
+  align-self: center;
+  width: 100%;
+  height: auto;
+}
+.thumb-annotations {
+  display: flex;
+  justify-content: space-between;
+  max-width: 80%;
+}
+.thumb-annotations p {
+  width: 33%;
+  color: black;
+  font-size: 0.3941rem;
+  text-align: center;
+  padding: 0;
+}
+.top-content h3 {
+  margin-bottom: 2rem;
 }

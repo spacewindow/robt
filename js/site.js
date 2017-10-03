@@ -67,6 +67,7 @@ function makeSlider(divID) {
   var prevSlideVideo;
   var playSlideVideo = function() {
     if (prevSlideVideo) {
+      prevSlideVideo.currentTime = 0;
       prevSlideVideo.pause();
     }
     var video = slider.currSlide.content.find('video');

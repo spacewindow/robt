@@ -11,22 +11,33 @@
 
       <div class="grid-cell">
 
-        <p>Currently <strong>UX Designer</strong> for award-winning mobile advertising startup <a href="#">PLAYGROUND XYZ</a>, where I design and prototype digital advertising products. Lead designer for Reporting and Analytics for their online platform.</p>
+        <p>I work currently as <strong>UX Designer</strong> for <a href="#">PLAYGROUND XYZ</a>, an award-winning mobile advertising startup. I create and prototype Mobile Advertising products, and lead design on Reporting and Analytics for their online platform.</p>
 
-        <h3>I Sketch and code.</h3>
+        <h3>Sketch in code</h3>
 
-        <p>Though I use Sketch and Photoshop daily, I lean towards 'designing in the browser'. I use advanced skills in <strong>HTML</strong>, <strong>CSS</strong> and <strong>Javascript</strong> to quickly iterate towards moving, functioning prototypes
-          that lay the groundwork for final development.</p>
+        <p>Though I use visual design tools like Sketch and Photoshop daily, I lean towards designing in-browser. I use advanced skills in <strong>HTML</strong>, <strong>CSS</strong> and <strong>Javascript</strong> to quickly iterate towards moving, functioning prototypes that lay the groundwork for final development.</p>
 
-        <h3>A visual touch.</h3>
+        <h3>Digital design for humans</h3>
 
-        <p>Originally a graphic designer and animator, I know the value of engaging people in your product through meaningful motion design and visual flair that delights.</p>
+        <p>I am a naturally empathetic person, and user needs are my constant companion throughout the design process. I have experience conducting user research at project inception, and user testing at different stages in the project.</p>
 
-        <h3>Digital design for humans.</h3>
+        <h3>Engaging with visuals</h3>
 
-        <p>I am a naturally empathetic person, and user needs a constant companion throughout the design process. I have experience conducting user research at project inception, and user testing at different stages in the project.</p>
+        <p>Engaging users of your product through meaningful motion design and visual flair that delights should not be undervalued, and I use my skills as a graphic designer and animator to that end.</p>
 
       </div>
+    </section>
+
+    <section class="grid thumbs">
+      <% allData.forEach(function(project){ %>
+        <div class="grid-cell grid6">
+          <a href="/<%= project.id %>">
+            <img src="/images/thumb-<%= project.id %>.png" alt="">
+          </a>
+          <h3><%- project.title %></h3>
+          <p><%- project.client %></p>
+        </div>
+      <% }) %>
     </section>
   </div>
 

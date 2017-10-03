@@ -4,46 +4,42 @@
     <div class="grid-cell grid8 intro__text">
       <div class="top-content" style="color: <%= pageData.current.color %>">
         <p>Playground XYZ offer a full-service mobile advertising platform, where advertisers can design, deploy and monitor mobile advertising campaigns.</p>
-        <img src="/images/reporting/top-thumbs.png" alt="" style="max-width: 80%">
+        <img src="/images/reporting/top-thumbs.png" alt="" style="max-width: 80%; margin: 1rem 0">
         <p>As part of our service platform, I designed and prototyped the <strong>Campaign Management Dashboard</strong> and <strong>Campaign Reporting and Analtyics</strong> screens.</p>
       </div>
 
     </div>
     <div class="grid-cell grid4 credits">
-      <div class="top-content"><h3>UX Design</h3>
-      <p>Rob Thwaites</p>
-
-      <h3>Design / Prototype</h3>
-      <p>Rob Thwaites</p></div>
-
-    </div>
+      <div class="top-content">
+        <h3>My Work</h3>
+        <p>UX Research, Design, Prototype </p>
+      </div>
   </section>
 
   <section class="grid block">
-    <div class="grid-cell grid4">
+    <div class="grid-cell grid5">
       <div class="top-content">
         <h3>Campaigns Dashboard</h3>
         <div class="slider__captions" id="slider-campaigns-captions">
-          <p>Users to quickly ascertain what campaigns were currently active, and which are scheduled.</p>
-          <p>User can expand the Campaigns view for a detailed breakdown of ad placements, which audience they are targetting</p>
-          <p>See placement performance at a glance by key metrics, and get alerts for poor performance.</p>
-          <p>Users can open a quick preview of the various add creatives attached to each campaign.</p>
+          <p><strong>Campaign List</strong>  Users to quickly ascertain what campaigns were currently active, and which are scheduled.</p>
+          <p><strong>Placement Breakdown</strong> Expand the Campaigns view to see which placements are running, and targetted audiences</p>
+          <p><strong>Performance at a glance</strong> Quickly assess placement performance and view alerts</p>
+          <p><strong>Ad preview</strong> Users can refresh their memory of the ad creative running in each placement</p>
         </div>
-      </div>
-      <div class="slider__nav" id="slider-campaigns-nav">
-
+        <div class="slider__nav" id="slider-campaigns-nav">
           <svg class="slider__arrow slider__arrow--left" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
             <use x="0" y="0" href="#arrow-left"></use>
           </svg>
-
           <svg class="slider__arrow slider__arrow--right" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
             <use x="0" y="0" href="#arrow-right"></use>
           </svg>
-
         </div>
 
+      </div>
+
+
     </div>
-    <div class="grid-cell grid8">
+    <div class="grid-cell grid7">
       <div  id="slider-campaigns-fullscreen" class="slider__fullscreen-button">
         <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
           <use x="0" y="0" href="#zoom"></use>
@@ -58,7 +54,7 @@
         <!-- image and content -->
         <div class="video-slide">
           <video autoplay loop muted playsinline>
-            <source src="/video/1-details.mp4">
+            <source src="/images/1-details.mp4">
             <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
             <!-- <img src="image.gif"> -->
           </video>
@@ -70,7 +66,7 @@
 
         <div class="video-slide">
           <video autoplay loop muted playsinline>
-            <source src="/video/4-preview.mp4">
+            <source src="/images/4-preview.mp4">
             <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
             <!-- <img src="image.gif"> -->
           </video>
@@ -83,7 +79,7 @@
   </section>
 
   <section class="block grid">
-    <div class="grid-cell grid8" style="background: #666">
+    <div class="grid-cell grid7" style="background: #666">
       <div class="slider__fullscreen-button" id="slider-charts-fullscreen">
         <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
           <use x="0" y="0" href="#zoom"></use>
@@ -95,22 +91,14 @@
         <!-- image and content -->
         <div class="video-slide">
           <video autoplay loop muted playsinline>
-            <source src="/video/2-charts.mp4">
+            <source src="/images/2-charts.mp4">
             <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
             <!-- <img src="image.gif"> -->
           </video>
         </div>
         <div class="video-slide">
           <video autoplay loop muted playsinline>
-            <source src="/video/2-animation.mp4">
-            <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
-            <!-- <img src="image.gif"> -->
-          </video>
-        </div>
-
-        <div class="video-slide">
-          <video autoplay loop muted playsinline>
-            <source src="/video/3-notes.mp4">
+            <source src="/images/2-animation.mp4">
             <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
             <!-- <img src="image.gif"> -->
           </video>
@@ -118,7 +106,15 @@
 
         <div class="video-slide">
           <video autoplay loop muted playsinline>
-            <source src="/video/4-split.mp4">
+            <source src="/images/3-notes.mp4">
+            <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
+            <!-- <img src="image.gif"> -->
+          </video>
+        </div>
+
+        <div class="video-slide">
+          <video autoplay loop muted playsinline>
+            <source src="/images/4-split.mp4">
             <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
             <!-- <img src="image.gif"> -->
           </video>
@@ -127,27 +123,23 @@
       </div>
 
     </div>
-    <div class="grid-cell grid4">
+    <div class="grid-cell grid5">
       <div class="top-content">
         <h3>Campaign Analytics</h3>
         <div class="slider__captions" id="slider-charts-captions">
-          <p><strong>Visualised breakdown</strong> Client can open up the campaign reporting dashboard for a detailed visual breakdown of campaign performance.</p>
-          <p><strong>Functional animation</strong> Transitions in the data quickly display how the data from two groupings compare. Colour coding helps users to track which ad creative data they are currently viewing.</p>
-          <p><strong>Annotations and Notes</strong> regarding camapign optimisations that were made along the way, and included as chart annotations.</p>
-          <p><strong>Meaningful comparisons</strong> the interface is designed so that clients can split and group their campaign data to develop key insights about audiences and their response to the campaign.</p>
+          <p><strong>Visual breakdown</strong> data can be viewed in easily understandable charts</p>
+          <p><strong>Functional animation</strong> Transitions and color coding assist clients to gain insight through visual comparison of data sets.</p>
+          <p><strong>Annotations</strong> can tell a chronological account of optimisations that were made throughout the campaign.</p>
+          <p><strong>Meaningful comparisons</strong> clients are limited to splitting and grouping their campaign data in ways that will help them reach essential insights.</p>
         </div>
-      </div>
-
-      <div class="slider__nav" id="slider-charts-nav">
-
-        <svg class="slider__arrow slider__arrow--left" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-          <use x="0" y="0" href="#arrow-left"></use>
-        </svg>
-
-        <svg class="slider__arrow slider__arrow--right" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-          <use x="0" y="0" href="#arrow-right"></use>
-        </svg>
-
+        <div class="slider__nav" id="slider-charts-nav">
+          <svg class="slider__arrow slider__arrow--left" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+            <use x="0" y="0" href="#arrow-left"></use>
+          </svg>
+          <svg class="slider__arrow slider__arrow--right" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+            <use x="0" y="0" href="#arrow-right"></use>
+          </svg>
+        </div>
       </div>
 
     </div>
@@ -159,22 +151,19 @@
       <div class="top-content">
         <h3>Report Download</h3>
         <div class="slider__captions" id="slider-download-captions">
-          <p><strong>Download Data</strong> Client can download all data for the Campaign</p>
-          <p><strong>Formatted Custom Report</strong> I created easy-to-read formatted custom reports.</p>
+          <p><strong>Download Data</strong> All data is availble to the client as an Excel file.</p>
+          <p><strong>Formatted Custom Report</strong> Colour coding and sheet layout for a clear view of your final data.</p>
+        </div>
+        <div class="slider__nav" id="slider-download-nav">
+          <svg class="slider__arrow slider__arrow--left" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+            <use x="0" y="0" href="#arrow-left"></use>
+          </svg>
+          <svg class="slider__arrow slider__arrow--right" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+            <use x="0" y="0" href="#arrow-right"></use>
+          </svg>
         </div>
       </div>
 
-      <div class="slider__nav" id="slider-download-nav">
-
-        <svg class="slider__arrow slider__arrow--left" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-          <use x="0" y="0" href="#arrow-left"></use>
-        </svg>
-
-        <svg class="slider__arrow slider__arrow--right" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-          <use x="0" y="0" href="#arrow-right"></use>
-        </svg>
-
-      </div>
     </div>
     <div class="grid-cell grid8">
 
@@ -183,7 +172,7 @@
         <!-- image and content -->
         <div class="video-slide">
           <video autoplay loop muted playsinline>
-            <source src="/video/5-download.mp4">
+            <source src="/images/5-download.mp4">
             <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
             <!-- <img src="image.gif"> -->
           </video>

@@ -3,7 +3,7 @@ const data = [
     id: "reporting",
     title: "Reporting Dashboard",
     client: "Playground XYZ",
-    description: "A UI to give advertisers feedback and insights on their mobile campaigns",
+    description: "An interface for advertisers to monitor and report on their mobile advertising campaigns",
     color: "#55adf8",
     roles: [
       "User Research",
@@ -46,13 +46,13 @@ const data = [
     description: "Drag-and-drop email templates leveraging the power of Salesforce Marketing Cloud",
     color: "#0aa945"
   },
-  {
-    id: "motherboard",
-    title: "Motherboard Website",
-    client: "Motherboard Productions",
-    description: "Responsive website with custom content-management for a national live performance company",
-    color: "#f1b706"
-  },
+  // {
+  //   id: "motherboard",
+  //   title: "Motherboard Website",
+  //   client: "Motherboard Productions",
+  //   description: "Responsive website with custom content-management for a national live performance company",
+  //   color: "#f1b706"
+  // },
   {
     id: "michaelthwaites",
     title: "Michael Thwaites: Australian Poet",
