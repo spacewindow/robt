@@ -405,6 +405,11 @@ body.showgrid:before {
   background-position: left 0.5rem top;
   z-index: -1;
 }
+@media (min-width: 1200px) {
+  html {
+    font-size: 28px;
+  }
+}
 @media (max-width: 899px) {
   html {
     font-size: 14px;
@@ -427,7 +432,7 @@ body.showgrid:before {
   width: auto;
   min-height: 2rem;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   overflow: hidden;
   padding: 1rem;
   display: flex;
@@ -589,8 +594,7 @@ h1 {
   letter-spacing: 0.03em;
 }
 h2 {
-  font-family: 'Playfair', serif;
-  font-size: 1.6583rem;
+  font-size: 1.2439rem;
   line-height: 2rem;
 }
 h3 {
@@ -602,7 +606,8 @@ h4,
   font-size: 0.9331rem;
   line-height: 1rem;
 }
-p {
+p,
+li {
   font-size: 0.7rem;
   line-height: 1rem;
 }
@@ -614,6 +619,40 @@ p.xsmall {
   font-size: 0.3941rem;
   line-height: 1rem;
 }
+@media (min-width: 1200px) {
+  h1 {
+    font-family: 'Playfair', serif;
+    font-size: 2.2099rem;
+    line-height: 3rem;
+    letter-spacing: 0.03em;
+  }
+  h2 {
+    font-size: 1.2439rem;
+    line-height: 2rem;
+  }
+  h3 {
+    font-size: 1.2439rem;
+    line-height: 2rem;
+  }
+  h4,
+  .size-1 {
+    font-size: 0.9331rem;
+    line-height: 1rem;
+  }
+  p,
+  li {
+    font-size: 0.7rem;
+    line-height: 1rem;
+  }
+  p.small {
+    font-size: 0.525rem;
+    line-height: 1rem;
+  }
+  p.xsmall {
+    font-size: 0.3941rem;
+    line-height: 1rem;
+  }
+}
 @media (max-width: 899px) {
   h1 {
     font-family: 'Playfair', serif;
@@ -622,8 +661,7 @@ p.xsmall {
     letter-spacing: 0.03em;
   }
   h2 {
-    font-family: 'Playfair', serif;
-    font-size: 1.3824rem;
+    font-size: 1.152rem;
     line-height: 2rem;
   }
   h3 {
@@ -635,7 +673,8 @@ p.xsmall {
     font-size: 0.96rem;
     line-height: 1rem;
   }
-  p {
+  p,
+  li {
     font-size: 0.8rem;
     line-height: 1rem;
   }
@@ -656,8 +695,7 @@ p.xsmall {
     letter-spacing: 0.03em;
   }
   h2 {
-    font-family: 'Playfair', serif;
-    font-size: 0.972rem;
+    font-size: 0.9104rem;
     line-height: 1rem;
   }
   h3 {
@@ -669,7 +707,8 @@ p.xsmall {
     font-size: 0.8536rem;
     line-height: 1rem;
   }
-  p {
+  p,
+  li {
     font-size: 0.8rem;
     line-height: 1rem;
   }
@@ -686,7 +725,8 @@ h1,
 h2,
 h3,
 h4,
-p {
+p,
+li {
   margin: 0.5rem 0;
 }
 a {
@@ -695,7 +735,8 @@ a {
   text-decoration: none;
   height: 1.75em;
 }
-p {
+p,
+li {
   padding-right: 0.5rem;
 }
 .labelled-input {
@@ -872,6 +913,7 @@ button.icon-only svg {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin: 0 auto;
 }
 .footer-links {
   justify-content: space-between;
@@ -916,10 +958,11 @@ button.icon-only svg {
 }
 footer {
   justify-content: center;
+  height: 15rem;
+  background-image: url(../images/me_desktop.jpg);
 }
-footer h4,
+footer h3,
 footer p {
-  width: 70%;
   text-align: center;
 }
 body {
@@ -955,7 +998,7 @@ img {
   width: 80%;
   height: auto;
   box-sizing: content-box;
-  margin: auto;
+  margin: 0 auto;
   border: 1rem solid #aaaaaa;
   border-radius: 0.5rem;
 }
@@ -1039,7 +1082,7 @@ element.style {
   position: relative;
   color: white;
   overflow: hidden;
-  height: 50vh;
+  height: 20rem;
   background-size: cover;
   background-position: right:center;
   background-repeat: no-repeat;
@@ -1051,7 +1094,6 @@ element.style {
   height: 200%;
   top: -50%;
   left: 0;
-  background-image: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
   pointer-events: none;
 }
 .project__header__hero {
@@ -1070,18 +1112,19 @@ element.style {
 }
 .intro {
   background: #efefef;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 .intro__text p {
-  font-size: 0.9331rem;
+  font-size: 0.7rem;
   font-family: 'Graphik', sans-serif;
+  max-width: 40em;
   line-height: 1.5;
   font-weight: 400;
 }
 .credits h3 {
   font-family: 'Graphik', serif;
-  font-size: 0.9331rem;
+  font-size: 0.7rem;
   font-weight: bold;
   color: #333333;
   margin: 0;
@@ -1153,12 +1196,33 @@ element.style {
   transform: translateX(1em);
   line-height: 1.4em;
 }
+.slider__nav-below {
+  position: relative;
+}
+.slider__nav-below span {
+  font-size: 0.7rem;
+}
 .slider__fullscreen-button {
+  width: 8rem;
   position: absolute;
+  display: flex;
+  align-items: center;
   top: 0;
   right: 0;
-  width: 2rem;
   height: 2rem;
+}
+.slider__fullscreen-button svg {
+  height: 100%;
+  width: 2rem;
+  left: 0;
+  top: 0;
+}
+.slider__fullscreen-button span {
+  text-transform: uppercase;
+  font-size: 0.525rem;
+  width: 6rem;
+  display: block;
+  right: 0;
 }
 .rsSlide {
   background: black;
@@ -1353,4 +1417,18 @@ element.style {
 }
 .top-content h3 {
   margin-bottom: 2rem;
+}
+.slider__nav-below {
+  color: black;
+}
+.slider__nav-below .full-count {
+  position: relative;
+  font-size: 0.5em;
+  display: inline-block;
+  top: -0.2em;
+  letter-spacing: 0.15em;
+  margin-left: 0.2em;
+}
+.slider__nav-below .full-count:before {
+  content: '/';
 }

@@ -41,7 +41,37 @@ function makeSlider(divID) {
   captions.children().first().addClass('current');
   // set Nav state
 
+  // insert navigation elements
+
+  var sliderNavBelow = $('<div id="' + divID + '-nav-below" class="slider__nav-below"></div>');
+
+  var sliderCount = $('<div class="slider__count"></div>')
+  sliderNavBelow.append(sliderCount);
+
+  var sliderCurrentCount = $('<span class="current-count">1</span>');
+  var sliderFullCount = $('<span class="full-count">1</span>');
+
+  sliderCurrentCount.html(slider.currSlideId + 1);
+  sliderFullCount.html(slider.numSlides);
+
+  sliderCount.append([sliderCurrentCount, sliderFullCount]);
+
+  sliderFullscreen = $('<div class="slider__fullscreen-button"><svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet"><use x="0" y="0" href="#zoom"></use></svg><span>Fullscreen</span></div>');
+
+  sliderNavBelow.append(sliderFullscreen);
+  sliderNavBelow.insertAfter(sliderDiv);
+
+  var currentCount = sliderNavBelow;
+
+  // activate fullscreen button
+
+  sliderFullscreen.on('click', function(){
+    console.log(slider);
+    slider.enterFullscreen();
+  });
+
   slider.ev.on('rsBeforeAnimStart', function() {
+    sliderCurrentCount.html(slider.currSlideId + 1);
     if (slider.currSlideId === 0) {
       customNav.attr('class', 'slider__nav start');
     } else if (slider.currSlideId === (slider.numSlides - 1)) {
@@ -55,11 +85,7 @@ function makeSlider(divID) {
 
   // fullscreen
 
-  var fsButton = $("#" + divID + '-fullscreen');
 
-  fsButton.on('click', function(){
-    slider.enterFullscreen();
-  });
 
 
   // play Videos on slide
@@ -103,6 +129,12 @@ var cgu_mod_TL = new TimelineMax({paused: true});
 
 $(window).on('load', function() {
 
+  // set width of container so zoom functions - this is still a bit dodgey.
+  $('.grid').css({
+    'width': window.innerWidth + 'px',
+    maxWidth: "100%"
+  });
+
   cgu_mod_TL
     .from('[src*="mod-block-1"]', 1, {
       x: '-50%',
@@ -122,17 +154,25 @@ $(window).on('load', function() {
     }, 'start+=0.6')
   ;
 
-  $(window).on('scroll', function(){
-    // modular blocks animation
-    var cgu_mod_progress = progress('#email-main', 200);
-    cgu_mod_TL.progress(cgu_mod_progress);
+  // set up CGU scrolling anim
 
-    // mobile mail animation
-    var cgu_mail_progress = progress('#cgu-mobile-edm', 400);
-    console.log(cgu_mail_progress);
-    $('#cgu-mobile-edm').css('transform', 'translateY(-' + 32 * cgu_mail_progress + '%)');
 
-  });
+
+  if($('body').hasClass('e-newsletters')){
+
+    $(window).on('scroll', function(){
+      // modular blocks animation
+      var cgu_mod_progress = progress('#email-main', 200);
+      cgu_mod_TL.progress(cgu_mod_progress);
+
+      // mobile mail animation
+      var cgu_mail_progress = progress('#cgu-mobile-edm', 400);
+      console.log(cgu_mail_progress);
+      $('#cgu-mobile-edm').css('transform', 'translateY(-' + 32 * cgu_mail_progress + '%)');
+
+    });
+
+  }
 
 });
 

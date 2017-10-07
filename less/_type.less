@@ -34,6 +34,20 @@ body{
 	-webkit-font-smoothing: antialiased;
 }
 
+.parameters(media-large){
+  @p-size: 0.7; // font-size in rem
+
+	// modular scale values - perfect fourth - http://type-scale.com/
+	@size-5: (@p-size * 4.208) * 1rem;
+	@size-4: (@p-size * 3.157) * 1rem;
+	@size-3: (@p-size * 2.369) * 1rem;
+	@size-2: (@p-size * 1.777) * 1rem;
+	@size-1: (@p-size * 1.333) * 1rem;
+	@size-0: (@p-size * 1) * 1rem;
+	@size-small: (@p-size * 0.75) * 1rem;
+	@size-xsmall: (@p-size * 0.563) * 1rem;
+}
+
 
 .parameters(media-desktop){
   @p-size: 0.7; // font-size in rem
@@ -47,8 +61,6 @@ body{
 	@size-0: (@p-size * 1) * 1rem;
 	@size-small: (@p-size * 0.75) * 1rem;
 	@size-xsmall: (@p-size * 0.563) * 1rem;
-
-
 }
 
 .parameters(media-small-device){
@@ -63,9 +75,6 @@ body{
 	@size-0: (@p-size * 1) * 1rem;
 	@size-small: (@p-size * 0.833) * 1rem;
 	@size-xsmall: (@p-size * 0.694) * 1rem;
-
-
-
 }
 
 .parameters(media-phone-portrait){
@@ -92,9 +101,8 @@ body{
     letter-spacing: 0.03em;
 	}
 	h2{
-    font-family: 'Playfair', serif;
-		font-size: @size-3;
-		line-height: ceil(@size-3);
+		font-size: @size-2;
+		line-height: ceil(@size-2);
 	}
 	h3{
 		font-size: @size-2;
@@ -104,7 +112,7 @@ body{
 		font-size: @size-1;
 		line-height: ceil(@size-1);
 	}
-	p{
+	p, li{
 		font-size: @size-0;
 		line-height: 1rem;
 	}
@@ -120,7 +128,12 @@ body{
 
 // some base font-sizes, set in rems, sized according to modular scale for that media query
 
+
 .make-headings(media-desktop);
+
+.media-large({
+	.make-headings(media-large);
+});
 
 .media-small-device({
 	.make-headings(media-small-device);
@@ -131,7 +144,7 @@ body{
 	.make-headings(media-phone-portrait);
 });
 
-h1, h2, h3, h4, p{
+h1, h2, h3, h4, p, li{
 	margin:0.5rem 0;
 }
 
@@ -144,7 +157,7 @@ a{
 
 }
 
-p{
+p, li{
   padding-right: 0.5rem;
 }
 

@@ -35,6 +35,7 @@
             <img src="/images/thumb-<%= project.id %>.png" alt="">
           </a>
           <h3><%- project.title %></h3>
+          <p><%- project.type %></p>
           <p><%- project.client %></p>
         </div>
       <% }) %>
@@ -44,4 +45,4 @@
 
   </section>
 
-<% include partials/footer-index.html.ejs %>
+<% include partials/footer.html.ejs %>
