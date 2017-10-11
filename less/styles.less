@@ -1,6 +1,6 @@
-body{
-  background: @palegrey;
-}
+// body{
+//   background: @palegrey;
+// }
 
 
 video{
@@ -10,6 +10,13 @@ video{
 img{
   position:relative;
   // max-width: 90%;
+}
+
+section{
+  .media-phone-portrait({
+    border-bottom: 1px solid @midgrey;
+    margin-bottom: 2rem;
+  });
 }
 
 .slider--mobile{
@@ -51,6 +58,10 @@ img{
   margin: 0 auto;
   border: 1rem solid #aaaaaa;
   border-radius: 0.5rem;
+  .media-phone-portrait({
+    width: 95%;
+    border: 0;
+  });
   &.rsFullscreen{
     border: 0;
     border-radius: 0;
@@ -80,6 +91,7 @@ img{
   display:flex;
   justify-content: flex-start;
   margin-left: 0.4rem;
+  padding:  0.5rem 0;
   &.align-right{
     justify-content: flex-end;
   }
@@ -100,8 +112,8 @@ img{
   display:flex;
   justify-content: center;
   align-items: center;
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 
@@ -171,19 +183,19 @@ element.style {
 
 .intro__text{
   p{
-    font-size: @size-0;
-    font-family: 'Graphik', sans-serif;
+    // font-size: @size-0;
+    // font-family: 'Graphik', sans-serif;
     max-width: 40em;
-    line-height: 1.5;
+    // line-height: 1.5;
     font-weight: 400;
   }
 }
 
 .credits{
   h3{
-    font-family: 'Graphik', serif;
+    // font-family: 'Graphik', serif;
     font-size: @size-0;
-    font-weight: bold;
+    font-weight: 7070;
     color: @darkgrey;
     margin: 0;
   }
@@ -249,9 +261,23 @@ element.style {
 }
 
 .slider__captions{
+
+  h4{
+    font-size: @size-1;
+    margin-bottom: 0.5em;
+  }
+  p{
+    font-size: @size-0;
+    line-height: 1.6;
+    margin-top:0;
+    overflow:hidden;
+    height: 2rem;
+    max-height: 2rem;
+    transition: all 0.5s linear;
+  }
   > *{
-    transition: all 0.5s ease-in;
-    margin: 1rem 0;
+    transition: all 0.5s linear;
+    margin: 0.5rem 0;
     strong{
       font-size: 1.1em;
       display:inline-block;
@@ -259,39 +285,42 @@ element.style {
     }
   }
   > *:not(.current){
-    opacity: 0.5;
-    transform: translateX(1em);
-    // font-size: @size-small;
-    line-height: 1.4em;
+    opacity: 0.4;
+    p{
+      max-height: 0;
+    }
   }
 }
 
 .slider__nav-below{
   position:relative;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  padding: 0.5rem 0;
   span{
     font-size: @size-0;
+    line-height: @size-0;
   }
 }
 
 .slider__fullscreen-button{
-  width: 8rem;
-  position: absolute;
+  width: auto;
   display:flex;
   align-items: center;
   top: 0;
   right: 0;
-  height: 2rem;
+  height: 1.5rem;
   svg{
-    height: 100%;
-    width: 2rem;
+    height: 90%;
     left:0;
     top:0;
   }
   span{
     text-transform: uppercase;
-    font-size: @size-small;
-    width: 6rem;
+    // width: 6rem;
     display:block;
+    font-size: @size-small;
     right:0;
   }
 }
@@ -452,6 +481,17 @@ element.style {
   border-radius: 100%;
 }
 
+.app__logo{
+  width: 4rem;
+  height: 4rem;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index: 20;
+  fill: black;
+  border-radius: 100%;
+}
+
 .app__menu{
   padding: 1rem;
   position: fixed;
@@ -475,14 +515,23 @@ element.style {
   border-radius: 50%;
 }
 
-.thumbs{
-  align-self: center;
-  width: 75%;
-  a{
+.work{
+  .grid-cell{
+    // padding: 1rem 2rem;
+  }
+  h3{
+    text-align: center;
+  }
+  a.work__thumb{
     position: relative;
     display:block;
-    height:10rem;
+    height: 10rem;
     overflow: hidden;
+    margin: 0 auto;
+    // border-radius: 0.5rem;
+    border: 1px solid @midgrey;
+    width: 80%;
+
     // &:before{
     //   content:'';
     //   display:block;
@@ -495,9 +544,16 @@ element.style {
     // }
   }
   img{
-    align-self: center;
-    width: 100%;
-    height: auto;
+    // align-self: center;
+    position:absolute;
+    margin: auto;
+    top:0;
+    left:-5rem;
+    right:-5rem;
+    bottom:0;
+    width:auto;
+    height:100%;
+    min-height: 100%;
   }
 }
 
@@ -522,16 +578,44 @@ element.style {
 
 .slider__nav-below{
   color: black;
+  width: 80%;
+  margin: 0 auto;
 
   .full-count{
     position: relative;
     font-size: 0.5em;
+    font-weight: 700;
     display:inline-block;
-    top: -0.2em;
+    top: -0.3em;
     letter-spacing: 0.15em;
     margin-left: 0.2em;
+    color: @midgrey;
     &:before{
       content: '/';
     }
+  }
+}
+
+.slider-section .grid-cell{
+  justify-content: flex-end;
+}
+
+.reverse-mobile{
+  .media-phone-portrait({
+    flex-direction: column-reverse;
+  });
+}
+
+.app__logo{
+
+}
+
+.work{
+  background: @lightgrey;
+}
+
+.approach{
+  .grid-cell{
+    padding-right: 2rem;
   }
 }

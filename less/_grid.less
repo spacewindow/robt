@@ -58,7 +58,7 @@ body {
 
 .media-large({
 	html{
-		font-size: 28px;
+		font-size: 25px;
 	}
 });
 
@@ -90,12 +90,12 @@ body {
 	flex-direction: column;
 	justify-content: flex-start;
 	overflow: hidden;
-	padding: 1rem;
 	display:flex;
 }
 
-section{
+section {
 	margin-top: 1rem;
+		padding: 2rem 4rem;
 }
 
 .baseGridWidths(@i: 1) when (@i <= (@numColumns)) {
@@ -106,7 +106,7 @@ section{
 			width: ~"calc("@baseWidth~" * "@i/@numColumns~")";
 			margin:0;
 		// }
-		.media-small-device({
+		.media-phone-portrait({
 			width:100%;
 		});
   }
@@ -124,6 +124,12 @@ section{
 
 section.block{
 	height: 80vh;
+	.media-phone-portrait({
+		height: auto;
+	});
+	.media-phone-portrait({
+		height: auto;
+	});
 }
 
 section.tall{

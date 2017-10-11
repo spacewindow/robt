@@ -2,44 +2,61 @@
 
     <section class="grid">
       <div class="grid-cell grid12">
-        <h1>Rob Thwaites</h1>
+        <h1 class="title">Rob Thwaites</h1>
         <h2>Digital Product Designer</h2>
       </div>
 
-    </section>
-    <section class="grid block">
+      <div class="grid-cell grid12">
 
-      <div class="grid-cell">
+        <p class="p__intro">I am a multi-disciplinary designer, working across UX, visual design and front-end development.</p>
 
-        <p>I work currently as <strong>UX Designer</strong> for <a href="#">PLAYGROUND XYZ</a>, an award-winning mobile advertising startup. I create and prototype Mobile Advertising products, and lead design on Reporting and Analytics for their online platform.</p>
-
-        <h3>Sketch in code</h3>
-
-        <p>Though I use visual design tools like Sketch and Photoshop daily, I lean towards designing in-browser. I use advanced skills in <strong>HTML</strong>, <strong>CSS</strong> and <strong>Javascript</strong> to quickly iterate towards moving, functioning prototypes that lay the groundwork for final development.</p>
-
-        <h3>Digital design for humans</h3>
-
-        <p>I am a naturally empathetic person, and user needs are my constant companion throughout the design process. I have experience conducting user research at project inception, and user testing at different stages in the project.</p>
-
-        <h3>Engaging with visuals</h3>
-
-        <p>Engaging users of your product through meaningful motion design and visual flair that delights should not be undervalued, and I use my skills as a graphic designer and animator to that end.</p>
+        <p class="p__intro">Right now I am <strong>UX Designer</strong> for the team at PLAYGROUND XYZ, an <a href="http://playground.xyz" target="_blank">award-winning</a> mobile advertising startup.</p>
+        <p class="p__intro"> I lead design on Reporting and Analytics for their online platform, and design and prototype mobile advertising products.</p>
 
       </div>
     </section>
 
-    <section class="grid thumbs">
+    <section class="grid work">
+      <h1 style="width:100%; margin-bottom: 1rem;">Work</h1>
       <% allData.forEach(function(project){ %>
-        <div class="grid-cell grid6">
-          <a href="/<%= project.id %>">
+        <div class="grid-cell grid4" style="margin-bottom: 2rem;">
+          <a class="work__thumb" href="/<%= project.id %>">
             <img src="/images/thumb-<%= project.id %>.png" alt="">
           </a>
-          <h3><%- project.title %></h3>
-          <p><%- project.type %></p>
-          <p><%- project.client %></p>
+          <h3 style="margin-top: 1rem; margin-bottom: 0.25rem;"><%- project.title %></h3>
+           <p style="margin: 0; text-align:center; color: #ff9900"><%- project.type %></p>
+          <!-- <p><%- project.client %></p> -->
         </div>
       <% }) %>
     </section>
+
+    <section class="grid approach">
+
+        <h1 style="width: 100%">Approach</h1>
+
+        <div class="grid-cell grid4">
+          <h4>Design for humans</h4>
+
+          <p>I am a naturally empathetic person, and user needs are my constant companion throughout the design process. I have conducted user research at project inception, and user testing at various project stages.</p>
+        </div>
+
+        <div class="grid-cell grid4">
+          <h4>I Sketch. And code.</h4>
+
+          <p>I solve visual design problems with Photoshop and Sketch, but move my work to the browser at an early stage to leverage the efficiencies of code, and iterate towards moving, functioning prototypes.</p>
+        </div>
+
+        <div class="grid-cell grid4">
+          <h4>Beauty = Engagement</h4>
+
+          <p>The value of visual flair and meaningful motion should not be underestimated, and I use my skills in graphic design and animation to that end.</p>
+        </div>
+
+      </div>
+
+    </section>
+
+
   </div>
 
 

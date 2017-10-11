@@ -52,7 +52,7 @@
       }
       .project__header__title h1,
       .project__header__title h2,
-      .project__header__title h3,
+      /*.project__header__title h3,*/
       .project__header__title p{
         color: white;
       }
@@ -66,12 +66,12 @@
       }
 
       <% var gradient2 = tinycolor(pageData.current.color).setAlpha(0).toRgbString(); %>
-      <% var gradient1 = tinycolor(pageData.current.color).setAlpha(0.8).toRgbString(); %>
+      <% var gradient1 = tinycolor(pageData.current.color).setAlpha(0.9).toRgbString(); %>
 
       .project__header:before{
         background-image:
-          radial-gradient(rgba(0,0,0,0), rgba(0,0,0,0.3)),
-          linear-gradient(to right, <%= gradient1 %>, <%= gradient2 %>);
+        linear-gradient(to right, <%= gradient1 %>, <%= gradient2 %>),
+          radial-gradient(rgba(0,0,0,0), rgba(0,0,0,0.3));
       }
 
     </style>

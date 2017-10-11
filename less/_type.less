@@ -7,27 +7,42 @@
 }
 
 @font-face {
-  font-family: 'Graphik';
-  src: url('../fonts/graphik.otf') format('opentype');
+  font-family: 'Interstate';
+  src: url('../fonts/interstateplus_regular-webfont.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Graphik';
-  src: url('../fonts/graphik-medium.otf') format('opentype');
+  font-family: 'Interstate';
+  src: url('../fonts/interstateplus_bold-webfont.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Graphik';
-  src: url('../fonts/graphik-italic.otf') format('opentype');
+  font-family: 'Aller';
+  src: url('../fonts/Aller.ttf') format('truetype');
   font-weight: 400;
-  font-style: italic;
+  font-style: normal;
 }
 
-@fontFamily: 'Graphik', Helvetica, Arial, sans-serif;
+@font-face {
+  font-family: 'Aller';
+  src: url('../fonts/Aller-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+// @font-face {
+//   font-family: 'Aller';
+//   src: url('../fonts/Aller-Bold.ttf') format('truetype');
+//   font-weight: 900;
+//   font-style: normal;
+// }
+
+@fontFamily: 'Aller', Helvetica, Arial, sans-serif;
+@headingFamily: 'Interstate', Helvetica, Arial, sans-serif;
 
 body{
 	font-family: @fontFamily;
@@ -50,7 +65,7 @@ body{
 
 
 .parameters(media-desktop){
-  @p-size: 0.7; // font-size in rem
+  @p-size: 0.9; // font-size in rem
 
 	// modular scale values - perfect fourth - http://type-scale.com/
 	@size-5: (@p-size * 4.208) * 1rem;
@@ -85,7 +100,7 @@ body{
 	@size-3: (@p-size * 1.215) * 1rem;
 	@size-2: (@p-size * 1.138) * 1rem;
 	@size-1: (@p-size * 1.067) * 1rem;
-	@size-0: (@p-size * 1) * 1rem;
+	@size-0: (@p-size * 0.9) * 1rem;
 	@size-small: (@p-size * 0.937) * 1rem;
 	@size-xsmall: (@p-size * 0.878) * 1rem;
 
@@ -95,20 +110,34 @@ body{
 .make-headings(@device){
 	.parameters(@device);
 	h1{
-		font-family: 'Playfair', serif;
-		font-size: @size-4;
-		line-height: ceil(@size-4);
+		font-family: @headingFamily;
+		font-size: @size-3;
+		line-height: ceil(@size-3);
     letter-spacing: 0.03em;
+    font-weight: 900;
+    text-transform: uppercase;
 	}
+
+  h1.title{
+    font-size: @size-4;
+  }
 	h2{
+    font-family: @headingFamily;
 		font-size: @size-2;
 		line-height: ceil(@size-2);
+    font-weight: 700;
+    // text-transform: uppercase;
 	}
 	h3{
-		font-size: @size-2;
-		line-height: ceil(@size-2);
+    font-family: @headingFamily;
+    text-transform: uppercase;
+		font-size: @size-1;
+    font-weight: 700;
+		line-height: ceil(@size-1);
+    color: @darkgrey;
 	}
 	h4, .size-1{
+    font-family: @headingFamily;
 		font-size: @size-1;
 		line-height: ceil(@size-1);
 	}
@@ -116,6 +145,10 @@ body{
 		font-size: @size-0;
 		line-height: 1rem;
 	}
+  p.p__intro{
+    font-size: @size-1;
+    line-height: 1.5rem;
+  }
 	p.small{
 		font-size: @size-small;
 		line-height: 1rem;
@@ -146,6 +179,7 @@ body{
 
 h1, h2, h3, h4, p, li{
 	margin:0.5rem 0;
+
 }
 
 a{

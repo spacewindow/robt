@@ -9,6 +9,15 @@ app.set('port', (process.env.PORT || 5000));
 
 app.use(express.static(__dirname));
 
+const color = {
+  black: '#222222',
+  white: '#ffffff',
+  palegrey: '#fafafa',
+  lightgrey: '#efefef',
+  midgrey:  '#aaaaaa',
+  darkgrey: '#333333',
+};
+
 // // get list of projects
 // const fs = require('fs');
 // let projects = [];
@@ -24,6 +33,7 @@ app.set('view engine', 'ejs');
 app.get('/', function(req, res) {
   res.render('../views/index.html.ejs', {
     allData: data,
+    color: color,
     tinycolor: tinycolor
   });
 });
