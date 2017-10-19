@@ -39,7 +39,20 @@
   <script src="/js/site.js"></script>
 
 </head>
-<body class="<%= pageData.current.id %>">
+
+<% var indexData = {
+  current: {
+    id: "index",
+    title: "Robert Thwaites: Digital Product Designer",
+    color: color.midgrey
+  }
+} %>
+
+<% pageData = (typeof pageData !== 'undefined') ? pageData : indexData;%>
+
+<body class="<%= pageData.current.id %>"
+
+
 
   <% include ../../images/icons.svg %>
 
@@ -48,7 +61,7 @@
   <div class="app__body">
     <style>
       h1,h2,h3{
-        color: <%= pageData.current.color %>;
+        /*color: <%= pageData.current.color %>;*/
       }
       .project__header__title h1,
       .project__header__title h2,
@@ -76,16 +89,21 @@
 
     </style>
 
-    <section class="project__header grid" style="background-color: <%= pageData.current.color %>; background-image: url(/images/hero-<%= pageData.current.id %>.png);">
-      <div class="grid-cell grid5 project__header__title">
-        <header>
-          <h1><%- pageData.current.title %></h1>
-          <h3><%= pageData.current.client %></h3>
-          <p></p>
-        </header>
-        <p><%= pageData.current.description %></p>
-      </div>
-      <div class="grid-cell grid7 project__header__hero">
-        <!-- <img src="./images/hero-<%= pageData.current.id %>.png" alt=""> -->
-      </div>
-    </section>
+    <% if(typeof pageData.current.type !== 'undefined') {%>
+
+      <section class="project__header grid" style="background-color: <%= pageData.current.color %>; background-image: url(/images/heros/hero-<%- pageData.current.id %>.png);">
+        <div class="grid-cell grid12 project__header__title">
+          <header>
+            <h1><%- pageData.current.title %></h1>
+            <h3><%= pageData.current.client %></h3>
+            <p></p>
+          </header>
+          <p><%= pageData.current.description %></p>
+          <div class="project__header__hero">
+            <img src="/images/hero-slide-<%- pageData.current.id %>.png" alt="">
+          </div>
+        </div>
+      </section>
+
+
+    <% } %>

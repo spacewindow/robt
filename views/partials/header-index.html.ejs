@@ -41,6 +41,17 @@
 
 </head>
 
+<% var indexData = {
+  id: "index",
+  title: "Robert Thwaites: Digital Product Designer",
+  color: color.midgrey
+}
+%>
+
+<% var pageData = (typeof pageData !== 'undefined') ? pageData : indexData%>
+
+<% console.log('PAGEDATA', pageData) %>
+
 <style>
   h1{
     color: <%= color.darkgrey %>;
@@ -62,7 +73,7 @@
 </style>
 
 
-<body>
+<body class="index init">
 
   <% include ../../images/icons.svg %>
 

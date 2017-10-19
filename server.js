@@ -58,6 +58,7 @@ app.get('/*', function(req, res) {
   res.render('../views/projects/' + reqPage + '.html.ejs', {
     pageData: pageData,
     allData: data,
+    color: color,
     tinycolor: tinycolor
   });
 });

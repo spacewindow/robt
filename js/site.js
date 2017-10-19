@@ -174,6 +174,19 @@ $(window).on('load', function() {
 
   }
 
+  if($('body').hasClass('index')){
+
+    function testScroll(ev){
+      if(window.pageYOffset>100){
+        $('body').removeClass('init');
+      }
+      if(window.pageYOffset<100){
+        $('body').addClass('init');
+      }
+    }
+    window.onscroll=testScroll
+    }
+
 });
 
 

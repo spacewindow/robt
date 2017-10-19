@@ -50,7 +50,7 @@ body{
 }
 
 .parameters(media-large){
-  @p-size: 0.7; // font-size in rem
+  @p-size: 0.8; // font-size in rem
 
 	// modular scale values - perfect fourth - http://type-scale.com/
 	@size-5: (@p-size * 4.208) * 1rem;
@@ -65,7 +65,7 @@ body{
 
 
 .parameters(media-desktop){
-  @p-size: 0.9; // font-size in rem
+  @p-size: 0.8; // font-size in rem
 
 	// modular scale values - perfect fourth - http://type-scale.com/
 	@size-5: (@p-size * 4.208) * 1rem;
@@ -110,16 +110,30 @@ body{
 .make-headings(@device){
 	.parameters(@device);
 	h1{
+    position:relative;
 		font-family: @headingFamily;
-		font-size: @size-3;
-		line-height: ceil(@size-3);
+		font-size: @size-2;
+		line-height: ceil(@size-2);
     letter-spacing: 0.03em;
     font-weight: 900;
     text-transform: uppercase;
+    text-align: center;
+    // &:after{
+    //   content:'';
+    //   width: 1em;
+    //   border-bottom: 0.2em solid black;
+    //   position: absolute;
+    //   display:block;
+    //   bottom: -0.5em;
+    // }
+    // border-bottom: 3px solid @black;
 	}
 
   h1.title{
     font-size: @size-4;
+    &:after{
+      display:none;
+    }
   }
 	h2{
     font-family: @headingFamily;
@@ -134,7 +148,7 @@ body{
 		font-size: @size-1;
     font-weight: 700;
 		line-height: ceil(@size-1);
-    color: @darkgrey;
+    color: @white;
 	}
 	h4, .size-1{
     font-family: @headingFamily;
@@ -143,11 +157,10 @@ body{
 	}
 	p, li{
 		font-size: @size-0;
-		line-height: 1rem;
+		line-height: 1.5rem;
 	}
   p.p__intro{
     font-size: @size-1;
-    line-height: 1.5rem;
   }
 	p.small{
 		font-size: @size-small;

@@ -1,33 +1,43 @@
-<% include partials/header-index.html.ejs %>
+<% include partials/header.html.ejs %>
 
     <section class="grid">
-      <div class="grid-cell grid12">
+
+      <div class="grid-cell grid3">
+
+      </div>
+      <div class="grid-cell grid6 about">
         <h1 class="title">Rob Thwaites</h1>
         <h2>Digital Product Designer</h2>
-      </div>
-
-      <div class="grid-cell grid12">
-
         <p class="p__intro">I am a multi-disciplinary designer, working across UX, visual design and front-end development.</p>
 
-        <p class="p__intro">Right now I am <strong>UX Designer</strong> for the team at PLAYGROUND XYZ, an <a href="http://playground.xyz" target="_blank">award-winning</a> mobile advertising startup.</p>
-        <p class="p__intro"> I lead design on Reporting and Analytics for their online platform, and design and prototype mobile advertising products.</p>
+        <p>Right now I am <strong>UX Designer</strong> for the team at PLAYGROUND XYZ, an <a href="http://playground.xyz" target="_blank">award-winning</a> mobile advertising startup.</p>
+        <p> I lead design on Reporting and Analytics for their online platform, and design and prototype mobile advertising products.</p>
+      </div>
+
+      <div class="grid-cell grid3">
+        <p>rob@robthwaites.com</p>
+        <p>0403899183</p>
 
       </div>
     </section>
 
     <section class="grid work">
-      <h1 style="width:100%; margin-bottom: 1rem;">Work</h1>
-      <% allData.forEach(function(project){ %>
-        <div class="grid-cell grid4" style="margin-bottom: 2rem;">
-          <a class="work__thumb" href="/<%= project.id %>">
-            <img src="/images/thumb-<%= project.id %>.png" alt="">
-          </a>
-          <h3 style="margin-top: 1rem; margin-bottom: 0.25rem;"><%- project.title %></h3>
-           <p style="margin: 0; text-align:center; color: #ff9900"><%- project.type %></p>
-          <!-- <p><%- project.client %></p> -->
-        </div>
-      <% }) %>
+      <!-- <div class="grid-cell grid3">
+        <h1 style="width:100%; margin-bottom: 1rem;">Work</h1>
+      </div>
+      <div class="grid-cell grid9 sub-grid" style="flex-direction: row; flex-wrap: wrap;"> -->
+        <% allData.forEach(function(project){ %>
+          <div class="grid-cell grid4" style="padding: 1rem">
+            <a class="work__thumb" href="/<%= project.id %>">
+              <img src="/images/thumb-bw-<%= project.id %>.png" alt="">
+            </a>
+            <h3 style="margin-top: 1rem; margin-bottom: 0.25rem;"><%- project.title %></h3>
+             <p style="margin: 0; text-align:center; color: #ff9900"><%- project.type %></p>
+            <!-- <p><%- project.client %></p> -->
+          </div>
+        <% }) %>
+      <!-- </div> -->
+
     </section>
 
     <section class="grid approach">

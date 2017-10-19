@@ -5,7 +5,7 @@
   "scripts": {
     "start": "npm-run-all -p server watch:less watch:sync",
     "watch:less": "onchange \"less/**/*.less\" -- npm run less",
-    "less": "lessc less/_main.less css/main.css",
+    "less": "lessc less/_main.less css/main.css --source-map=source.map --source-map-rootpath=css/",
     "uglify": "uglifyjs js/app.js --compress --mangle -o ./js/app.min.js",
     "watch:css": "onchange \"scss/*.scss\" -- npm run css",
     "css": "node bin/scss.js",

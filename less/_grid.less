@@ -4,7 +4,7 @@
 
 html{
 	height: 100%;
-	font-size: 24px;
+	font-size: 20px;
 }
 
 @columnColor: #bada55;
@@ -65,7 +65,7 @@ body {
 
 .media-small-device({
 	html{
-		font-size: 14px;
+		font-size: 17px;
 	}
 });
 
@@ -77,7 +77,7 @@ body {
 
 .grid{
 	width: @baseWidth;
-	margin: 0 auto;
+	// margin: 0 auto;
 	display:flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -93,19 +93,32 @@ body {
 	display:flex;
 }
 
+.grid-cell.sub-grid{
+	// width: @baseWidth;
+	margin: 0 auto;
+	display:flex;
+	flex-direction: row;
+	// flex-wrap: wrap;
+	justify-content: space-between;
+	.grid-cell{
+		// margin-right: 1rem;
+	}
+}
+
 section {
-	margin-top: 1rem;
-		padding: 2rem 4rem;
+	// margin-bottom: 1.5rem;
+	padding: 2rem 1rem;
 }
 
 .baseGridWidths(@i: 1) when (@i <= (@numColumns)) {
   .grid@{i} {
-    // width: ~"calc(("@baseWidth~" * "@i/@numColumns~") - 1rem)";
-		// flex:none;
-		// &.no-gutter{
+    width: ~"calc(("@baseWidth~" * "@i/@numColumns~") - 1rem)";
+		flex:none;
+		margin: 0 0.5rem;
+		&.no-gutter{
 			width: ~"calc("@baseWidth~" * "@i/@numColumns~")";
 			margin:0;
-		// }
+		}
 		.media-phone-portrait({
 			width:100%;
 		});
