@@ -1,28 +1,26 @@
 <% include ../partials/header.html.ejs %>
 
   <section class="grid intro">
-    <div class="grid-cell grid6 intro__text">
+    <div class="grid-cell grid8 intro__text">
       <div class="top-content" style="color: <%= pageData.current.color %>">
         <!-- <img src="/images/reporting/top-thumbs.png" alt="" style="max-width: 80%; margin: 1rem 0"> -->
-        <p>Playground XYZ offer a full-service mobile advertising platform, where advertisers can design, deploy and monitor mobile advertising campaigns.</p>
-        <p>Though we had automated a lot of our workflow, we still lacked customer-facing tools that which would enable users to monitor the process of their campaigns.</p>
-        <p>I designed this Reporting Dashboard for the company to be integrated into our customer-facing platform. It involved creating a <strong>Campaigns Listing </strong> and <strong>Reporting and Analytics</strong> screens.</p>
+        <p>Playground XYZ offer a full-service mobile advertising platform, where advertisers can create and deploy mobile advertising campaigns.</p>
+        <p>Our online platform required a Reporting Dashboard for clients to monitor and gain insights on the performance of their ad placements. I designed and prototyped the <strong>Campaigns Listing </strong> and <strong>Reporting and Analytics</strong>          screens.</p>
       </div>
 
     </div>
-    <div class="grid-cell grid6 credits">
+    <div class="grid-cell grid4 credits">
       <div class="top-content">
         <h3>My Work</h3>
         <p>UX Research, Design, Prototype </p>
       </div>
   </section>
 
-  <section class="grid reverse-mobile">
+  <section class="grid">
     <div class="grid-cell grid4">
       <h2>Campaigns Listing</h2>
       <p>Playground customers are usually managing multiple ad campaigns at once, each containing multiple ad creatives and audience targetting.</p>
-      <p>My challenge: to provide users with immediate insight into the performance of their campaigns on login.</p>
-      <p>I drafted and iterated on layout concepts for the application in Balsamiq Mockups, then coded up concepts with HTML/CSS/JS to create a data-driven, moving prototype.</p>
+      <p>My challenge was to provide users with immediate insight into the performance of their campaigns on login.</p>
     </div>
     <div class="grid-cell grid8 single-image">
       <img src="/images/reporting/dashboard1.jpg" alt="" style="align-self: flex-end">
@@ -36,76 +34,59 @@
     <div class="grid-cell grid5">
       <h2>Reporting and Analytics</h2>
       <p>We wanted to provide customers with custom, easily comprehensible visualisations of their Campaign Data.</p>
-      <p>I used Sketch to create draft designs for charts in consultation with our Operations Team with Sketch, ensuring they would make sense to our customers.</p>
-      <p>I brought the final concepts to life in the browser using dummy campaign data, custom SVG charts and leveraging the amazing Amcharts API for the more complex charts.</p>
+      <p>We also aimed to provide some basic analytics controls, so the data could be split and viewed in a number of ways to gain deeper insights on campaign performance, such as which targetted audience was responding most to the ads based on clicks or
+        engagement.
+      </p>
     </div>
   </section>
 
 
-  <section class="grid reverse-mobile slider-section">
-    <div class="grid-cell grid5">
-        <div class="slider__captions" id="slider-campaigns-captions">
-          <div class="caption">
-            <h4>List and Breakdown</h4>
-            <p> Overview of your campaigns view can be expanded to show what placements you have running, and targetted audiences</p>
-          </div>
-          <div class="caption">
-            <h4>Performance at a glance</h4>
-            <p> Quickly assess placement performance and view alerts</p>
-          </div>
-          <div class="caption">
-            <h4>Ad preview</h4>
-            <p>Users can refresh their memory of the ad creative running in each placement</p>
-          </div>
+  <section class="grid slider-section">
+    <h2 style="width:100%">Key Features</h2>
+    <div class="grid-cell grid3 captions-cell">
+      <div class="slider__count">
+        <span class="current-count"></span>
+        <span class="full-count"></span>
+      </div>
+      <div class="slider__captions" id="slider-campaigns-captions">
+        <div class="caption current">
+          <h4>Campaigns, Creatives, Placements</h4>
+          <p> Overview of your campaigns can be expanded to display the ad creatives for each campaign, whether ad placement is delivering and generating engagement form its target audience.</p>
         </div>
-        <div class="slider__nav" id="slider-campaigns-nav">
-          <svg class="slider__arrow slider__arrow--left" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-            <use x="0" y="0" href="#arrow-left"></use>
-          </svg>
-          <svg class="slider__arrow slider__arrow--right" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-            <use x="0" y="0" href="#arrow-right"></use>
-          </svg>
+        <div class="caption">
+          <h4>Visual insights</h4>
+          <p>Custom charts quickly surface the most relevant data for campaign managers, including alerts when key metrics for a campaign are not hitting their benchmarks.</p>
         </div>
+        <div class="caption">
+          <h4>Annotations and Alerts</h4>
+          <p>Customers are quickly alerted when the data indicates a placement is not performing to benchmarks. Annotations keep track of where optimisations were made during the campaign to improve campaign performance.</p>
+        </div>
+        <div class="caption">
+          <h4>Basic Analytics</h4>
+          <p>Campaign data can be split and grouped in various ways - by placement, audience and site. Animated transitions and color coding assist clients to make comparisons and gain insights</p>
+        </div>
+      </div>
+      <div class="slider__nav" id="slider-campaigns-nav">
+        <svg class="slider__arrow slider__arrow--left" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+          <use x="0" y="0" href="#arrow-left"></use>
+        </svg>
+        <svg class="slider__arrow slider__arrow--right" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+          <use x="0" y="0" href="#arrow-right"></use>
+        </svg>
+      </div>
     </div>
-    <div class="grid-cell grid7">
+    <div class="grid-cell grid9 slider-cell">
 
       <div id="slider-campaigns" class="slider--desktop">
-
-        <!-- <div class="image-slide">
-          <img src="/images/reporting/overview.png" alt="">
-        </div> -->
 
         <!-- image and content -->
         <div class="video-slide">
           <video autoplay loop muted playsinline>
-            <source src="/images/1-details_v2.mp4">
+            <source src="/video/v2-list-breakdown.mp4">
             <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
             <!-- <img src="image.gif"> -->
           </video>
         </div>
-
-        <!-- <div class="image-slide">
-          <img src="/images/reporting/placement-metrics-detail.png" alt="">
-        </div> -->
-
-        <div class="video-slide">
-          <video autoplay loop muted playsinline>
-            <source src="/images/4-preview.mp4">
-            <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
-            <!-- <img src="image.gif"> -->
-          </video>
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <section class="grid">
-    <div class="grid-cell grid7">
-
-      <div id="slider-charts" class="slider--desktop">
 
         <!-- image and content -->
         <div class="video-slide">
@@ -125,14 +106,6 @@
 
         <div class="video-slide">
           <video autoplay loop muted playsinline>
-            <source src="/images/3-notes.mp4">
-            <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
-            <!-- <img src="image.gif"> -->
-          </video>
-        </div>
-
-        <div class="video-slide">
-          <video autoplay loop muted playsinline>
             <source src="/images/4-split.mp4">
             <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
             <!-- <img src="image.gif"> -->
@@ -142,90 +115,43 @@
       </div>
 
     </div>
-    <div class="grid-cell grid5">
-      <div class="top-content">
-        <h3>Campaign Analytics</h3>
-        <div class="slider__captions" id="slider-charts-captions">
-          <p><strong>Visual breakdown</strong> data can be viewed in easily understandable charts</p>
-          <p><strong>Functional animation</strong> Transitions and color coding assist clients to gain insight through visual comparison of data sets.</p>
-          <p><strong>Annotations</strong> can tell a chronological account of optimisations that were made throughout the campaign.</p>
-          <p><strong>Meaningful comparisons</strong> clients are limited to splitting and grouping their campaign data in ways that will help them reach essential insights.</p>
-        </div>
-        <div class="slider__nav" id="slider-charts-nav">
-          <svg class="slider__arrow slider__arrow--left" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-            <use x="0" y="0" href="#arrow-left"></use>
-          </svg>
-          <svg class="slider__arrow slider__arrow--right" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-            <use x="0" y="0" href="#arrow-right"></use>
-          </svg>
-        </div>
-      </div>
-
-    </div>
 
   </section>
 
-  <section class="grid reverse-mobile">
-    <div class="grid-cell grid4">
-      <div class="top-content">
-        <h3>Report Download</h3>
-        <div class="slider__captions" id="slider-download-captions">
-          <p><strong>Download Data</strong> All data is availble to the client as an Excel file.</p>
-          <p><strong>Formatted Custom Report</strong> Colour coding and sheet layout for a clear view of your final data.</p>
-        </div>
-        <div class="slider__nav" id="slider-download-nav">
-          <svg class="slider__arrow slider__arrow--left" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-            <use x="0" y="0" href="#arrow-left"></use>
-          </svg>
-          <svg class="slider__arrow slider__arrow--right" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-            <use x="0" y="0" href="#arrow-right"></use>
-          </svg>
-        </div>
-      </div>
-
+  <section class="grid additional-features" style="background: <%= color.palegrey %>;">
+    <h2 style="width:100%;">Additional Features</h2>
+    <div class="grid-cell grid6">
+      <img src="/images/reporting/preview-creative.jpg" alt="" style="align-self: center; width: 100%">
+      <h4>Ad previews</h4>
+      <p>Ad Creative can be viewed as a preview to show advertisers what their customers are seeing.</p>
     </div>
-    <div class="grid-cell grid8">
-
-      <div id="slider-download" class="slider--desktop">
-
-        <!-- image and content -->
-        <div class="video-slide">
-          <video autoplay loop muted playsinline>
-            <source src="/images/5-download.mp4">
-            <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
-            <!-- <img src="image.gif"> -->
-          </video>
-        </div>
-        <div class="image-slide">
-          <img src="/images/reporting/download-sheet.png" alt="">
-        </div>
-      </div>
-
+    <div class="grid-cell grid6">
+      <img src="/images/reporting/download-sheet.jpg" alt="" style="align-self: center; width: 100%">
+      <h4>Data downloads</h4>
+      <p>All data is downloadable as a formatted Excel document for further analysis.</p>
     </div>
   </section>
 
   <section class="grid process">
+    <h2 style="width:100%">Process</h2>
     <div class="grid-cell grid5 process-hero">
-    <img src="/images/process-reporting.png" alt="">
+      <img src="/images/process-reporting.png" alt="">
     </div>
     <div class="grid-cell grid7">
       <p>
         <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
           <use x="0" y="0" href="#research"></use>
-        </svg>
-        Gathered user FAQs and most requested  campaign  insights user input through our Operations Team,  based on two years of managing campaigns and reporting in-house.</p>
+        </svg> Gathered user FAQs and most requested campaign insights user input through our Operations Team, based on two years of managing campaigns and reporting in-house.</p>
 
       <p>
         <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
           <use x="0" y="0" href="#plan"></use>
-        </svg>
-        Wireframed the application using Balsamiq mockups over several iterations until we hit on the most clear and efficient layout.</p>
+        </svg> Wireframed the application using Balsamiq mockups over several iterations until we hit on the most clear and efficient layout.</p>
 
       <p>
         <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
           <use x="0" y="0" href="#codesign"></use>
-        </svg>
-        Built the prototype with HTML / CSS / JS, using the Amcharts API for the more complex charts. I also created a ‘dummy data’ generator with Javascript, with which we could simulate errors to see how the interface would respond.</p>
+        </svg> Built the prototype with HTML / CSS / JS, using the Amcharts API for the more complex charts. I also created a ‘dummy data’ generator with Javascript, with which we could simulate errors to see how the interface would respond.</p>
     </div>
   </section>
 

@@ -45,30 +45,30 @@ function makeSlider(divID) {
 
   var sliderNavBelow = $('<div id="' + divID + '-nav-below" class="slider__nav-below"></div>');
 
-  var sliderCount = $('<div class="slider__count"></div>')
-  sliderNavBelow.append(sliderCount);
-
-  var sliderCurrentCount = $('<span class="current-count">1</span>');
-  var sliderFullCount = $('<span class="full-count">1</span>');
+  var sliderCount = $('.slider__count');
+  // sliderNavBelow.append(sliderCount);
+  //
+  var sliderCurrentCount = $('.current-count');
+  var sliderFullCount = $('.full-count');
 
   sliderCurrentCount.html(slider.currSlideId + 1);
   sliderFullCount.html(slider.numSlides);
 
-  sliderCount.append([sliderCurrentCount, sliderFullCount]);
-
-  sliderFullscreen = $('<div class="slider__fullscreen-button"><svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet"><use x="0" y="0" href="#zoom"></use></svg><span>Fullscreen</span></div>');
-
-  sliderNavBelow.append(sliderFullscreen);
-  sliderNavBelow.insertAfter(sliderDiv);
+  // sliderCount.append([sliderCurrentCount, sliderFullCount]);
+  //
+  // sliderFullscreen = $('<div class="slider__fullscreen-button"><svg viewBox="0 0 300 300"  preserveAspectRatio="xMidYMid meet"><use x="0" y="0" href="#zoom"></use></svg><span>Fullscreen</span></div>');
+  //
+  // sliderNavBelow.append(sliderFullscreen);
+  // sliderNavBelow.insertAfter(sliderDiv);
 
   var currentCount = sliderNavBelow;
 
   // activate fullscreen button
 
-  sliderFullscreen.on('click', function(){
-    console.log(slider);
-    slider.enterFullscreen();
-  });
+  // sliderFullscreen.on('click', function(){
+  //   console.log(slider);
+  //   slider.enterFullscreen();
+  // });
 
   slider.ev.on('rsBeforeAnimStart', function() {
     sliderCurrentCount.html(slider.currSlideId + 1);
