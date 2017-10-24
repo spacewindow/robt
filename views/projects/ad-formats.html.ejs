@@ -4,7 +4,7 @@
     <div class="grid-cell grid8 intro__text">
       <div class="top-content" style="color: <%= pageData.current.color %>">
         <p>Playground XYZ wants to change the way advertisers interact with their customers on mobiles.</p>
-        <p>I and the rest of the design team were tasked with devising, prototyping and testing new canvases and templates that would be user-friendly and appeal to advertisers.</p>
+        <p>I was responsible for developing and refining the Hang Time and Vertical Video products, based on a concept from our product team.</p>
       </div>
 
     </div>
@@ -24,11 +24,10 @@
       <div class="top-content">
         <h3>The Hang Time</h3>
 
-        <p>Say somethign about being able to get pixel perfect layouts in the ads... templates with clear guides and guidelines. Maybe use a picture of one of our Wizard templates in the process section.</p>
+      <p>The Hang Time is a full-screen vertical format for mobile that momentarily delays the user in an inline ad experience as they scroll through an article.</p>
+        <p>A beta product was developed by our product team, but was rather difficult to work with. I suggested the idea of animations on a timeline that would 'scrub' with the Hang Time 'progress'.</p>
 
-        <p>I helped design and develop this full-screen format that engages customers with full-screen ad experiences, and animated timelines that 'scrub' back and forth with user scroll.</p>
-        <p> My design of the timeline and the lightweight Javascript that powered it were my key contributions to the project.</p>
-        <p>This impressive, popular format lead to strong ad campaign results for clients, driven by impressive creative executions and user-friendliness of the format.</p>
+        <p>I developed a simple Javascript to run these animations, in a way that was easy to template so we could  produce pixel-perfect animation that would work across all device sizes.</p>
 
       </div>
     </div>
@@ -49,9 +48,8 @@
 
   </section>
 
-  <section class="block grid">
-    <div class="grid-cell grid6" style="background: #666">
-
+  <section class="block grid slider-section">
+    <div class="grid-cell grid7">
       <div id="slider-hangtime" class="slider--mobile">
 
         <!-- image and content -->
@@ -82,8 +80,9 @@
       </div>
 
     </div>
-    <div class="grid-cell grid6">
+    <div class="grid-cell grid5">
       <div class="top-content">
+        <p>The scrubbing animations became the essential feature of the format.</p>
         <p>I had a lot of fun rolling this out into ad executions for many brands and campaigns.</p>
         <div class="slider__captions" id="slider-hangtime-captions">
           <p><strong>Honda Annual Clearance</strong></p>
@@ -112,19 +111,17 @@
   <section class="grid">
     <div class="grid-cell grid4">
       <div class="top-content">
-        <h3>Store Locator</h3>
+        <h3>Vertical Video</h3>
 
-        <p>Playground needed a 'store locator' with a simple set-up for clients, including a Google Map that could be populated with locations based on a few simpel search terms.</p>
+        <p>Playground needed a product to house advertisers' vertical video content, and the Hang Time was the perfect vehicle.</p>
 
-        <p>The ad unit would also use Google Geolocation to estimate the user location without having to request it, as we knew from our data that users were generally reluctant to share their location.</p>
-
-        <p>I created careful user-flows and decision trees to craft an experience that would encourage the user to engage with the ad. These formed the basis of scripts I developed that leveraged the Google maps API and integrate it with our own AdSDK.</p>
+        <p>The challenge was to have a responsive product where the full video content would be visible wherever the ad was displayed - different devices, sites, browsers.</p>
 
       </div>
     </div>
     <div class="grid-cell grid8">
       <div class="image-slide">
-        <img src="/images/ads/store-locator-spec.jpg" alt="">
+        <img src="/images/ads/process-vertical-video.png" alt="">
       </div>
     </div>
 
@@ -137,14 +134,14 @@
         <!-- image and content -->
         <div class="video-slide">
           <video autoplay loop muted playsinline style="border: 1px solid black;">
-            <source src="/images/ads/ads-maccers-sl.mp4">
+            <source src="/images/ads-adf.mp4">
             <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
             <!-- <img src="image.gif"> -->
           </video>
         </div>
         <div class="video-slide">
           <video autoplay loop muted playsinline style="border: 1px solid black;">
-            <source src="/images/ads/ads-maccers-sl.mp4">
+            <source src="/images/ads-wonderwoman.mp4">
             <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
             <!-- <img src="image.gif"> -->
           </video>
@@ -155,20 +152,36 @@
 
     <div class="grid-cell grid6">
       <div class="top-content">
-        <p>The ease of setup and simple UX made the Store Locator a popular choice for brands.</p>
-        <p>The format was used successfully with a number of brands.</p>
+        <p>The Vertical Video ended up with two versions, "fit" or "fill", where advertisers could decide whether to use a safe 'letterbox'-style video presentation, or take advantage of an impactful full-screen experience.</p>
+        <p>I enjoyed creating a number of templated and custom executions for brands using my new ad format.</p>
 
       </div>
     </div>
 
   </section>
 
-  <section class="grid image-frame">
-      <div class="grid-cell grid10">
-        <img src="/images/ads/ads-mock1.jpg" alt="">
-        <img src="/images/ads/ads-mock2.jpg" alt="">
-      </div>
+  <section class="grid process">
+    <h2 style="width:100%">Process</h2>
+    <div class="grid-cell grid5 process-hero">
+      <img src="/images/process-reporting.png" alt="">
+    </div>
+    <div class="grid-cell grid7">
 
+        <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+          <use x="0" y="0" href="#codesign"></use>
+        </svg>I worked up a prototype of the format using HTML/CSS/JS.</p>
+
+      <p>
+        <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+          <use x="0" y="0" href="#research"></use>
+        </svg>I consulted with the product team to get sign off on the concept and behaviour.</p>
+
+        <p>
+          <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+            <use x="0" y="0" href="#plan"></use>
+          </svg>I created a detailed spec for the exact behaviour of the Hang Time and Vertical Video for handover to the dev team.</p>
+        <p>
+    </div>
   </section>
 
 

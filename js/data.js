@@ -21,6 +21,14 @@ const data = [
     color: "#72b1a3"
   },
   {
+    id: "store-locator",
+    title: "Store Locator",
+    type: "Mobile web components",
+    client: "Playground XYZ",
+    description: "Ad product with Google Maps API intergration",
+    color: "#ff0000"
+  },
+  {
     id: "characters",
     title: "Brand Characters",
     type: "Javascript animation",
