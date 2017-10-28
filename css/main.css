@@ -1670,6 +1670,10 @@ element.style {
   text-align: center;
   padding: 0;
 }
+.top-content {
+  position: absolute;
+  top: 2rem;
+}
 .top-content h3 {
   margin-bottom: 2rem;
 }
@@ -1740,7 +1744,7 @@ element.style {
   left: 0;
   width: 4em;
   height: 4em;
-  fill: #333333;
+  fill: #ffffff;
 }
 .process-hero img {
   align-self: center;

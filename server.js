@@ -5,7 +5,7 @@ const tinycolor = require("tinycolor2");
 
 const {data} = require("./js/data.js");
 
-app.set('port', (process.env.PORT || 5000));
+app.set('port', (process.env.PORT || 8080));
 
 app.use(express.static(__dirname));
 

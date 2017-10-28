@@ -20,24 +20,31 @@
   <section class="grid">
     <div class="grid-cell grid4">
       <div class="top-content">
-        <h3>Store Locator</h3>
+        <h4>Engagement journey</h3>
 
-        <p>The ad unit would also use Google Geolocation to estimate the user location without having to request it, as we knew from our data that users were generally reluctant to share their location.</p>
+        <p>We knew from our campaign data that users are reluctant to share their location with brands.</p>
+
+        <p>The ad unit would engage users incrementally:</p>
+        <ul>
+          <li>Estimate user location using Google Geolocation, then use Search to fetch a list of nearby locations to make a purchase.</li>
+          <li>Display the locations in a custom Google map styled match the brand.</li>
+          <li>The customer could control whether to refine their location, or open up directions in the Maps app or web browser.</li>
+        </ul>
 
       </div>
     </div>
     <div class="grid-cell grid8">
       <div class="image-slide">
-        <img src="/images/ads/store-locator-spec.jpg" alt="">
+        <img src="/images/store-locator/store-locator-schematic.png" alt="">
       </div>
     </div>
 
   </section>
 
-  <section class="grid">
+  <section class="block grid slider-section">
 
     <div class="grid-cell grid6">
-      <div class="slider--mobile">
+      <div class="slider--mobile" id="slider-store-locator">
         <!-- image and content -->
         <div class="video-slide">
           <video autoplay loop muted playsinline style="border: 1px solid black;">
@@ -57,15 +64,68 @@
       </div>
     </div>
 
-    <div class="grid-cell grid6">
-      <div class="top-content">
-        <p>The ease of setup and simple UX made the Store Locator a popular choice for brands.</p>
-        <p>The format was used successfully with a number of brands.</p>
-
+    <div class="grid-cell grid6 captions-cell">
+      <div class="slider__count">
+        <span class="current-count"></span>
+        <span class="full-count"></span>
       </div>
+      <div class="top-content">
+        <p>This ease of setup and simple UX made the Store Locator a popular choice for brands.</p>
+        <p>The format was used successfully with a number of campaigns.</p>
+      </div>
+
+        <div class="slider__captions" id="slider-store-locator-captions">
+          <div class="caption current">
+            <h4>McDonalds</h4>
+            <p>With locations everywhere, McDonalds was an obvious candidate for a Store Locator ad to generate foot traffic into outlets.</p>
+          </div>
+          <div class="caption">
+            <h4>Schweppes</h4>
+            <p>Multiple locations were possible for brands - Schweppes beverages were available from 7-Elevens and Caltex, providing multiple possible destinations.</p>
+          </div>
+
+        </div>
+
+        <div class="slider__nav" id="slider-store-locator-nav">
+
+            <svg class="slider__arrow slider__arrow--left" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+              <use x="0" y="0" href="#arrow-left"></use>
+            </svg>
+
+            <svg class="slider__arrow slider__arrow--right" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+              <use x="0" y="0" href="#arrow-right"></use>
+            </svg>
+
+          </div>
     </div>
 
   </section>
+
+  <section class="grid process">
+    <h2 style="width:100%">Process</h2>
+    <div class="grid-cell grid6 process-hero">
+      <img src="/images/process-store-locator.png" alt="">
+    </div>
+    <div class="grid-cell grid76">
+
+      <p>
+        <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+          <use x="0" y="0" href="#plan"></use>
+        </svg>Based on requirements from th eproduct manager, I made a detailed customer-journey map for the application to get sign-off.</p>
+      <p>
+        <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+          <use x="0" y="0" href="#codesign"></use>
+        </svg>I prototyped the unit locally discovering the capabilities of the Google Maps API and working on the visual presentation of the app in parellel.</p>
+
+        <p>
+          <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+            <use x="0" y="0" href="#code"></use>
+          </svg>The ad unit was now solid, and was handed over to the development team to integrate with our reporting system and deploy.</p>
+        <p>
+    </div>
+  </section>
+
+<!-- 
 
   <section class="grid image-frame">
       <div class="grid-cell grid10">
@@ -73,7 +133,7 @@
         <img src="/images/ads/ads-mock2.jpg" alt="">
       </div>
 
-  </section>
+  </section> -->
 
 
   <% include ../partials/footer.html.ejs %>

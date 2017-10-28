@@ -3,14 +3,15 @@
   "description": "Rob Thwaites Portfolio",
   "main": "server.js",
   "scripts": {
-    "start": "npm-run-all -p server watch:less watch:sync",
+    "dev": "npm-run-all -p start watch:less watch:sync",
+    "start": "node server.js",
+    "deploy": "gcloud app deploy",
     "watch:less": "onchange \"less/**/*.less\" -- npm run less",
     "less": "lessc less/_main.less css/main.css --source-map=source.map --source-map-rootpath=css/",
     "uglify": "uglifyjs js/app.js --compress --mangle -o ./js/app.min.js",
     "watch:css": "onchange \"scss/*.scss\" -- npm run css",
     "css": "node bin/scss.js",
-    "server": "node server.js",
-    "watch:sync": "browser-sync start --port \"4000\" --ui-port \"4001\"  --proxy \"127.0.0.1:5000\"  --files \"css/*.css, views/**/*.html.ejs, js/*.js, images/**/*.jpg\" --startPath \"/e-newsletters\""
+    "watch:sync": "browser-sync start --port \"4000\" --ui-port \"4001\"  --proxy \"127.0.0.1:8080\"  --files \"css/*.css, views/**/*.html.ejs, js/*.js, images/**/*.jpg\" --startPath \"/e-newsletters\""
   },
   "repository": {
     "type": "git",
@@ -24,7 +25,8 @@
   "homepage": "https://github.com/#readme",
   "dependencies": {
     "ejs": "^1.0.0",
-    "express": "^4.6.1"
+    "express": "^4.6.1",
+    "tinycolor2": "^1.4.1"
   },
   "devDependencies": {
     "glob": "^7.1.0",
@@ -40,7 +42,6 @@
     "uglify-js": "^2.7.4",
     "autoprefixer": "^6.7.3",
     "lucid-ui": "^2.15.2",
-    "less": "^2.7.2",
-    "tinycolor2": "^1.4.1"
+    "less": "^2.7.2"
   }
 }
