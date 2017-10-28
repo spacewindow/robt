@@ -201,7 +201,7 @@ function progress(element, offsetStart){ // element is the selector string
   if (currentPosition < scrollTopStart) {
       progress = 0;
   } else if (currentPosition > scrollTopEnd) {
-      progress = 100;
+      progress = 1;
   } else {
       progress = ((currentPosition - scrollTopStart) / (scrollTopEnd - scrollTopStart));
   }

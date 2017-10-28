@@ -1483,12 +1483,6 @@ element.style {
   background-repeat: no-repeat;
   z-index: 2;
 }
-.edm-grid {
-  background-image: url(../images/email/email-litmus-grid.png);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-}
 .highlight {
   position: absolute;
   height: 5%;
