@@ -1,26 +1,15 @@
 <% include ../partials/header.html.ejs %>
 
   <section class="grid intro">
-    <div class="grid-cell grid8 intro__text">
-      <div class="top-content" style="color: <%= pageData.current.color %>">
+    <div class="grid-cell grid8 intro__text"  style="color: <%= pageData.current.color %>">
         <p>Critical Stages needed to raise $25,000 in tax-deductible donations to send hit show <em>Songs for the Fallen</em> on its first international tour.</p>
         <p>I was contracted to create a rich-media brochure site, showcasing the new music and rich design of the show.</p>
-      </div>
-
     </div>
     <div class="grid-cell grid4 credits">
-      <div class="top-content"><h3>Design<br/>Front-End Development<br/>CMS</h3>
+<h3>Design<br/>Front-End Development<br/>CMS</h3>
       <p>Rob Thwaites</p>
-
     </div>
-  </section>
 
-  <section class="grid">
-    <div class="grid-cell grid12 hero-slide">
-      <div class="image-slide" style="border-color: black; background: black;">
-        <img src="/images/songs/songs-slide1.jpg" alt="">
-      </div>
-    </div>
   </section>
 
 
@@ -42,11 +31,11 @@
 
   </section>
 
-  <section class="grid">
+  <section class="grid" style="background: <%= color.lightgrey %>">
 
     <div class="grid-cell grid6">
           <video autoplay loop muted playsinline style="height: 30vw;">
-            <source src="/video/songs-thumbs.mp4">
+            <source src="/images/songs/songs-thumbs.mp4">
             <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
             <!-- <img src="image.gif"> -->
           </video>
@@ -81,14 +70,14 @@
 
   </section>
 
-  <section class="grid block">
+  <section class="grid block  slider-section">
 
     <div class="grid-cell grid8">
       <div class="slider--desktop">
         <!-- image and content -->
         <div class="video-slide">
           <video autoplay loop muted playsinline style="border: 1px solid black;">
-            <source src="/video/songs-demo.mp4">
+            <source src="/images/songs/songs-demo.mp4">
             <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
             <!-- <img src="image.gif"> -->
           </video>
@@ -122,6 +111,30 @@
       </div>
     </div>
 
+  </section>
+
+  <section class="grid process">
+    <h2 style="width:100%">Process</h2>
+    <div class="grid-cell grid5 process-hero">
+      <img src="/images/process-songs.png" alt="">
+    </div>
+    <div class="grid-cell grid7">
+
+        <p><svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+          <use x="0" y="0" href="#research"></use>
+        </svg>I consulted closely with the show's director on the functionality and look and feel of the site, mocking designs in Photoshop to get sign-off.</p>
+
+      <p>
+        <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+          <use x="0" y="0" href="#codesign"></use>
+        </svg>I coded up a static responsive version of the site with HTML/CSS/JS.</p>
+
+        <p>
+          <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+            <use x="0" y="0" href="#code"></use>
+          </svg>I realised that it would be easier for the clients to update their own content. I ported the static website to Wordpress and deployed it to a PHP server.</p>
+        <p>
+    </div>
   </section>
 
 
