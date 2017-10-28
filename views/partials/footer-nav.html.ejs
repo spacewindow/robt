@@ -3,7 +3,7 @@
     <div class="grid-cell previous">
       <a href="/<%= pageData.previous.id %>" style="color: <%= pageData.previous.color %>">
           <img src="/images/thumb-bw-<%= pageData.previous.id %>.png" alt="">
-          <span><%= pageData.previous.title %></span>
+          <span><%- pageData.previous.title %></span>
       </a>
     </div>
     <% } %>
@@ -11,7 +11,7 @@
     <div class="grid-cell next">
       <a style="color: <%= pageData.next.color %>" href="/<%= pageData.next.id %>">
           <img src="/images/thumb-bw-<%= pageData.next.id %>.png" alt="">
-          <span><%= pageData.next.title %></span>
+          <span><%- pageData.next.title %></span>
       </a>
     </div>
   <% } %>

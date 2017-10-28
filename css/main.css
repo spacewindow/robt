@@ -1261,12 +1261,15 @@ img {
   fill: #aaaaaa;
 }
 .slider__arrow {
-  fill: #ffffff;
+  fill: #333333;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 1.5rem;
   height: 1.5rem;
+}
+.slider-section .slider__arrow {
+  fill: #ffffff;
 }
 .video-slide {
   position: absolute;
