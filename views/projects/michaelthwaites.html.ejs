@@ -20,51 +20,33 @@
   </section>
 
 
-  <section class="grid">
-    <div class="grid-cell grid8" style="margin-left: 20% ">
-      <div class="slider--desktop" style="border-color: #333;">
-          <div class="image-slide" style="position: absolute; top:0;">
-            <img src="/images/thwaites/hero.jpg" alt="">
-          </div>
-        </div>
-    </div>
-  </section>
-
-
-  <section class="grid">
-    <div class="grid-cell grid5">
-      <div class="top-content">
-        <h3>Features</h3>
+  <section class="grid slider-section">
+    <div class="grid-cell grid5" style="justify-content: flex-end;">
+        <h3 style="position:absolute; top: 2rem;">Features</h3>
         <div class="slider__captions" id="slider-poetry-captions">
-          <p>Family albums were raided to create an iconic image for each poem. Poems with audio display an icon in the visual navigation.</p>
-          <p>Each poem was carefully and clearly typeset so that the visual appeal and extra features of the site did not interfere with the power of the words alone.</p>
-        </div>
-
+          <div class="caption current"><p>Family albums were raided to create an iconic image for each poem. Poems with audio display an icon in the visual navigation.</p></div>
+          <div class="caption"><p>Each poem was carefully and clearly typeset so that the visual appeal and extra features of the site did not interfere with the power of the words alone.</p></div>
       </div>
       <div class="slider__nav" id="slider-poetry-nav">
 
           <svg class="slider__arrow slider__arrow--left" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-            <use x="0" y="0" href="#arrow-left"></use>
+            <use x="0" y="0" xlink:href="#arrow-left"></use>
           </svg>
 
           <svg class="slider__arrow slider__arrow--right" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-            <use x="0" y="0" href="#arrow-right"></use>
+            <use x="0" y="0" xlink:href="#arrow-right"></use>
           </svg>
 
         </div>
     </div>
 
     <div class="grid-cell grid7">
-      <div  id="slider-poetry-fullscreen" class="slider__fullscreen-button">
-        <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-          <use x="0" y="0" href="#zoom"></use>
-        </svg>
-      </div>
+
       <div id="slider-poetry" class="slider--desktop">
         <!-- image and content -->
         <div class="video-slide">
           <video autoplay loop muted playsinline>
-            <source src="/video/mrt-nav.mp4">
+            <source src="/images/thwaites/thwaites-nav.mp4">
             <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
             <!-- <img src="image.gif"> -->
           </video>
@@ -72,7 +54,7 @@
 
         <div class="video-slide">
           <video autoplay loop muted playsinline>
-            <source src="/video/mrt-poem.mp4">
+            <source src="/images/thwaites/thwaites-poem.mp4">
             <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
             <!-- <img src="image.gif"> -->
           </video>
@@ -88,12 +70,13 @@
 
     <div class="grid-cell grid7">
       <div class="image-slide">
-        <img src="/images/thwaites/06.jpg" alt="">
+        <img src="/images/thwaites/thwaites-ipad.jpg" alt="">
       </div>
     </div>
     <div class="grid-cell grid5">
       <div class="top-content">
-        <p>A playlist of poems from a Concert of Poetry and Music could be listened to on the site, or downloaded from iTunes as a podcast. The author's publications are is also for sale on the website.</p>
+        <p>A playlist of poems from a Concert of Poetry and Music could be listened to on the site, or downloaded from iTunes as a podcast.</p>
+        <p>The author's publications are is also for sale on the website.</p>
       </div>
     </div>
 
@@ -103,7 +86,8 @@
 
     <div class="grid-cell grid6">
       <div class="top-content">
-        <p>Social sharing was a key goal from the start, with Facebook, Twitter and Pinterest APIs incorporated into the site.</p>
+        <p>Social sharing was a key goal from the start.</p>
+        <p>Facebook, Twitter and Pinterest APIs incorporated into the site.</p>
       </div>
     </div>
 
@@ -116,20 +100,28 @@
 
   </section>
 
-  <section class="grid">
 
-    <div class="grid-cell grid6">
-      <div class="image-slide">
-        <img src="/images/thwaites/interface.jpg" alt="">
-      </div>
+  <section class="grid process">
+    <h2 style="width:100%">Process</h2>
+    <div class="grid-cell grid6 process-hero">
+      <img src="/images/thwaites/interface.jpg" alt="">
     </div>
-
     <div class="grid-cell grid6">
-      <div class="top-content">
-        <p>Site content is managed with a custom Wordpress backend, enabling family members to update notes and add new content easily.</p>
-      </div>
-    </div>
+      <p>
+        <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+          <use x="0" y="0" xlink:href="#research"></use>
+        </svg>I dived deep into family photo albums and archived materials to source the text and imagery for the site.</p>
 
+      <p>
+        <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+          <use x="0" y="0" xlink:href="#design"></use>
+        </svg>I mocked up each page of the site with Photoshop, using a series of photo manipulation techniques for the accompanying imagery for each poem.</p>
+
+      <p>
+        <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+          <use x="0" y="0" xlink:href="#code"></use>
+        </svg>I created a Wordpress theme for the site with a custom admin interface, so that family members could upate content easily and contribute.</p>
+    </div>
   </section>
 
   <!-- <script src="/js/birds_loop.js"></script> -->

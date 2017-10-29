@@ -1,11 +1,10 @@
 <% include partials/header.html.ejs %>
 
     <section class="grid">
-
-      <div class="grid-cell grid3">
-
-      </div>
-      <div class="grid-cell grid6 about">
+      <div class="grid-cell grid9 about">
+        <svg class="logo__mobile" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+          <use x="0" y="0" xlink:href="#logo"></use>
+        </svg>
         <h1 class="title">Rob Thwaites</h1>
         <h2>Digital Product Designer</h2>
         <p class="p__intro">I am a multi-disciplinary designer, working across UX, visual design and front-end development.</p>
@@ -27,12 +26,12 @@
       </div>
       <div class="grid-cell grid9 sub-grid" style="flex-direction: row; flex-wrap: wrap;"> -->
         <% allData.forEach(function(project){ %>
-          <div class="grid-cell grid4" style="padding: 1rem">
+          <div class="grid-cell grid4">
             <a class="work__thumb" href="/<%= project.id %>">
               <img src="/images/thumb-bw-<%= project.id %>.png" alt="">
             </a>
             <h3 style="margin-top: 1rem; margin-bottom: 0.25rem;"><%- project.title %></h3>
-             <p style="margin: 0; text-align:center; color: #ff9900"><%- project.type %></p>
+             <p class="work__tag"><%- project.type %></p>
             <!-- <p><%- project.client %></p> -->
           </div>
         <% }) %>
@@ -47,7 +46,7 @@
         <div class="grid-cell grid4">
 
           <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-            <use x="0" y="0" href="#research"></use>
+            <use x="0" y="0" xlink:href="#research"></use>
           </svg>
           <h4>Design for humans</h4>
           <p style="color:red">Can I say somethign about business consultancy? How sometimes the process of comunicating what it is you do helps to articulate what it is your business actually does?</p>
@@ -56,7 +55,7 @@
 
         <div class="grid-cell grid4">
           <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-            <use x="0" y="0" href="#codesign"></use>
+            <use x="0" y="0" xlink:href="#codesign"></use>
           </svg>
           <h4>I Sketch in code</h4>
 
@@ -65,7 +64,7 @@
 
         <div class="grid-cell grid4">
           <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-            <use x="0" y="0" href="#design"></use>
+            <use x="0" y="0" xlink:href="#design"></use>
           </svg>
           <h4>Beauty = Engagement</h4>
 

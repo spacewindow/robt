@@ -454,6 +454,11 @@ body.showgrid:before {
 section {
   padding: 2rem 1rem;
 }
+@media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
+  section {
+    padding: 1rem 0;
+  }
+}
 .grid1 {
   width: calc(( 100%  *  0.08333333 ) - 1rem);
   flex: none;
@@ -465,7 +470,7 @@ section {
 }
 @media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
   .grid1 {
-    width: 100%;
+    width: calc(100% - 1rem);
   }
 }
 .grid2 {
@@ -479,7 +484,7 @@ section {
 }
 @media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
   .grid2 {
-    width: 100%;
+    width: calc(100% - 1rem);
   }
 }
 .grid3 {
@@ -493,7 +498,7 @@ section {
 }
 @media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
   .grid3 {
-    width: 100%;
+    width: calc(100% - 1rem);
   }
 }
 .grid4 {
@@ -507,7 +512,7 @@ section {
 }
 @media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
   .grid4 {
-    width: 100%;
+    width: calc(100% - 1rem);
   }
 }
 .grid5 {
@@ -521,7 +526,7 @@ section {
 }
 @media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
   .grid5 {
-    width: 100%;
+    width: calc(100% - 1rem);
   }
 }
 .grid6 {
@@ -535,7 +540,7 @@ section {
 }
 @media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
   .grid6 {
-    width: 100%;
+    width: calc(100% - 1rem);
   }
 }
 .grid7 {
@@ -549,7 +554,7 @@ section {
 }
 @media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
   .grid7 {
-    width: 100%;
+    width: calc(100% - 1rem);
   }
 }
 .grid8 {
@@ -563,7 +568,7 @@ section {
 }
 @media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
   .grid8 {
-    width: 100%;
+    width: calc(100% - 1rem);
   }
 }
 .grid9 {
@@ -577,7 +582,7 @@ section {
 }
 @media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
   .grid9 {
-    width: 100%;
+    width: calc(100% - 1rem);
   }
 }
 .grid10 {
@@ -591,7 +596,7 @@ section {
 }
 @media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
   .grid10 {
-    width: 100%;
+    width: calc(100% - 1rem);
   }
 }
 .grid11 {
@@ -605,7 +610,7 @@ section {
 }
 @media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
   .grid11 {
-    width: 100%;
+    width: calc(100% - 1rem);
   }
 }
 .grid12 {
@@ -619,7 +624,7 @@ section {
 }
 @media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
   .grid12 {
-    width: 100%;
+    width: calc(100% - 1rem);
   }
 }
 section {
@@ -685,13 +690,9 @@ h1 {
   letter-spacing: 0.03em;
   font-weight: 900;
   text-transform: uppercase;
-  text-align: center;
 }
 h1.title {
   font-size: 2.5256rem;
-}
-h1.title:after {
-  display: none;
 }
 h2 {
   font-family: 'Interstate', Helvetica, Arial, sans-serif;
@@ -737,13 +738,9 @@ p.xsmall {
     letter-spacing: 0.03em;
     font-weight: 900;
     text-transform: uppercase;
-    text-align: center;
   }
   h1.title {
     font-size: 2.5256rem;
-  }
-  h1.title:after {
-    display: none;
   }
   h2 {
     font-family: 'Interstate', Helvetica, Arial, sans-serif;
@@ -790,13 +787,9 @@ p.xsmall {
     letter-spacing: 0.03em;
     font-weight: 900;
     text-transform: uppercase;
-    text-align: center;
   }
   h1.title {
     font-size: 1.6592rem;
-  }
-  h1.title:after {
-    display: none;
   }
   h2 {
     font-family: 'Interstate', Helvetica, Arial, sans-serif;
@@ -843,13 +836,9 @@ p.xsmall {
     letter-spacing: 0.03em;
     font-weight: 900;
     text-transform: uppercase;
-    text-align: center;
   }
   h1.title {
     font-size: 1.0368rem;
-  }
-  h1.title:after {
-    display: none;
   }
   h2 {
     font-family: 'Interstate', Helvetica, Arial, sans-serif;
@@ -1079,6 +1068,8 @@ button.icon-only svg {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  max-width: 100%;
+  overflow: hidden;
   margin: 0 auto;
 }
 .footer-links {
@@ -1150,26 +1141,6 @@ footer a {
   text-align: center;
   font-size: 1.0664rem;
 }
-.app__header {
-  position: fixed;
-  height: 2.3rem;
-  width: 100%;
-  z-index: 100;
-}
-.app__header:after {
-  content: '';
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  transition: all 0.3s ease-out;
-}
-.init .app__header:after {
-  opacity: 0;
-}
 video {
   width: 100%;
 }
@@ -1177,10 +1148,6 @@ img {
   position: relative;
 }
 @media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
-  section {
-    border-bottom: 1px solid #aaaaaa;
-    margin-bottom: 2rem;
-  }
 }
 .slider--mobile {
   position: relative;
@@ -1483,6 +1450,12 @@ element.style {
   background-repeat: no-repeat;
   z-index: 2;
 }
+.edm-grid {
+  background-image: url(../images/email/email-litmus-grid.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .highlight {
   position: absolute;
   height: 5%;
@@ -1603,8 +1576,59 @@ element.style {
   transform-origin: 0 0;
   transition: transform 0.3s ease-out;
 }
+@media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
+  .app__logo {
+    transform: translateX(0%);
+  }
+}
+.app__header {
+  position: fixed;
+  height: 2.3rem;
+  width: 100%;
+  background: white;
+  z-index: 100;
+}
+.app__header:after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-out;
+}
+.init .app__header:after,
+.sticky .app__header:after {
+  opacity: 0;
+}
+.init .app__logo,
+.sticky .app__logo {
+  transform: scale(3);
+}
+@media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
+  .init .app__logo,
+  .sticky .app__logo {
+    transform: translateX(-105%);
+  }
+}
+.init .app__header:after {
+  transition: none;
+}
 .init .app__logo {
-  transform: scale(1.8);
+  transition: none;
+}
+.logo__mobile {
+  display: none;
+}
+@media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
+  .logo__mobile {
+    display: block;
+    width: 100%;
+    height: 10rem;
+  }
 }
 .app__menu {
   padding: 1rem;
@@ -1629,11 +1653,22 @@ element.style {
 }
 .work {
   background: #333333 url(../images/textured_paper.png);
+  justify-content: space-around;
+}
+.work .grid-cell {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+@media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
+  .work .grid-cell {
+    width: calc(50% - 1rem);
+    padding: 0;
+  }
 }
 .work h1,
 .work h2,
 .work h3 {
-  color: #ffffff;
+  color: #ff9900;
 }
 .work h1:after {
   border-color: white;
@@ -1641,11 +1676,10 @@ element.style {
 .work h3 {
   text-align: center;
 }
-.work a.work__thumb {
-  position: relative;
-  margin: 0 auto;
-  width: 100%;
-  padding-top: 74.5%;
+@media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
+  .work h3 {
+    font-size: 0.8rem;
+  }
 }
 .work img {
   position: absolute;
@@ -1654,6 +1688,18 @@ element.style {
   top: 0;
   width: 100%;
   height: auto;
+}
+.work__thumb {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 74.5%;
+}
+.work__tag {
+  color: #fafafa;
+  font-size: 0.6rem;
+  text-align: center;
+  line-height: 0.8rem;
 }
 .thumb-annotations {
   display: flex;
@@ -1720,7 +1766,12 @@ element.style {
   padding-right: 2rem;
 }
 .about {
-  padding: 0 0.5rem;
+  padding: 0 1rem 0 25%;
+}
+@media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
+  .about {
+    padding: 0;
+  }
 }
 .single-image > img {
   width: 85%;

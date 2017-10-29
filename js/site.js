@@ -1,3 +1,4 @@
+
 function makeSlider(divID) {
   var sliderDiv = $("#" + divID);
   if (sliderDiv.length === 0) {
@@ -127,13 +128,23 @@ var scrollDirection = function(section) {
 
 var cgu_mod_TL = new TimelineMax({paused: true});
 
+
+
 $(window).on('load', function() {
 
-  // set width of container so zoom functions - this is still a bit dodgey.
-  $('.grid').css({
-    'width': window.innerWidth + 'px',
-    maxWidth: "100%"
-  });
+  // JS version of media query
+
+  var deviceOrient = window.orientation;
+  var deviceWidth = window.innerWidth;
+  var deviceType = 'desktop';
+
+  if(deviceOrient === 0 && deviceWidth <= 414){
+    deviceType = 'mobile';
+  }
+
+  // alert(deviceType);
+
+  // if(deviceOrient === )
 
   cgu_mod_TL
     .from('[src*="mod-block-1"]', 1, {
@@ -176,7 +187,7 @@ $(window).on('load', function() {
 
   if($('body').hasClass('index')){
 
-    function testScroll(ev){
+    function initClass(ev){
       if(window.pageYOffset>100){
         $('body').removeClass('init');
       }
@@ -184,7 +195,9 @@ $(window).on('load', function() {
         $('body').addClass('init');
       }
     }
-    window.onscroll=testScroll
+
+    initClass();
+    window.onscroll=initClass
     }
 
 });

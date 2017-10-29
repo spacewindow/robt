@@ -109,6 +109,9 @@ body {
 section {
 	// margin-bottom: 1.5rem;
 	padding: 2rem 1rem;
+	.media-phone-portrait({
+		padding: 1rem 0;
+	});
 }
 
 .baseGridWidths(@i: 1) when (@i <= (@numColumns)) {
@@ -121,7 +124,7 @@ section {
 			margin:0;
 		}
 		.media-phone-portrait({
-			width:100%;
+			width:~"calc(100% - 1rem)";
 		});
   }
 	// .grid-cell.wrapper
