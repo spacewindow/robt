@@ -456,7 +456,7 @@ section {
 }
 @media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
   section {
-    padding: 1rem 0;
+    padding: 1rem 1rem;
   }
 }
 .grid1 {
@@ -630,7 +630,14 @@ section {
 section {
   display: flex;
   width: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: flex-start;
+}
+@media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
+  section {
+    border-bottom: 1px solid #efefef;
+  }
 }
 section.block {
   height: 80vh;
@@ -685,14 +692,13 @@ body {
 h1 {
   position: relative;
   font-family: 'Interstate', Helvetica, Arial, sans-serif;
-  font-size: 1.4216rem;
+  font-size: 1.8952rem;
   line-height: 2rem;
   letter-spacing: 0.03em;
   font-weight: 900;
   text-transform: uppercase;
-}
-h1.title {
-  font-size: 2.5256rem;
+  margin-top: 3rem;
+  text-align: center;
 }
 h2 {
   font-family: 'Interstate', Helvetica, Arial, sans-serif;
@@ -733,14 +739,13 @@ p.xsmall {
   h1 {
     position: relative;
     font-family: 'Interstate', Helvetica, Arial, sans-serif;
-    font-size: 1.4216rem;
+    font-size: 1.8952rem;
     line-height: 2rem;
     letter-spacing: 0.03em;
     font-weight: 900;
     text-transform: uppercase;
-  }
-  h1.title {
-    font-size: 2.5256rem;
+    margin-top: 3rem;
+    text-align: center;
   }
   h2 {
     font-family: 'Interstate', Helvetica, Arial, sans-serif;
@@ -782,14 +787,13 @@ p.xsmall {
   h1 {
     position: relative;
     font-family: 'Interstate', Helvetica, Arial, sans-serif;
-    font-size: 1.152rem;
+    font-size: 1.3824rem;
     line-height: 2rem;
     letter-spacing: 0.03em;
     font-weight: 900;
     text-transform: uppercase;
-  }
-  h1.title {
-    font-size: 1.6592rem;
+    margin-top: 3rem;
+    text-align: center;
   }
   h2 {
     font-family: 'Interstate', Helvetica, Arial, sans-serif;
@@ -831,58 +835,49 @@ p.xsmall {
   h1 {
     position: relative;
     font-family: 'Interstate', Helvetica, Arial, sans-serif;
-    font-size: 0.9104rem;
-    line-height: 1rem;
+    font-size: 1.2096rem;
+    line-height: 2rem;
     letter-spacing: 0.03em;
     font-weight: 900;
     text-transform: uppercase;
-  }
-  h1.title {
-    font-size: 1.0368rem;
+    margin-top: 3rem;
+    text-align: center;
   }
   h2 {
     font-family: 'Interstate', Helvetica, Arial, sans-serif;
-    font-size: 0.9104rem;
-    line-height: 1rem;
+    font-size: 1.008rem;
+    line-height: 2rem;
     font-weight: 700;
   }
   h3 {
     font-family: 'Interstate', Helvetica, Arial, sans-serif;
     text-transform: uppercase;
-    font-size: 0.8536rem;
+    font-size: 0.84rem;
     font-weight: 700;
     line-height: 1rem;
   }
   h4,
   .size-1 {
     font-family: 'Interstate', Helvetica, Arial, sans-serif;
-    font-size: 0.8536rem;
+    font-size: 0.84rem;
     line-height: 1rem;
   }
   p,
   li {
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     line-height: 1.5rem;
   }
   p.p__intro {
-    font-size: 0.8536rem;
+    font-size: 0.84rem;
   }
   p.small {
-    font-size: 0.7496rem;
+    font-size: 0.5831rem;
     line-height: 1rem;
   }
   p.xsmall {
-    font-size: 0.7024rem;
+    font-size: 0.4858rem;
     line-height: 1rem;
   }
-}
-h1,
-h2,
-h3,
-h4,
-p,
-li {
-  margin: 0.5rem 0;
 }
 a {
   display: inline-flex;
@@ -898,10 +893,6 @@ a svg {
   height: 2rem;
   width: 2rem;
   margin-right: 0.5em;
-}
-p,
-li {
-  padding-right: 0.5rem;
 }
 .labelled-input {
   display: flex;
@@ -1244,7 +1235,7 @@ img {
   width: 1.5rem;
   height: 1.5rem;
 }
-.slider-section .slider__arrow {
+.section--dark .slider__arrow {
   fill: #ffffff;
 }
 .video-slide {
@@ -1281,9 +1272,6 @@ element.style {
 .project__header__title {
   overflow: visible;
 }
-.project__header__title h1 {
-  font-size: 2.5256rem;
-}
 .project__header__title h3 {
   text-align: center;
 }
@@ -1293,7 +1281,8 @@ element.style {
 .project__header__hero {
   position: absolute;
   width: 100%;
-  top: 50%;
+  top: 70%;
+  left: 0;
   overflow: visible;
 }
 .project__header__hero img {
@@ -1302,10 +1291,15 @@ element.style {
   width: 60%;
   margin-left: 20%;
 }
-.intro {
-  background: #efefef;
-  padding-top: 12rem;
+.section--intro .top-content,
+.section--intro .bottom-content {
+  padding-top: 4rem;
   padding-bottom: 1rem;
+}
+@media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
+  .section--intro .bottom-content {
+    padding-top: 0;
+  }
 }
 .intro__text p {
   max-width: 40em;
@@ -1723,13 +1717,6 @@ element.style {
   text-align: center;
   padding: 0;
 }
-.top-content {
-  position: absolute;
-  top: 2rem;
-}
-.top-content h3 {
-  margin-bottom: 2rem;
-}
 .slider__nav-below {
   color: black;
   width: 80%;
@@ -1753,11 +1740,11 @@ element.style {
   content: '/';
   margin-right: 0.3em;
 }
-.slider-section {
+.section--dark {
   background: #333333;
   color: #ffffff;
 }
-.slider-section .grid-cell {
+.section--dark .grid-cell {
   justify-content: flex-end;
 }
 .slider-cell {
@@ -1812,5 +1799,16 @@ element.style {
 }
 .additional-features .grid-cell {
   padding-right: 2rem;
+}
+.slide img {
+  border: 1px solid #aaaaaa;
+}
+@media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
+  .slide img {
+    width: 100%;
+  }
+}
+.section--grey {
+  background: #efefef;
 }
 /*# sourceMappingURL=../source.map */

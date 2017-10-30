@@ -252,7 +252,7 @@ section{
   height: 1.5rem;
 }
 
-.slider-section .slider__arrow{
+.section--dark .slider__arrow{
   fill: @white;
 }
 
@@ -303,9 +303,7 @@ element.style {
 .project__header__title{
 	overflow:visible;
   // justify-content: space-between;
-	h1{
-		font-size: @size-4;
-	}
+
 	h3{
 		text-align: center;
 	}
@@ -317,7 +315,8 @@ element.style {
 .project__header__hero{
 	position: absolute;
 	width: 100%;
-	top: 50%;
+	top: 70%;
+	left: 0;
 	overflow:visible;
 	img{
 		position:absolute;
@@ -327,10 +326,16 @@ element.style {
 	}
 }
 
-.intro{
-  background: @lightgrey;
-  padding-top: 12rem;
-  padding-bottom: 1rem;
+.section--intro{
+	.top-content, .bottom-content{
+	  padding-top: 4rem;
+	  padding-bottom: 1rem;
+	}
+	.media-phone-portrait({
+		.bottom-content{
+			padding-top: 0;
+		}
+	});
 }
 
 .intro__text{
@@ -794,14 +799,6 @@ element.style {
   }
 }
 
-.top-content{
-  h3{
-    margin-bottom: 2rem;
-  }
-	position: absolute;
-	top: 2rem;
-}
-
 .slider__nav-below{
   color: black;
   width: 80%;
@@ -829,12 +826,12 @@ element.style {
 	}
 }
 
-.slider-section{
+.section--dark{
 	background: @darkgrey;
 	color: @white;
 }
 
-.slider-section .grid-cell{
+.section--dark .grid-cell{
   justify-content: flex-end;
 }
 
@@ -905,4 +902,19 @@ element.style {
 	.grid-cell{
 		padding-right: 2rem;
 	}
+}
+
+.slide{
+	img{
+		border: 1px solid @midgrey;
+	}
+	.media-phone-portrait({
+		img{
+			width:100%;
+		}
+	});
+}
+
+.section--grey{
+	background: @lightgrey;
 }

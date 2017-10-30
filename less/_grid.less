@@ -110,7 +110,7 @@ section {
 	// margin-bottom: 1.5rem;
 	padding: 2rem 1rem;
 	.media-phone-portrait({
-		padding: 1rem 0;
+		padding: 1rem 1rem;
 	});
 }
 
@@ -136,7 +136,12 @@ section {
 section{
 	display:flex;
 	width: 100%;
+	flex-direction: column;
+	flex-wrap:wrap;
 	justify-content: flex-start;
+	.media-phone-portrait({
+		border-bottom: 1px solid @lightgrey;
+	});
 }
 
 section.block{

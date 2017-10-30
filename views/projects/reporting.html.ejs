@@ -1,54 +1,82 @@
 <% include ../partials/header.html.ejs %>
 
-  <section class="grid intro">
-    <div class="grid-cell grid8 intro__text">
+  <section class="section--grey section--intro">
       <div class="top-content" style="color: <%= pageData.current.color %>">
         <!-- <img src="/images/reporting/top-thumbs.png" alt="" style="max-width: 80%; margin: 1rem 0"> -->
         <p>Playground XYZ offer a full-service mobile advertising platform, where advertisers can create and deploy mobile advertising campaigns.</p>
-        <p>Our online platform required a Reporting Dashboard for clients to monitor and gain insights on the performance of their ad placements. I designed and prototyped the <strong>Campaigns Listing </strong> and <strong>Reporting and Analytics</strong>          screens.</p>
+        <p>Our online platform required a Reporting Dashboard for clients to monitor and gain insights on the performance of their ad placements. I designed and prototyped the <strong>Campaigns Listing </strong> and <strong>Reporting and Analytics</strong> screens.</p>
       </div>
 
-    </div>
-    <div class="grid-cell grid4 credits">
-      <div class="top-content">
+      <div class="bottom-content">
         <h3>My Work</h3>
         <p>UX Research, Design, Prototype </p>
       </div>
+
   </section>
 
-  <section class="grid">
-    <div class="grid-cell grid4">
-      <h2>Campaigns Listing</h2>
-      <p>Playground customers are usually managing multiple ad campaigns at once, each containing multiple ad creatives and audience targetting.</p>
-      <p>My challenge was to provide users with immediate insight into the performance of their campaigns on login.</p>
-    </div>
-    <div class="grid-cell grid8 single-image">
-      <img src="/images/reporting/dashboard1.jpg" alt="" style="align-self: flex-end">
-    </div>
-  </section>
-
-  <section class="grid">
-    <div class="grid-cell grid7 single-image">
-      <img src="/images/reporting/analytics1.jpg" alt="">
-    </div>
-    <div class="grid-cell grid5">
-      <h2>Reporting and Analytics</h2>
-      <p>We wanted to provide customers with custom, easily comprehensible visualisations of their Campaign Data.</p>
-      <p>We also aimed to provide some basic analytics controls, so the data could be split and viewed in a number of ways to gain deeper insights on campaign performance, such as which targetted audience was responding most to the ads based on clicks or
-        engagement.
-      </p>
-    </div>
-  </section>
-
-
-  <section class="grid slider-section">
-    <h2 style="width:100%">Key Features</h2>
-    <div class="grid-cell grid3 captions-cell">
-      <div class="slider__count">
-        <span class="current-count"></span>
-        <span class="full-count"></span>
+  <section>
+      <div class="top-content">
+        <h2>Campaigns Listing</h2>
       </div>
-      <div class="slider__captions" id="slider-campaigns-captions">
+        <div class="slide">
+          <img src="/images/reporting/dashboard1.jpg" alt="" style="align-self: flex-end">
+        </div>
+        <div class="bottom-content">
+        <p>Playground customers are usually managing multiple ad campaigns at once, each containing multiple ad creatives and audience targetting.</p>
+        <p>My challenge was to provide users with immediate insight into the performance of their campaigns on login.</p>
+      </div>
+  </section>
+
+  <section class="section--text-right">
+      <div class="top-content">
+      <h2>Reporting and Analytics</h2>
+      </div>
+      <div class="slide">
+        <img src="/images/reporting/analytics1.jpg" alt="">
+      </div>
+      <div class="bottom-content">
+        <p>We wanted to provide customers with custom, easily comprehensible visualisations of their Campaign Data.</p>
+        <p>We also aimed to provide some basic analytics controls, so the data could be split and viewed in a number of ways to gain deeper insights on campaign performance, such as which targetted audience was responding most to the ads based on clicks or
+          engagement.
+        </p>
+      </div>
+  </section>
+
+
+  <section class="section--dark section--text-left">
+    <div class="top-content">
+      <h2 style="width:100%">Key Features</h2>
+    </div>
+
+    <div class="slide slider--desktop" id="slider-campaigns">
+
+        <div class="video-slide">
+          <video autoplay loop muted playsinline>
+            <source src="/images/reporting/v2-list-breakdown.mp4">
+          </video>
+        </div>
+
+        <div class="video-slide">
+          <video autoplay loop muted playsinline>
+            <source src="/images/2-charts.mp4">
+          </video>
+        </div>
+        <div class="video-slide">
+          <video autoplay loop muted playsinline>
+            <source src="/images/2-animation.mp4">
+          </video>
+        </div>
+
+        <div class="video-slide">
+          <video autoplay loop muted playsinline>
+            <source src="/images/4-split.mp4">
+          </video>
+        </div>
+
+      </div>
+
+    <div class="bottom-content">
+      <div class="slider_captions">
         <div class="caption current">
           <h4>Campaigns, Creatives, Placements</h4>
           <p> Overview of your campaigns can be expanded to display the ad creatives for each campaign, whether ad placement is delivering and generating engagement form its target audience.</p>
@@ -66,78 +94,32 @@
           <p>Campaign data can be split and grouped in various ways - by placement, audience and site. Animated transitions and color coding assist clients to make comparisons and gain insights</p>
         </div>
       </div>
-      <div class="slider__nav" id="slider-campaigns-nav">
-        <svg class="slider__arrow slider__arrow--left" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-          <use x="0" y="0" xlink:href="#arrow-left"></use>
-        </svg>
-        <svg class="slider__arrow slider__arrow--right" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-          <use x="0" y="0" xlink:href="#arrow-right"></use>
-        </svg>
-      </div>
-    </div>
-    <div class="grid-cell grid9 slider-cell">
-
-      <div id="slider-campaigns" class="slider--desktop">
-
-        <!-- image and content -->
-        <div class="video-slide">
-          <video autoplay loop muted playsinline>
-            <source src="/images/reporting/v2-list-breakdown.mp4">
-            <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
-            <!-- <img src="image.gif"> -->
-          </video>
-        </div>
-
-        <!-- image and content -->
-        <div class="video-slide">
-          <video autoplay loop muted playsinline>
-            <source src="/images/2-charts.mp4">
-            <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
-            <!-- <img src="image.gif"> -->
-          </video>
-        </div>
-        <div class="video-slide">
-          <video autoplay loop muted playsinline>
-            <source src="/images/2-animation.mp4">
-            <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
-            <!-- <img src="image.gif"> -->
-          </video>
-        </div>
-
-        <div class="video-slide">
-          <video autoplay loop muted playsinline>
-            <source src="/images/4-split.mp4">
-            <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
-            <!-- <img src="image.gif"> -->
-          </video>
-        </div>
-
-      </div>
-
     </div>
 
   </section>
 
-  <section class="grid additional-features" style="background: <%= color.palegrey %>;">
-    <h2 style="width:100%;">Additional Features</h2>
-    <div class="grid-cell grid6">
+  <section class="section--split section--lightgrey">
+    <h2>Additional Features</h2>
+    <div class="top-content">
       <img src="/images/reporting/preview-creative.jpg" alt="" style="align-self: center; width: 100%">
       <h4>Ad previews</h4>
       <p>Ad Creative can be viewed as a preview to show advertisers what their customers are seeing.</p>
     </div>
-    <div class="grid-cell grid6">
+    <div class="bottom-content">
       <img src="/images/reporting/download-sheet.jpg" alt="" style="align-self: center; width: 100%">
       <h4>Data downloads</h4>
       <p>All data is downloadable as a formatted Excel document for further analysis.</p>
     </div>
   </section>
 
-  <section class="grid process">
-    <h2 style="width:100%">Process</h2>
-    <div class="grid-cell grid6 process-hero">
+  <section class="process section--text-right">
+    <div class="top-content">
+      <h2>Process</h2>
+    </div>
+    <div class="slide">
       <img src="/images/process-reporting.png" alt="">
     </div>
-    <div class="grid-cell grid6">
+    <div class="bottom-content">
       <p>
         <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
           <use x="0" y="0" xlink:href="#research"></use>
@@ -154,7 +136,6 @@
         </svg> Built the prototype with HTML / CSS / JS, using the Amcharts API for the more complex charts. I also created a ‘dummy data’ generator with Javascript, with which we could simulate errors to see how the interface would respond. <span style="color:red">Something to do with designing and preparing this or a component-based React Application. Component-based design thinking.</span></p>
     </div>
   </section>
-
 
 
   <% include ../partials/footer.html.ejs %>

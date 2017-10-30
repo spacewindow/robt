@@ -1,3 +1,14 @@
+<% var indexData = {
+  current: {
+    id: "index",
+    title: "Robert Thwaites: Digital Product Designer",
+    color: color.orange
+  }
+} %>
+
+<% pageData = (typeof pageData !== 'undefined') ? pageData : indexData;%>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +16,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rob Thwaites : UX and Interaction Designer</title>
+  <title>Rob Thwaites :: <%- pageData.current.title %></title>
   <link rel="shortcut icon" href="/images/favicon/favicon.ico" type="image/x-icon">
 
   <link rel="stylesheet" type="text/css" href="/css/royalslider.css">
@@ -39,16 +50,6 @@
   <script src="/js/site.js"></script>
 
 </head>
-
-<% var indexData = {
-  current: {
-    id: "index",
-    title: "Robert Thwaites: Digital Product Designer",
-    color: color.orange
-  }
-} %>
-
-<% pageData = (typeof pageData !== 'undefined') ? pageData : indexData;%>
 
 <body class="<%= pageData.current.id %>">
 
@@ -96,17 +97,14 @@
 
     <% if(typeof pageData.current.type !== 'undefined') {%>
 
-      <section class="project__header grid" style="background-color: <%= pageData.current.color %>; background-image: url(/images/heros/hero-<%- pageData.current.id %>.png);">
-        <div class="grid-cell grid12 project__header__title">
+      <section class="project__header" style="background-color: <%= pageData.current.color %>; background-image: url(/images/heros/hero-<%- pageData.current.id %>.png);">
+        <div class="project__header__title">
           <header>
             <h1><%- pageData.current.title %></h1>
             <h3><%= pageData.current.client %></h3>
-            <p></p>
           </header>
           <p><%= pageData.current.description %></p>
-          <div class="project__header__hero">
-            <img src="/images/hero-slide-<%- pageData.current.id %>.png" alt="">
-          </div>
+          <img class="project__header__hero" src="/images/hero-slide-<%- pageData.current.id %>.png" alt="">
         </div>
       </section>
 
