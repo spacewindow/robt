@@ -16,6 +16,7 @@ const color = {
   lightgrey: '#efefef',
   midgrey:  '#aaaaaa',
   darkgrey: '#333333',
+  orange: '#ff9900'
 };
 
 // // get list of projects

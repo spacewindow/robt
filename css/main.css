@@ -885,10 +885,19 @@ li {
   margin: 0.5rem 0;
 }
 a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   width: auto;
   text-decoration: none;
+  color: #ff9900;
   height: 1.75em;
+}
+a svg {
+  display: block;
+  fill: #aaaaaa;
+  height: 2rem;
+  width: 2rem;
+  margin-right: 0.5em;
 }
 p,
 li {
@@ -1565,27 +1574,27 @@ element.style {
   border-radius: 100%;
 }
 .app__logo {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 12rem;
+  height: 12rem;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: -0.3rem;
+  left: -0.2rem;
   z-index: 20;
   fill: black;
   border-radius: 100%;
   transform-origin: 0 0;
   transition: transform 0.3s ease-out;
+  transform: scale(0.25);
 }
 @media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
   .app__logo {
-    transform: translateX(0%);
+    transform: translateX(0%) scale(0.25);
   }
 }
 .app__header {
   position: fixed;
   height: 2.3rem;
   width: 100%;
-  background: white;
   z-index: 100;
 }
 .app__header:after {
@@ -1599,6 +1608,7 @@ element.style {
   z-index: -1;
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-out;
+  background: white;
 }
 .init .app__header:after,
 .sticky .app__header:after {
@@ -1606,12 +1616,12 @@ element.style {
 }
 .init .app__logo,
 .sticky .app__logo {
-  transform: scale(3);
+  transform: translateZ(0) scale(1);
 }
 @media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
   .init .app__logo,
   .sticky .app__logo {
-    transform: translateX(-105%);
+    transform: scale(0.25) translateZ(0) translateX(-105%);
   }
 }
 .init .app__header:after {
@@ -1760,7 +1770,8 @@ element.style {
 }
 .approach svg {
   width: 100%;
-  height: 2rem;
+  height: 4rem;
+  fill: #ff9900;
 }
 .approach .grid-cell {
   padding-right: 2rem;

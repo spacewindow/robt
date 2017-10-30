@@ -638,18 +638,21 @@ element.style {
 }
 
 .app__logo{
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 12rem;
+  height: 12rem;
   position:fixed;
-  top:0;
-  left:0;
+  top:-0.3rem;
+  left:-0.2rem;
   z-index: 20;
   fill: black;
   border-radius: 100%;
   transform-origin: 0 0;
   transition: transform 0.3s ease-out;
+	transform: scale(0.25);
+// 	outline: 1px solid transparent;
+// backface-visibility: hidden;
 	.media-phone-portrait({
-		transform: translateX(0%);
+		transform: translateX(0%) scale(0.25);
 	});
   .init & {
     // transform: scale(3);
@@ -662,13 +665,13 @@ element.style {
 	position: fixed;
 	height: 2.3rem;
 	width: 100%;
-	background: white;
 	z-index:100;
 	&:after{
 		.pseudofill;
 		z-index:-1;
 		box-shadow: 0 0 1em rgba(0,0,0,0.2);
 		transition: all 0.3s ease-out;
+		background: white;
 		// .init &{
 		// 	opacity:0;
 		// }
@@ -680,9 +683,9 @@ element.style {
 		opacity:0;
 	}
 	.app__logo{
-		transform: scale(3);
+		transform: translateZ(0) scale(1);
 		.media-phone-portrait({
-			transform: translateX(-105%);
+			transform: scale(0.25) translateZ(0) translateX(-105%);
 		});
 	}
 }
@@ -852,7 +855,8 @@ element.style {
 .approach{
 	svg{
 		width: 100%;
-		height: 2rem;
+		height: 4rem;
+		fill: #ff9900;
 	}
   .grid-cell{
     padding-right: 2rem;
