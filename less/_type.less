@@ -118,7 +118,6 @@ body{
     letter-spacing: 0.03em;
     font-weight: 900;
     text-transform: uppercase;
-    margin-top: 3rem;
     text-align: center;
 	}
 	h2{
@@ -146,7 +145,6 @@ body{
   }
 	p, li{
 		font-size: @size-0;
-		line-height: 1.2rem;
 	}
   p.p__intro{
     font-size: @size-1;
@@ -166,6 +164,10 @@ body{
 
 .make-headings(media-desktop);
 
+p{
+  line-height: 1.7;
+}
+
 .media-large({
 	.make-headings(media-large);
 });
@@ -177,6 +179,9 @@ body{
 .media-phone-portrait({
 	// uses fluid type - see dash_grid.less
 	.make-headings(media-phone-portrait);
+  h1{
+    line-height: 1.6rem;
+  }
 });
 
 a{

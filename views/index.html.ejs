@@ -1,7 +1,7 @@
 <% include partials/header.html.ejs %>
 
-    <section class="grid">
-      <div class="grid-cell grid9 about">
+    <section class="about">
+      <div class="top-content profile">
         <svg class="logo__mobile" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
           <use x="0" y="0" xlink:href="#logo"></use>
         </svg>
@@ -13,43 +13,39 @@
 
       </div>
 
-      <div class="grid-cell grid3 contact">
-        <p><a href="mailto:rob@robthwaites.com">
+      <div class="bottom-content contact">
+        <a href="mailto:rob@robthwaites.com">
           <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
             <use x="0" y="0" xlink:href="#envelope"></use>
           </svg>
-          rob@robthwaites.com</a></p>
-        <p><a tel="+612403899183">
+          rob@robthwaites.com</a>
+        <a tel="+612403899183">
           <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
             <use x="0" y="0" xlink:href="#phone"></use>
           </svg>
-          0403899183</a></p>
+          0403899183
+        </a>
 
       </div>
     </section>
 
-    <section class="grid work">
-      <!-- <div class="grid-cell grid3">
-        <h1 style="width:100%; margin-bottom: 1rem;">Work</h1>
-      </div>
-      <div class="grid-cell grid9 sub-grid" style="flex-direction: row; flex-wrap: wrap;"> -->
+    <section class="work">
+
         <% allData.forEach(function(project){ %>
-          <div class="grid-cell grid4">
-            <a class="work__thumb" href="/<%= project.id %>">
-              <img src="/images/thumb-bw-<%= project.id %>.png" alt="">
-            </a>
+
+          <a class="work__thumb" href="/<%= project.id %>">
+            <img src="/images/thumb-bw-<%= project.id %>.png" alt="">
             <h3 style="margin-top: 1rem; margin-bottom: 0.25rem;"><%- project.title %></h3>
              <p class="work__tag"><%- project.type %></p>
-            <!-- <p><%- project.client %></p> -->
-          </div>
+          </a>
+
         <% }) %>
-      <!-- </div> -->
 
     </section>
 
     <section class="grid approach">
 
-        <h1 style="width: 100%">Approach</h1>
+        <h2>Approach</h2>
 
         <div class="grid-cell grid4">
 
