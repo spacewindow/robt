@@ -206,25 +206,20 @@ section{
   });
 }
 
-.slider--mobile{
+.section--slider-mobile{
+	.media-desktop({
+		height: 28rem;
+	});
+
+}
+
+.phone{
   position:relative;
-  height: 55vh;
-  width: 30.93vh;
+  height: 20rem;
+  width: 11.25rem;
   margin: 2rem auto;
   // overflow:hidden;
-  &:before{
-    content: '';
-      display: block;
-      position: absolute;
-      width: 141%;
-      height: 138%;
-      top: -16.5%;
-      left: -20%;
-      background-image: url(../images/phone2.png);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: contain;
-  }
+
 }
 
 .slider--desktop{
@@ -245,10 +240,11 @@ section{
   // margin: 0 auto;
   border: 1rem solid #aaaaaa;
   border-radius: 0.5rem;
-  .media-phone-portrait({
-    width: 95%;
-    border: 0;
+	.media-phone-portrait({
+    margin: 0 !important;
+		border: 0.5rem solid #aaa;
   });
+
   &.rsFullscreen{
     border: 0;
     border-radius: 0;
@@ -267,8 +263,49 @@ section{
     position:absolute;
     top:0;
   }
-
 }
+
+.slider--mobile{
+	height: auto !important; //overwriting royalSlider?
+	margin: 1rem auto !important;
+	// width: auto !important;
+	.rsOverflow{
+    position:absolute;
+    top:0;
+		z-index:2;
+  }
+	&:before{
+    content:'';
+    opacity:0;
+    z-index:-1;
+    position:relative;
+    display:block;
+    width:12rem;
+    height:0;
+    padding-top: 177.7%; // aspect ratio for 16:9 phone
+  }
+	.media-phone-portrait({
+		height: 55vh;
+		width: 33.93vh !important;
+		margin: 3rem auto !important;
+	});
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 141%;
+    height: 138%;
+    top: -16.5%;
+    left: -20%;
+    background-image: url(../images/phone2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+		z-index:1;
+  }
+}
+
+
 
 #slider-hangtime-demo:before{
   background-image: url(../images/phone-sketch.png);
@@ -358,6 +395,7 @@ element.style {
 .project__header__hero{
 	position: relative;
 	display:block;
+	width:auto;
 	height: 20rem;
 	margin: 2rem auto 0;
 	.media-phone-portrait({
@@ -366,7 +404,12 @@ element.style {
 	});
 }
 
+img{
+	width:100%;
+}
+
 .top-content, .bottom-content{
+	position: relative;
 	width: ~"calc(50% - 3rem)";
 	margin: 0 1.5rem;
 	padding: 0 0 2rem;
@@ -389,7 +432,8 @@ element.style {
 	}
 	.media-phone-portrait({
 		position:relative;
-		margin: 1rem 0;
+		width:92.5%;
+		margin: 0rem 0 1rem 5%;
 	});
 }
 
@@ -416,6 +460,12 @@ element.style {
 			right:0;
 			top:0;
 			margin:1.5rem 1rem 0 0;
+			&.slider--mobile{
+				width:auto;
+				left:auto;
+				right:15%;
+				top:2rem;
+			}
 		}
 		.top-content, .bottom-content{
 			width: ~"calc(40% - 3rem)";
@@ -433,6 +483,12 @@ element.style {
 			left:0;
 			top:0;
 			margin: 1.5rem 1rem 0;
+			&.slider--mobile{
+				width:auto;
+				right:auto;
+				left:15%;
+				top:2rem;
+			}
 		}
 		.top-content, .bottom-content{
 			width: ~"calc(40% - 3rem)";
@@ -444,6 +500,20 @@ element.style {
 .section--slider-desktop{
 	.media-desktop({
 		height: 25rem;
+		justify-content: space-between;
+		.slider__nav{
+			justify-content: flex-start;
+		}
+		.bottom-content{
+			display:flex;
+			flex-direction: column-reverse;
+			margin-bottom: 2rem;
+		}
+	});
+}
+
+.phone-royalSlider{
+	.media-desktop({
 		justify-content: space-between;
 		.slider__nav{
 			justify-content: flex-start;
@@ -481,17 +551,9 @@ element.style {
 
 .credits{
   h3{
-    // font-family: 'Graphik', serif;
-    font-size: @size-0;
-    font-weight: 7070;
+		font-weight: 700;
     color: @darkgrey;
     margin: 0;
-  }
-  p{
-    font-size: @size-0;
-    color: @darkgrey;
-    margin:0;
-    padding: 0;
   }
 }
 
@@ -551,6 +613,9 @@ element.style {
 .slider__captions{
 	position:relative;
 	height: 10rem;
+	.media-phone-portrait({
+		height: 8rem;
+	});
   h4{
     font-size: @size-0;
     margin-bottom: 0.5em;
@@ -570,6 +635,10 @@ element.style {
 		position: absolute;
 		bottom:2rem;
     margin: 0.5rem 0;
+		.media-phone-portrait({
+			bottom:auto;
+		});
+
     strong{
       font-size: 1.1em;
       display:inline-block;
@@ -982,6 +1051,9 @@ element.style {
 }
 
 .approach{
+	.media-desktop({
+		flex-direction:row;
+	});
 	svg{
 		width: 82%;
 		height: 4rem;
@@ -1020,19 +1092,20 @@ element.style {
 }
 
 .about{
+	flex-direction:row;
 	padding: 2rem 1rem 0 25%;
 	h1{
 		text-align:left;
 		margin-top: 0;
 	}
 	.top-content{
-		width: ~"calc(70% - 1rem)";
+		width: ~"calc(70% - 3rem)";
 		padding-top: 1.5rem;
 		padding-right: 1rem;
 		padding-bottom: 2rem;
 	}
 	.bottom-content{
-		width: ~"calc(30% - 1rem)";
+		width: ~"calc(30% - 3rem)";
 		padding-top: 1.5rem;
 		padding-bottom: 2rem;
 		a{
@@ -1054,6 +1127,7 @@ element.style {
 		}
 	}
 	.media-phone-portrait({
+		flex-direction:column;
 		padding: 0;
 		.top-content, .bottom-content{
 			width: ~"calc(100% - 1.5rem)";

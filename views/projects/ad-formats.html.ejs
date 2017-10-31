@@ -1,14 +1,12 @@
 <% include ../partials/header.html.ejs %>
 
-  <section class="grid intro">
-    <div class="grid-cell grid8 intro__text">
-      <div class="top-content" style="color: <%= pageData.current.color %>">
+<section class="section--grey section--intro">
+    <div class="top-content" style="color: <%= pageData.current.color %>">
         <p>Playground XYZ wants to change the way advertisers interact with their customers on mobiles.</p>
         <p>I was responsible for developing and refining the Hang Time and Vertical Video products, based on a concept from our product team.</p>
       </div>
 
-    </div>
-    <div class="grid-cell grid4 credits">
+    <div class="bottom-content credits">
       <h3>My Role</h3>
       <p>UX Design, Prototyping, Graphic Design</p>
 
@@ -19,38 +17,39 @@
     </div>
   </section>
 
-  <section class="grid">
-    <div class="grid-cell grid6">
+  <section class="section--text-left  section--slider-mobile">
       <div class="top-content">
-        <h3>The Hang Time</h3>
-
+        <h2>The Hang Time</h2>
+      </div>
+      <div class="slide slider--mobile">
+        <!-- image and content -->
+          <div class="video-slide">
+            <video autoplay loop muted playsinline style="border: 1px solid black;">
+              <source src="/images/ads-ht-demo.mp4">
+              <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
+              <!-- <img src="image.gif"> -->
+            </video>
+        </div>
+      </div>
+      <div class="bottom-content">
       <p>The Hang Time is a full-screen vertical format for mobile that momentarily delays the user in an inline ad experience as they scroll through an article.</p>
         <p>A beta product was developed by our product team, but was rather difficult to work with. I suggested the idea of animations on a timeline that would 'scrub' with the Hang Time 'progress'.</p>
 
         <p>I developed a simple Javascript to run these animations, in a way that was easy to template so we could  produce pixel-perfect animation that would work across all device sizes.</p>
 
       </div>
-    </div>
-    <div class="grid-cell grid6 hangtime-intro">
-      <div class="slider--mobile">
-        <!-- image and content -->
-        <div class="video-slide">
-          <video autoplay loop muted playsinline style="border: 1px solid black;">
-            <source src="/images/ads-ht-demo.mp4">
-            <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
-            <!-- <img src="image.gif"> -->
-          </video>
-        </div>
-
-
-      </div>
-    </div>
 
   </section>
 
-  <section class="block grid slider-section">
-    <div class="grid-cell grid7">
-      <div id="slider-hangtime" class="slider--mobile">
+  <section class="section--text-right section--slider-mobile phone-royalSlider section--dark">
+    <div class="top-content">
+      <h2>Brand Executions</h2>
+      <p>The scrubbing animations became the essential feature of the format.</p>
+      <p>I had a lot of fun rolling this out into ad executions for many brands and campaigns.</p>
+    </div>
+    <div  class="slide slider--mobile"  id="slider-hangtime">
+
+      <!-- <div class="phone" id="slider-hangtime"> -->
 
         <!-- image and content -->
         <div class="video-slide">
@@ -77,97 +76,79 @@
           </video>
         </div>
 
-      </div>
+      <!-- </div> -->
 
     </div>
-    <div class="grid-cell grid5">
-      <div class="top-content">
-        <p>The scrubbing animations became the essential feature of the format.</p>
-        <p>I had a lot of fun rolling this out into ad executions for many brands and campaigns.</p>
-        <div class="slider__captions" id="slider-hangtime-captions">
-          <p><strong>Honda Annual Clearance</strong></p>
-          <p><strong>Google Home</strong></p>
-          <p><strong>Pirates of the Carribean</strong></p>
-        </div>
-        <div class="slider__nav" id="slider-hangtime-nav">
 
-            <svg class="slider__arrow slider__arrow--left" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-              <use x="0" y="0" xlink:href="#arrow-left"></use>
-            </svg>
+    <div class="bottom-content">
 
-            <svg class="slider__arrow slider__arrow--right" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-              <use x="0" y="0" xlink:href="#arrow-right"></use>
-            </svg>
-
-          </div>
-      </div>
-
+      <div class="slider__captions">
+        <div class="caption"><h4>Honda Annual Clearance</h4></div>
+        <div class="caption"><h4>Google Home</h4></div>
+        <div class="caption"><h4>Pirates of the Carribean</h4></div>
       </div>
 
     </div>
 
   </section>
 
-  <section class="grid">
-    <div class="grid-cell grid4">
-      <div class="top-content">
-        <h3>Vertical Video</h3>
+  <section class="section--text-left">
 
+      <div class="top-content">
+        <h2>Vertical Video</h2>
+      </div>
+      <div class="slide">
+        <img src="/images/ads/process-vertical-video.png" alt=""  style="border:0;">
+      </div>
+      <div class="bottom-content">
         <p>Playground needed a product to house advertisers' vertical video content, and the Hang Time was the perfect vehicle.</p>
 
         <p>The challenge was to have a responsive product where the full video content would be visible wherever the ad was displayed - different devices, sites, browsers.</p>
 
       </div>
-    </div>
-    <div class="grid-cell grid8">
-      <div class="image-slide">
-        <img src="/images/ads/process-vertical-video.png" alt="">
-      </div>
-    </div>
 
   </section>
 
-  <section class="grid">
+  <section class="section--text-right section--slider-mobile phone-royalSlider section--dark">
 
-    <div class="grid-cell grid6">
-      <div class="slider--mobile">
+    <div class="top-content">
+      <h2>Video Ads</h2>
+      <p>The Vertical Video ended up with two versions, "fit" or "fill", where advertisers could decide whether to use a safe 'letterbox'-style video presentation, or take advantage of an impactful full-screen experience.</p>
+      <p>I enjoyed creating a number of templated and custom executions for brands using the new ad format.</p>
+    </div>
+
+      <div class="slide slider--mobile" id="slider-vertical-vid">
         <!-- image and content -->
         <div class="video-slide">
           <video autoplay loop muted playsinline style="border: 1px solid black;">
             <source src="/images/ads-adf.mp4">
-            <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
-            <!-- <img src="image.gif"> -->
           </video>
         </div>
         <div class="video-slide">
           <video autoplay loop muted playsinline style="border: 1px solid black;">
             <source src="/images/ads-wonderwoman.mp4">
-            <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
-            <!-- <img src="image.gif"> -->
           </video>
         </div>
 
       </div>
-    </div>
 
-    <div class="grid-cell grid6">
-      <div class="top-content">
-        <p>The Vertical Video ended up with two versions, "fit" or "fill", where advertisers could decide whether to use a safe 'letterbox'-style video presentation, or take advantage of an impactful full-screen experience.</p>
-        <p>I enjoyed creating a number of templated and custom executions for brands using my new ad format.</p>
-
+    <div class="bottom-content">
+      <div class="slider__captions">
+        <div class="caption"><h4>Australian Defence Force</h4></div>
+        <div class="caption"><h4>Wonder Woman (Roadshow)</h4></div>
       </div>
     </div>
 
   </section>
 
-  <section class="grid process">
-    <h2 style="width:100%">Process</h2>
-    <div class="grid-cell grid5 process-hero">
+  <section class="process section--split">
+
+    <div class="top-content">
       <img src="/images/process-reporting.png" alt="">
     </div>
-    <div class="grid-cell grid7">
-
-        <p><svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
+    <div class="bottom-content">
+      <h2>Process</h2>
+      <p><svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
           <use x="0" y="0" xlink:href="#codesign"></use>
         </svg>I worked up a prototype of the format using HTML/CSS/JS.</p>
 

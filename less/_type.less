@@ -133,6 +133,9 @@ body{
 		font-size: @size-1;
     font-weight: 700;
 		line-height: ceil(@size-1);
+    .credits & {
+      font-size: @size-0;
+    }
 	}
 	h4, .size-1{
     font-family: @headingFamily;
@@ -144,6 +147,11 @@ body{
   }
 	p, li{
 		font-size: @size-0;
+    .credits & {
+      font-size: @size-small;
+      margin-bottom: 0.25rem;
+      // line-height: 1.2;
+    }
 	}
   p.p__intro{
     font-size: @size-1;

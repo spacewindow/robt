@@ -707,6 +707,9 @@ h3 {
   font-weight: 700;
   line-height: 2rem;
 }
+.credits h3 {
+  font-size: 0.8rem;
+}
 h4,
 .size-1 {
   font-family: 'Interstate', Helvetica, Arial, sans-serif;
@@ -719,6 +722,11 @@ p {
 p,
 li {
   font-size: 0.8rem;
+}
+.credits p,
+.credits li {
+  font-size: 0.6rem;
+  margin-bottom: 0.25rem;
 }
 p.p__intro {
   font-size: 1.0664rem;
@@ -758,6 +766,9 @@ p {
     font-weight: 700;
     line-height: 2rem;
   }
+  .credits h3 {
+    font-size: 0.8rem;
+  }
   h4,
   .size-1 {
     font-family: 'Interstate', Helvetica, Arial, sans-serif;
@@ -770,6 +781,11 @@ p {
   p,
   li {
     font-size: 0.8rem;
+  }
+  .credits p,
+  .credits li {
+    font-size: 0.6rem;
+    margin-bottom: 0.25rem;
   }
   p.p__intro {
     font-size: 1.0664rem;
@@ -807,6 +823,9 @@ p {
     font-weight: 700;
     line-height: 1rem;
   }
+  .credits h3 {
+    font-size: 0.8rem;
+  }
   h4,
   .size-1 {
     font-family: 'Interstate', Helvetica, Arial, sans-serif;
@@ -819,6 +838,11 @@ p {
   p,
   li {
     font-size: 0.8rem;
+  }
+  .credits p,
+  .credits li {
+    font-size: 0.6664rem;
+    margin-bottom: 0.25rem;
   }
   p.p__intro {
     font-size: 0.96rem;
@@ -856,6 +880,9 @@ p {
     font-weight: 700;
     line-height: 1rem;
   }
+  .credits h3 {
+    font-size: 0.7rem;
+  }
   h4,
   .size-1 {
     font-family: 'Interstate', Helvetica, Arial, sans-serif;
@@ -868,6 +895,11 @@ p {
   p,
   li {
     font-size: 0.7rem;
+  }
+  .credits p,
+  .credits li {
+    font-size: 0.5831rem;
+    margin-bottom: 0.25rem;
   }
   p.p__intro {
     font-size: 0.84rem;
@@ -1223,24 +1255,16 @@ img {
 }
 @media (max-width: 550px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
 }
-.slider--mobile {
-  position: relative;
-  height: 55vh;
-  width: 30.93vh;
-  margin: 2rem auto;
+@media (min-width: 481px) {
+  .section--slider-mobile {
+    height: 28rem;
+  }
 }
-.slider--mobile:before {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 141%;
-  height: 138%;
-  top: -16.5%;
-  left: -20%;
-  background-image: url(../images/phone2.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
+.phone {
+  position: relative;
+  height: 20rem;
+  width: 11.25rem;
+  margin: 2rem auto;
 }
 .slider--desktop {
   position: relative;
@@ -1262,8 +1286,8 @@ img {
 }
 @media (max-width: 550px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
   .slider--desktop {
-    width: 95%;
-    border: 0;
+    margin: 0 !important;
+    border: 0.5rem solid #aaa;
   }
 }
 .slider--desktop.rsFullscreen {
@@ -1283,6 +1307,46 @@ img {
 .slider--desktop .rsOverflow {
   position: absolute;
   top: 0;
+}
+.slider--mobile {
+  height: auto !important;
+  margin: 1rem auto !important;
+}
+.slider--mobile .rsOverflow {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+.slider--mobile:before {
+  content: '';
+  opacity: 0;
+  z-index: -1;
+  position: relative;
+  display: block;
+  width: 12rem;
+  height: 0;
+  padding-top: 177.7%;
+}
+@media (max-width: 550px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
+  .slider--mobile {
+    height: 55vh;
+    width: 33.93vh !important;
+    margin: 3rem auto !important;
+  }
+}
+.slider--mobile:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 141%;
+  height: 138%;
+  top: -16.5%;
+  left: -20%;
+  background-image: url(../images/phone2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 1;
 }
 #slider-hangtime-demo:before {
   background-image: url(../images/phone-sketch.png);
@@ -1362,6 +1426,7 @@ element.style {
 .project__header__hero {
   position: relative;
   display: block;
+  width: auto;
   height: 20rem;
   margin: 2rem auto 0;
 }
@@ -1371,8 +1436,12 @@ element.style {
     margin: 1.5rem auto 0;
   }
 }
+img {
+  width: 100%;
+}
 .top-content,
 .bottom-content {
+  position: relative;
   width: calc(50% - 3rem);
   margin: 0 1.5rem;
   padding: 0 0 2rem;
@@ -1400,7 +1469,8 @@ element.style {
 @media (max-width: 550px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
   .slide {
     position: relative;
-    margin: 1rem 0;
+    width: 92.5%;
+    margin: 0rem 0 1rem 5%;
   }
 }
 .section--intro {
@@ -1431,6 +1501,12 @@ element.style {
     top: 0;
     margin: 1.5rem 1rem 0 0;
   }
+  .section--text-left .slide.slider--mobile {
+    width: auto;
+    left: auto;
+    right: 15%;
+    top: 2rem;
+  }
   .section--text-left .top-content,
   .section--text-left .bottom-content {
     width: calc(40% - 3rem);
@@ -1447,6 +1523,12 @@ element.style {
     left: 0;
     top: 0;
     margin: 1.5rem 1rem 0;
+  }
+  .section--text-right .slide.slider--mobile {
+    width: auto;
+    right: auto;
+    left: 15%;
+    top: 2rem;
   }
   .section--text-right .top-content,
   .section--text-right .bottom-content {
@@ -1469,6 +1551,19 @@ element.style {
   }
 }
 @media (min-width: 481px) {
+  .phone-royalSlider {
+    justify-content: space-between;
+  }
+  .phone-royalSlider .slider__nav {
+    justify-content: flex-start;
+  }
+  .phone-royalSlider .bottom-content {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 2rem;
+  }
+}
+@media (min-width: 481px) {
   .section--split {
     flex-direction: row;
   }
@@ -1485,16 +1580,9 @@ element.style {
   font-weight: 400;
 }
 .credits h3 {
-  font-size: 0.8rem;
-  font-weight: 7070;
+  font-weight: 700;
   color: #333333;
   margin: 0;
-}
-.credits p {
-  font-size: 0.8rem;
-  color: #333333;
-  margin: 0;
-  padding: 0;
 }
 .divider {
   width: 100%;
@@ -1547,6 +1635,11 @@ element.style {
   position: relative;
   height: 10rem;
 }
+@media (max-width: 550px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
+  .slider__captions {
+    height: 8rem;
+  }
+}
 .slider__captions h4 {
   font-size: 0.8rem;
   margin-bottom: 0.5em;
@@ -1566,6 +1659,11 @@ element.style {
   position: absolute;
   bottom: 2rem;
   margin: 0.5rem 0;
+}
+@media (max-width: 550px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
+  .slider__captions .caption {
+    bottom: auto;
+  }
 }
 .slider__captions .caption strong {
   font-size: 1.1em;
@@ -1939,6 +2037,11 @@ element.style {
 .index .footer-links {
   display: none;
 }
+@media (min-width: 481px) {
+  .approach {
+    flex-direction: row;
+  }
+}
 .approach svg {
   width: 82%;
   height: 4rem;
@@ -1978,6 +2081,7 @@ element.style {
   }
 }
 .about {
+  flex-direction: row;
   padding: 2rem 1rem 0 25%;
 }
 .about h1 {
@@ -1985,13 +2089,13 @@ element.style {
   margin-top: 0;
 }
 .about .top-content {
-  width: calc(70% - 1rem);
+  width: calc(70% - 3rem);
   padding-top: 1.5rem;
   padding-right: 1rem;
   padding-bottom: 2rem;
 }
 .about .bottom-content {
-  width: calc(30% - 1rem);
+  width: calc(30% - 3rem);
   padding-top: 1.5rem;
   padding-bottom: 2rem;
 }
@@ -2014,6 +2118,7 @@ element.style {
 }
 @media (max-width: 550px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
   .about {
+    flex-direction: column;
     padding: 0;
   }
   .about .top-content,

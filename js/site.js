@@ -28,6 +28,7 @@ function makeSlider(divID) {
   // Captions
 
   var captions = sliderDiv.siblings('.bottom-content').children('.slider__captions');
+  console.log(captions);
 
   // init styles
   captions.children().first().addClass('current');
@@ -247,8 +248,9 @@ function progress(element, offsetStart){ // element is the selector string
 
 $(document).ready(function() {
 
-  // var sliderHangtime = makeSlider("slider-hangtime");
+  var sliderHangtime = makeSlider("slider-hangtime");
   var sliderCampaigns = makeSlider("slider-campaigns");
+  var sliderCampaigns = makeSlider("slider-vertical-vid");
   // var sliderWattyl1 = makeSlider("slider-wattyl1");
   // var sliderWattyl2 = makeSlider("slider-wattyl2");
   // var sliderPoetry = makeSlider("slider-poetry");
