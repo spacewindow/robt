@@ -30,12 +30,16 @@
     @media (min-width: 1200px) { @rules(); }
 }
 
+.media-desktop(@rules) {
+    @media (min-width: 481px) { @rules(); }
+}
+
 .media-small-device(@rules) {
      @media (max-width: 899px) { @rules(); }
  }
 .media-phone-portrait(@rules) {
   // iPhone 7 portrait + below  or iPhone 5 landscape + below will trigger mobile stack
-     @media (max-width: 414px) and (orientation: portrait),
+     @media (max-width: 550px) and (orientation: portrait),
      (max-width: 480px) and (orientation: landscape){ @rules(); }
  }
 

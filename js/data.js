@@ -54,7 +54,7 @@ const data = [
   },
   {
     id: "e-newsletters",
-    title: "Salesforce E&#8209;Newsletters",
+    title: "E&#8209;Newsletters",
     type: "responsive / html email",
     client: "CGU Insurance",
     description: "Drag-and-drop email templates leveraging the power of Salesforce Marketing Cloud",
