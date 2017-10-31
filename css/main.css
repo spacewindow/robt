@@ -903,13 +903,6 @@ a {
   color: #ff9900;
   height: 1.75em;
 }
-a svg {
-  display: block;
-  fill: #aaaaaa;
-  height: 2rem;
-  width: 2rem;
-  margin-right: 0.5em;
-}
 .labelled-input {
   display: flex;
   justify-content: space-between;
@@ -1089,54 +1082,72 @@ button.icon-only svg {
   margin: 0 auto;
 }
 .footer-links {
-  justify-content: space-between;
-}
-.footer-links > * {
-  overflow: visible;
-  height: 4rem;
+  position: relative;
+  height: 9rem;
+  font-family: 'Interstate', Helvetica, Arial, sans-serif;
+  color: #333333;
 }
 .footer-links a {
+  position: absolute;
+  top: 0;
+  display: flex;
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+  width: 20rem;
+  height: 100%;
+}
+.footer-links a.previous {
+  left: 0;
+  flex-direction: row-reverse;
+}
+.footer-links a.next {
+  right: 0;
+}
+.footer-links__thumb {
+  position: relative;
+  width: 80%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  width: 10rem;
+  height: 100%;
 }
-.footer-links a img {
-  display: block;
-  width: 6rem;
-  height: auto;
+.previous .footer-links__thumb {
+  align-items: flex-start;
+  margin-left: 1rem;
+}
+.next .footer-links__thumb {
+  align-items: flex-end;
+  margin-right: 1rem;
+}
+.footer-links__thumb img {
+  display: none;
+  position: relative;
+  width: 50%;
   filter: invert(100%);
 }
-.footer-links .previous a {
+.footer-links__title {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.footer-links__type {
+  font-size: 0.6rem;
+  font-weight: 400;
+  color: #aaaaaa;
+  margin: 0.5em 0;
+}
+.footer-links__chevron {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  margin-left: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 1px solid white;
 }
-.footer-links .previous a:before {
-  font-family: 'Interstate', Helvetica, Arial, sans-serif;
-  font-size: 3rem;
-  position: absolute;
-  display: block;
-  content: '\2039';
-  left: 0;
-  top: 0;
-  width: 2rem;
-}
-.footer-links .next {
-  align-items: flex-end;
-}
-.footer-links .next a {
-  align-items: center;
-  margin-right: 2rem;
-}
-.footer-links .next a:before {
-  font-family: 'Interstate', Helvetica, Arial, sans-serif;
-  font-size: 3rem;
-  position: absolute;
-  display: block;
-  content: '\203A';
-  right: 0;
-  top: 0;
-  width: 2rem;
+.footer-links__chevron svg {
+  width: 70%;
+  height: 70%;
 }
 footer {
   justify-content: center;
@@ -1812,6 +1823,13 @@ element.style {
   .about {
     padding: 0;
   }
+}
+.about a svg {
+  display: block;
+  fill: #aaaaaa;
+  height: 2rem;
+  width: 2rem;
+  margin-right: 0.5em;
 }
 .single-image > img {
   width: 85%;
