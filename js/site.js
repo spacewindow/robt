@@ -21,33 +21,51 @@ function makeSlider(divID) {
   sliderDiv.addClass('royalSlider rsDefault');
 
   // slider Nav
+  //
+  // var sliderNav = $("#" + divID + '-nav');
 
-  var customNav = $("#" + divID + '-nav');
-  // init style
-  customNav.addClass('start');
-  sliderLeft = customNav.children(".slider__arrow--left");
-  sliderRight = customNav.children(".slider__arrow--right");
-
-  sliderLeft.click(function() {
-    slider.prev();
-  });
-  sliderRight.click(function() {
-    slider.next();
-  });
 
   // Captions
 
-  var captions = $("#" + divID + '-captions');
+  var captions = sliderDiv.siblings('.bottom-content').children('.slider__captions');
+
   // init styles
   captions.children().first().addClass('current');
   // set Nav state
 
   // insert navigation elements
 
-  var sliderNavBelow = $('<div id="' + divID + '-nav-below" class="slider__nav-below"></div>');
+  var sliderNav = $('<div class="slider__nav"></div>');
+
+  var sliderNavLeft = $('<div class="slider__nav__arrow slider__nav__arrow--left"></div>');
+  var sliderNavRight = $('<div class="slider__nav__arrow slider__nav__arrow--right"></div>');
+  var sliderBullet = '<div class="slider__nav__bullet"></div>';
+
+  for(var i = 0; i < slider.numSlides; i++){
+    var newBullet = $(sliderBullet);
+    sliderNav.append(newBullet);
+  }
+
+  var sliderBullets = sliderNav.children('.slider__nav__bullet');
+
+  sliderNav.prepend(sliderNavLeft);
+  sliderNav.append(sliderNavRight);
+
+  // init style
+  sliderNav.addClass('start');
+  sliderBullets.first().addClass('current');
+
+  sliderNavLeft.click(function() {
+    slider.prev();
+  });
+  sliderNavRight.click(function() {
+    slider.next();
+  });
+
+  sliderNav.insertBefore(captions);
 
   var sliderCount = $('.slider__count');
-  // sliderNavBelow.append(sliderCount);
+  // sliderNav.append(sliderCount);
   //
   var sliderCurrentCount = $('.current-count');
   var sliderFullCount = $('.full-count');
@@ -59,10 +77,10 @@ function makeSlider(divID) {
   //
   // sliderFullscreen = $('<div class="slider__fullscreen-button"><svg viewBox="0 0 300 300"  preserveAspectRatio="xMidYMid meet"><use x="0" y="0" href="#zoom"></use></svg><span>Fullscreen</span></div>');
   //
-  // sliderNavBelow.append(sliderFullscreen);
-  // sliderNavBelow.insertAfter(sliderDiv);
+  // sliderNav.append(sliderFullscreen);
+  // sliderNav.insertAfter(sliderDiv);
 
-  var currentCount = sliderNavBelow;
+  var currentCount = sliderNav;
 
   // activate fullscreen button
 
@@ -74,14 +92,17 @@ function makeSlider(divID) {
   slider.ev.on('rsBeforeAnimStart', function() {
     sliderCurrentCount.html(slider.currSlideId + 1);
     if (slider.currSlideId === 0) {
-      customNav.attr('class', 'slider__nav start');
+      sliderNav.attr('class', 'slider__nav start');
     } else if (slider.currSlideId === (slider.numSlides - 1)) {
-      customNav.attr('class', 'slider__nav end');
+      sliderNav.attr('class', 'slider__nav end');
     } else {
-      customNav.attr('class', 'slider__nav middle');
+      sliderNav.attr('class', 'slider__nav middle');
     }
     //remove current class from all captions, then add to current
     captions.children().removeClass('current').eq(slider.currSlideId).addClass('current');
+    //remove current class from all bullets, then add to current
+    sliderBullets.removeClass('current').eq(slider.currSlideId).addClass('current');
+
   });
 
   // fullscreen
@@ -226,14 +247,12 @@ function progress(element, offsetStart){ // element is the selector string
 
 $(document).ready(function() {
 
-  var sliderHangtime = makeSlider("slider-hangtime");
+  // var sliderHangtime = makeSlider("slider-hangtime");
   var sliderCampaigns = makeSlider("slider-campaigns");
-  var sliderCharts = makeSlider("slider-charts");
-  var sliderDownload = makeSlider("slider-download");
-  var sliderWattyl1 = makeSlider("slider-wattyl1");
-  var sliderWattyl2 = makeSlider("slider-wattyl2");
-  var sliderPoetry = makeSlider("slider-poetry");
-  var sliderStoreLocator = makeSlider("slider-store-locator");
+  // var sliderWattyl1 = makeSlider("slider-wattyl1");
+  // var sliderWattyl2 = makeSlider("slider-wattyl2");
+  // var sliderPoetry = makeSlider("slider-poetry");
+  // var sliderStoreLocator = makeSlider("slider-store-locator");
 
   $('#wattyl-video').on('click', function(){
     $(this).removeClass('placeholder').children('video').get(0).play();

@@ -705,6 +705,7 @@ h2 {
   font-size: 1.4216rem;
   line-height: 2rem;
   font-weight: 700;
+  margin-top: 0;
 }
 h3 {
   font-family: 'Interstate', Helvetica, Arial, sans-serif;
@@ -719,10 +720,13 @@ h4,
   font-size: 1.0664rem;
   line-height: 2rem;
 }
+p {
+  margin: 0.25rem 0 0.5rem;
+}
 p,
 li {
   font-size: 0.8rem;
-  line-height: 1.5rem;
+  line-height: 1.2rem;
 }
 p.p__intro {
   font-size: 1.0664rem;
@@ -752,6 +756,7 @@ p.xsmall {
     font-size: 1.4216rem;
     line-height: 2rem;
     font-weight: 700;
+    margin-top: 0;
   }
   h3 {
     font-family: 'Interstate', Helvetica, Arial, sans-serif;
@@ -766,10 +771,13 @@ p.xsmall {
     font-size: 1.0664rem;
     line-height: 2rem;
   }
+  p {
+    margin: 0.25rem 0 0.5rem;
+  }
   p,
   li {
     font-size: 0.8rem;
-    line-height: 1.5rem;
+    line-height: 1.2rem;
   }
   p.p__intro {
     font-size: 1.0664rem;
@@ -800,6 +808,7 @@ p.xsmall {
     font-size: 1.152rem;
     line-height: 2rem;
     font-weight: 700;
+    margin-top: 0;
   }
   h3 {
     font-family: 'Interstate', Helvetica, Arial, sans-serif;
@@ -814,10 +823,13 @@ p.xsmall {
     font-size: 0.96rem;
     line-height: 1rem;
   }
+  p {
+    margin: 0.25rem 0 0.5rem;
+  }
   p,
   li {
     font-size: 0.8rem;
-    line-height: 1.5rem;
+    line-height: 1.2rem;
   }
   p.p__intro {
     font-size: 0.96rem;
@@ -848,6 +860,7 @@ p.xsmall {
     font-size: 1.008rem;
     line-height: 2rem;
     font-weight: 700;
+    margin-top: 0;
   }
   h3 {
     font-family: 'Interstate', Helvetica, Arial, sans-serif;
@@ -862,10 +875,13 @@ p.xsmall {
     font-size: 0.84rem;
     line-height: 1rem;
   }
+  p {
+    margin: 0.25rem 0 0.5rem;
+  }
   p,
   li {
     font-size: 0.7rem;
-    line-height: 1.5rem;
+    line-height: 1.2rem;
   }
   p.p__intro {
     font-size: 0.84rem;
@@ -1125,7 +1141,14 @@ button.icon-only svg {
 footer {
   justify-content: center;
   height: 15rem;
-  background-image: url(../images/me_desktop_bw.jpg), url('#chevron-left');
+  background-image: url(../images/me.png), linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0)), url(../images/white-brick.jpg);
+  background-repeat: no-repeat, no-repeat, repeat;
+  background-position: left bottom,
+		0 0,
+		0 0;
+  background-size: contain,
+		auto,
+		auto 12rem;
 }
 footer .grid-cell {
   justify-content: center;
@@ -1136,10 +1159,25 @@ footer h2 {
   max-width: 25rem;
   margin: 0 auto;
 }
-footer p,
-footer a {
+footer p {
   text-align: center;
   font-size: 1.0664rem;
+}
+@media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
+  footer {
+    background-size: auto 60%,
+			auto,
+			auto 12rem;
+    background-position: left -1rem bottom -1rem, 0 0, 0 0;
+  }
+  footer h2 {
+    font-size: 1.0664rem;
+    margin-bottom: 2rem;
+  }
+  footer p {
+    font-size: 0.8rem;
+    padding-left: 35%;
+  }
 }
 video {
   width: 100%;
@@ -1364,13 +1402,17 @@ element.style {
   border-radius: 0.5rem;
   border: 1rem solid #aaaaaa;
 }
+.slider__captions {
+  position: relative;
+  height: 10rem;
+}
 .slider__captions h4 {
-  font-size: 1.0664rem;
+  font-size: 0.8rem;
   margin-bottom: 0.5em;
 }
 .slider__captions p {
-  font-size: 0.8rem;
-  line-height: 1.6;
+  font-size: 0.6rem;
+  line-height: 1rem;
   margin-top: 0;
   overflow: hidden;
   height: 4rem;
@@ -1792,6 +1834,18 @@ element.style {
   height: 4em;
   fill: #ffffff;
 }
+@media (max-width: 414px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
+  .process p {
+    margin-bottom: 1rem;
+    padding-left: 0;
+  }
+  .process svg {
+    position: relative;
+    width: 100%;
+    top: auto;
+    height: 5em;
+  }
+}
 .process-hero img {
   align-self: center;
   width: 100%;
@@ -1799,6 +1853,9 @@ element.style {
 }
 .additional-features .grid-cell {
   padding-right: 2rem;
+}
+.slide {
+  margin: 1rem 0;
 }
 .slide img {
   border: 1px solid #aaaaaa;
@@ -1810,5 +1867,47 @@ element.style {
 }
 .section--grey {
   background: #efefef;
+}
+.slider__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: auto;
+}
+.slider__nav__arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.slider__nav__arrow--left {
+  border-width: 0.35rem 0.5rem 0.35rem 0;
+  border-color: transparent #c8c8c8 transparent transparent;
+  margin-right: 0.75rem;
+}
+.start .slider__nav__arrow--left {
+  border-color: transparent rgba(200, 200, 200, 0.6) transparent transparent;
+}
+.slider__nav__arrow--right {
+  border-width: 0.35rem 0 0.35rem 0.5rem;
+  border-color: transparent transparent transparent #c8c8c8;
+  margin-left: 0.75rem;
+}
+.end .slider__nav__arrow--right {
+  border-color: transparent transparent transparent rgba(200, 200, 200, 0.6);
+}
+.slider__nav__bullet {
+  width: 0.15rem;
+  height: 0.15rem;
+  border-radius: 50%;
+  background: rgba(200, 200, 200, 0.6);
+  margin: 0 0.35rem;
+}
+.slider__nav__bullet.current {
+  background: #c8c8c8;
+}
+.top-content img,
+.bottom-content img {
+  margin: 0.5rem 0;
 }
 /*# sourceMappingURL=../source.map */
