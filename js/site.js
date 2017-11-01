@@ -271,7 +271,8 @@ $(document).ready(function() {
   }, 1.5, 'start');
 
   $('.app__menu__button').click(function(){
-    $('.app__menu').toggleClass('show');
+    // $('.app__menu').toggleClass('show');
+    $('body').toggleClass('menu');
   });
 
 

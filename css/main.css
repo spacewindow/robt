@@ -1887,6 +1887,25 @@ img {
   width: 100%;
   height: 100%;
 }
+html {
+  overflow: hidden;
+}
+body {
+  transition: transform 0.5s cubic-bezier(0.02, 0.8, 0.24, 0.99);
+}
+body.menu {
+  transition: transform 0.5s cubic-bezier(0.8, 0.12, 0.9, 0.37);
+}
+@media (min-width: 481px) {
+  body.menu {
+    transform: translateX(-30%);
+  }
+}
+@media (max-width: 550px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
+  body.menu {
+    transform: translateX(-90%);
+  }
+}
 .app__menu__button {
   width: 2rem;
   height: 2rem;
@@ -1896,6 +1915,42 @@ img {
   z-index: 20;
   background: white;
   border-radius: 100%;
+}
+.app__menu__close-icon {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: opacity 0.4s ease;
+}
+body.menu .app__menu__close-icon {
+  opacity: 1;
+}
+.app__menu {
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30%;
+  height: 105vh;
+  background: #333333;
+  transform: translateX(100%);
+  z-index: 10;
+}
+@media (max-width: 550px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
+  .app__menu {
+    width: 90%;
+  }
+}
+.app__menu h3 {
+  color: #ff9900;
+}
+.app__menu a {
+  font-size: 0.8rem;
+  color: white;
+  display: block;
 }
 .app__logo {
   width: 12rem;
@@ -1963,23 +2018,6 @@ img {
     width: 100%;
     height: 10rem;
   }
-}
-.app__menu {
-  padding: 1rem;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  background: black;
-  display: none;
-  z-index: 10;
-}
-.app__menu.show {
-  display: block;
-}
-.app__menu a {
-  color: white;
-  display: block;
 }
 .me-pic {
   align-self: center;

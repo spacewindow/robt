@@ -888,6 +888,24 @@ img{
   }
 }
 
+html{
+	overflow:hidden;
+}
+
+body{
+	transition: transform 0.5s cubic-bezier(.02,.8,.24,.99);
+}
+
+body.menu{
+	transition: transform 0.5s cubic-bezier(.8,.12,.9,.37);
+	.media-desktop({
+		transform: translateX(-30%);
+	});
+	.media-phone-portrait({
+		transform: translateX(-90%);
+	});
+}
+
 .app__menu__button{
   width: 2rem;
   height: 2rem;
@@ -897,6 +915,42 @@ img{
   z-index: 20;
   background: white;
   border-radius: 100%;
+}
+
+.app__menu__close-icon{
+	opacity:0;
+	position: absolute;
+	top:0;
+	width:100%;
+	height:100%;
+	z-index:2;
+	transition: opacity 0.4s ease;
+	body.menu & {
+		opacity:1;
+	}
+}
+
+.app__menu{
+  padding: 1rem;
+  position: absolute;
+  top:0;
+	right:0;
+  width: 30%;
+  height: 105vh;
+  background: @darkgrey;
+	transform: translateX(100%);
+	.media-phone-portrait({
+		width: 90%;
+	});
+	h3{
+		color: #ff9900;
+	}
+  a{
+		font-size: @size-0;
+    color: white;
+    display:block;
+  }
+  z-index: 10;
 }
 
 .app__logo{
@@ -970,23 +1024,7 @@ img{
 	});
 }
 
-.app__menu{
-  padding: 1rem;
-  position: fixed;
-  top:0;
-  width: 100vw;
-  height: 100vh;
-  background: black;
-  display:none;
-  &.show{
-    display:block;
-  }
-  a{
-    color: white;
-    display:block;
-  }
-  z-index: 10;
-}
+
 
 .me-pic{
   align-self:center;
