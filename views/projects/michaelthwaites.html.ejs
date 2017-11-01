@@ -1,48 +1,22 @@
 <% include ../partials/header.html.ejs %>
 
-<!-- <section class="preloader">
-  <div id="status"></div>
-</section> -->
-
-  <section class="grid intro">
-    <div class="grid-cell grid8 intro__text">
-      <div class="top-content" style="color: <%= pageData.current.color %>">
+<section class="section--grey section--intro">
+    <div class="top-content" style="color: <%= pageData.current.color %>">
         <p>Michael Thwaites, my grandfather, was a distinguished Australia poet. He won the Kings Gold Medal for poetry, wrote the Bicentennial hymn for the opening of New Parliament House, and other notable achievements.</p>
         <p>The foundation that manages his estate contracted me to provide an appropriate web presence for his work. The project was a deeply personal one for me, giving me the chance to explore the imagery of my grandfather's work in a contemporary style, without losing its link to the life of the author.</p>
-      </div>
-
     </div>
-    <div class="grid-cell grid4 credits">
+
+    <div class="bottom-content credits">
       <h3>Design, Coding, CMS</h3>
       <p>Rob Thwaites</p>
-
     </div>
   </section>
 
-
-  <section class="grid slider-section">
-    <div class="grid-cell grid5" style="justify-content: flex-end;">
-        <h3 style="position:absolute; top: 2rem;">Features</h3>
-        <div class="slider__captions" id="slider-poetry-captions">
-          <div class="caption current"><p>Family albums were raided to create an iconic image for each poem. Poems with audio display an icon in the visual navigation.</p></div>
-          <div class="caption"><p>Each poem was carefully and clearly typeset so that the visual appeal and extra features of the site did not interfere with the power of the words alone.</p></div>
+  <section class="section--text-left section--slider-desktop section--dark">
+      <div class="top-content">
+        <h3>Features</h3>
       </div>
-      <div class="slider__nav" id="slider-poetry-nav">
-
-          <svg class="slider__arrow slider__arrow--left" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-            <use x="0" y="0" xlink:href="#arrow-left"></use>
-          </svg>
-
-          <svg class="slider__arrow slider__arrow--right" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-            <use x="0" y="0" xlink:href="#arrow-right"></use>
-          </svg>
-
-        </div>
-    </div>
-
-    <div class="grid-cell grid7">
-
-      <div id="slider-poetry" class="slider--desktop">
+      <div class="slide slider--desktop" id="slider-poetry" >
         <!-- image and content -->
         <div class="video-slide">
           <video autoplay loop muted playsinline>
@@ -61,52 +35,49 @@
         </div>
 
       </div>
-
-    </div>
+      <div class="bottom-content">
+        <div class="slider__captions">
+            <div class="caption current"><p>Family albums were raided to create an iconic image for each poem. Poems with audio display an icon in the visual navigation.</p></div>
+            <div class="caption"><p>Each poem was carefully and clearly typeset so that the visual appeal and extra features of the site did not interfere with the power of the words alone.</p></div>
+        </div>
+      </div>
   </section>
 
 
-  <section class="grid">
-
-    <div class="grid-cell grid7">
-      <div class="image-slide">
-        <img src="/images/thwaites/thwaites-ipad.jpg" alt="">
-      </div>
+  <section class="section--text-right">
+    <div class="top-content">
+      <h2>Audio and Media</h2>
+      <p>A playlist of poems from a Concert of Poetry and Music could be listened to on the site, or downloaded from iTunes as a podcast.</p>
+      <p>Press clippings of interviews with the poet could be clicked and viewed.</p>
+      <p>The author's publications are is also for sale on the website.</p>
     </div>
-    <div class="grid-cell grid5">
-      <div class="top-content">
-        <p>A playlist of poems from a Concert of Poetry and Music could be listened to on the site, or downloaded from iTunes as a podcast.</p>
-        <p>The author's publications are is also for sale on the website.</p>
-      </div>
+    <div class="slide">
+      <img src="/images/thwaites/thwaites-ipad.jpg" alt="" style="border:0">
     </div>
+    <div class="bottom-content"></div>
 
   </section>
 
-  <section class="grid">
-
-    <div class="grid-cell grid6">
+  <section class="section--text-left section--palegrey">
       <div class="top-content">
+        <h2>Social Features</h2>
         <p>Social sharing was a key goal from the start.</p>
         <p>Facebook, Twitter and Pinterest APIs incorporated into the site.</p>
       </div>
-    </div>
-
-    <div class="grid-cell grid6">
-      <div class="image-slide">
+      <div class="slide">
         <img src="/images/thwaites/thwaites-share.png" alt="">
       </div>
-    </div>
-
+    <div class="bottom-content"></div>
 
   </section>
 
 
-  <section class="grid process">
-    <h2 style="width:100%">Process</h2>
-    <div class="grid-cell grid6 process-hero">
+  <section class="process section--split">
+    <div class="top-content">
       <img src="/images/thwaites/interface.jpg" alt="">
     </div>
-    <div class="grid-cell grid6">
+    <div class="bottom-content">
+      <h2>Process</h2>
       <p>
         <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
           <use x="0" y="0" xlink:href="#research"></use>

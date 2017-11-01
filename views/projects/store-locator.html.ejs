@@ -1,14 +1,12 @@
 <% include ../partials/header.html.ejs %>
 
-  <section class="grid intro">
-    <div class="grid-cell grid8 intro__text">
-      <div class="top-content" style="color: <%= pageData.current.color %>">
+<section class="section--grey section--intro">
+    <div class="top-content" style="color: <%= pageData.current.color %>">
         <p>Playground needed a 'store locator' with a simple set-up for clients, including a Google Map that could be populated with locations based on a few simpel search terms.</p>
 
       </div>
 
-    </div>
-    <div class="grid-cell grid4 credits">
+    <div class="bottom-content credits">
       <h3>My Role</h3>
       <p>UX Design, Prototyping, Development</p>
 
@@ -17,11 +15,14 @@
     </div>
   </section>
 
-  <section class="grid">
-    <div class="grid-cell grid4">
+  <section class="section--text-left  section--slider-mobile">
       <div class="top-content">
-        <h4>Engagement journey</h3>
-
+        <h2>Engagement journey</h2>
+      </div>
+      <div class="slide">
+        <img src="/images/store-locator/store-locator-schematic.png" alt="" style="border:0;">
+      </div>
+      <div class="bottom-content">
         <p>We knew from our campaign data that users are reluctant to share their location with brands.</p>
 
         <p>The ad unit would engage users incrementally:</p>
@@ -30,52 +31,30 @@
           <li>Display the locations in a custom Google map styled match the brand.</li>
           <li>The customer could control whether to refine their location, or open up directions in the Maps app or web browser.</li>
         </ul>
-
       </div>
-    </div>
-    <div class="grid-cell grid8">
-      <div class="image-slide">
-        <img src="/images/store-locator/store-locator-schematic.png" alt="">
-      </div>
-    </div>
-
   </section>
 
-  <section class="block grid slider-section">
-
-    <div class="grid-cell grid6">
-      <div class="slider--mobile" id="slider-store-locator">
-        <!-- image and content -->
+  <section class="section--text-right section--slider-mobile phone-royalSlider section--dark">
+    <div class="top-content">
+      <p>This ease of setup and simple UX made the Store Locator a popular choice for brands.</p>
+      <p>The format was used successfully with a number of campaigns.</p>
+    </div>
+    <div class="slide slider--mobile"  id="slider-store-locator">
         <div class="video-slide">
           <video autoplay loop muted playsinline style="border: 1px solid black;">
             <source src="/images/ads/ads-maccers-sl.mp4">
-            <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
-            <!-- <img src="image.gif"> -->
           </video>
         </div>
         <div class="video-slide">
           <video autoplay loop muted playsinline style="border: 1px solid black;">
             <source src="/images/ads-schweppes.mp4">
-            <!-- <source src="image.webm" onerror="fallback(parentNode)"> -->
-            <!-- <img src="image.gif"> -->
           </video>
         </div>
-
-      </div>
     </div>
 
-    <div class="grid-cell grid6 captions-cell">
-      <div class="slider__count">
-        <span class="current-count"></span>
-        <span class="full-count"></span>
-      </div>
-      <div class="top-content">
-        <p>This ease of setup and simple UX made the Store Locator a popular choice for brands.</p>
-        <p>The format was used successfully with a number of campaigns.</p>
-      </div>
-
-        <div class="slider__captions" id="slider-store-locator-captions">
-          <div class="caption current">
+    <div class="bottom-content">
+        <div class="slider__captions">
+          <div class="caption">
             <h4>McDonalds</h4>
             <p>With locations everywhere, McDonalds was an obvious candidate for a Store Locator ad to generate foot traffic into outlets.</p>
           </div>
@@ -83,31 +62,17 @@
             <h4>Schweppes</h4>
             <p>Multiple locations were possible for brands - Schweppes beverages were available from 7-Elevens and Caltex, providing multiple possible destinations.</p>
           </div>
-
         </div>
-
-        <div class="slider__nav" id="slider-store-locator-nav">
-
-            <svg class="slider__arrow slider__arrow--left" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-              <use x="0" y="0" xlink:href="#arrow-left"></use>
-            </svg>
-
-            <svg class="slider__arrow slider__arrow--right" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
-              <use x="0" y="0" xlink:href="#arrow-right"></use>
-            </svg>
-
-          </div>
     </div>
 
   </section>
 
-  <section class="grid process">
-    <h2 style="width:100%">Process</h2>
-    <div class="grid-cell grid6 process-hero">
+  <section class="process section--split">
+    <div class="top-content">
       <img src="/images/process-store-locator.png" alt="">
     </div>
-    <div class="grid-cell grid76">
-
+    <div class="bottom-content">
+      <h2>Process</h2>
       <p>
         <svg viewBox="0 0 300 300" preserveAspectRatio="xMidYMid meet">
           <use x="0" y="0" xlink:href="#plan"></use>
@@ -125,7 +90,7 @@
     </div>
   </section>
 
-<!-- 
+<!--
 
   <section class="grid image-frame">
       <div class="grid-cell grid10">

@@ -244,17 +244,15 @@ function progress(element, offsetStart){ // element is the selector string
 
 }
 
-
-
 $(document).ready(function() {
 
   var sliderHangtime = makeSlider("slider-hangtime");
   var sliderCampaigns = makeSlider("slider-campaigns");
   var sliderCampaigns = makeSlider("slider-vertical-vid");
-  // var sliderWattyl1 = makeSlider("slider-wattyl1");
-  // var sliderWattyl2 = makeSlider("slider-wattyl2");
-  // var sliderPoetry = makeSlider("slider-poetry");
-  // var sliderStoreLocator = makeSlider("slider-store-locator");
+  var sliderWattyl1 = makeSlider("slider-wattyl1");
+  var sliderWattyl2 = makeSlider("slider-wattyl2");
+  var sliderPoetry = makeSlider("slider-poetry");
+  var sliderStoreLocator = makeSlider("slider-store-locator");
 
   $('#wattyl-video').on('click', function(){
     $(this).removeClass('placeholder').children('video').get(0).play();
