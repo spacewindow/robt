@@ -270,9 +270,9 @@ $(document).ready(function() {
     delay: 1.5
   }, 1.5, 'start');
 
-  $('.app__menu__button').click(function(){
+  $('.app__menu__button, .app__menu__close-icon').click(function(){
     // $('.app__menu').toggleClass('show');
-    $('body').toggleClass('menu');
+    $('.app__body, .app__header').toggleClass('menu');
   });
 
 

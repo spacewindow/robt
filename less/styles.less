@@ -1,23 +1,12 @@
 #__bs_notify__ { top:95% !important; right: 10px !important; border-radius: 15px !important; height:60px !important; display: none !important }
-body{
-	// background: lighten(red, 45%);
-	// &:after{
-	// 	content:'';
-	// 	pointer-events: none;
-	// 	display:block;
-	// 	position: absolute;
-	// 	top:0;
-	// 	bottom:0;
-	// 	left:0;
-	// 	right:0;
-	// 	background-image: url(../images/textured_paper.png);
-	// 	opacity: 0.4;
-	// 	z-index: 10;
-	// 	// mix-blend-mode: overlay;
-	// 	color: white !important;
-	// }
+
+html{
+	overflow-x:hidden;
 }
 
+body{
+	background: @darkgrey;
+}
 
 .app__svg-icons{
 	display:none;
@@ -33,6 +22,149 @@ body{
 	max-width: 100%;
 	overflow:hidden;
 	margin: 0 auto;
+	transition: transform 0.5s 0.1s cubic-bezier(.02,.8,.24,.99);
+	background:white;
+	z-index:1;
+}
+
+.app__body.menu{
+	transition: transform 0.5s cubic-bezier(.8,.12,.9,.37);
+	.media-desktop({
+		transform: translateX(-30%);
+	});
+	.media-phone-portrait({
+		transform: translateX(-90%);
+	});
+}
+
+.app__menu__button{
+  width: 2rem;
+  height: 2rem;
+  position:fixed;
+  top:0;
+  right:1rem;
+  z-index: 20;
+  background: white;
+  border-radius: 100%;
+}
+
+.app__menu__close-icon{
+	position: absolute;
+	top:0;
+	right:0;
+	width:2rem;
+	height: 2rem;
+	z-index:2;
+	fill:white;
+}
+
+.app__menu{
+  padding: 3rem 1rem 1rem 1rem;
+  position: fixed;
+  top:0;
+	right:0;
+  width: 30%;
+  height: 102vh;
+  background: @darkgrey;
+	overflow-x: hidden;
+	overflow-y:auto;
+	transition: width 0s linear 0.5s;
+	.media-phone-portrait({
+		width: 90%;
+	});
+	h3{
+		color: #ff9900;
+		text-align: left !important;
+	}
+  a{
+		font-size: @size-0;
+    color: white;
+    display:block;
+		margin-bottom: 0.5em;
+
+  }
+  z-index: 0;
+}
+
+.app__logo{
+  width: 12rem;
+  height: 12rem;
+  position:fixed;
+  top:-0.3rem;
+  left:-0.2rem;
+  z-index: 20;
+  fill: black;
+  border-radius: 100%;
+  transform-origin: 0 0;
+  transition: transform 0.3s ease-out;
+	transform: scale(0.25);
+// 	outline: 1px solid transparent;
+// backface-visibility: hidden;
+	.media-phone-portrait({
+		transform: translateX(0%) scale(0.25);
+	});
+  .init & {
+    transform: scale(3);
+		.media-phone-portrait({
+			transform: translateX(-105%);
+		});
+  }
+}
+.app__header{
+	position: fixed;
+	height: 2.3rem;
+	width: 100%;
+	z-index:100;
+	transition: transform 0.5s 0.1s cubic-bezier(.02,.8,.24,.99);
+	&:after{
+		.pseudofill;
+		z-index:-1;
+		box-shadow: 0 0 1em rgba(0,0,0,0.2);
+		transition: all 0.3s ease-out;
+		background: white;
+		.init &{
+			opacity:0;
+		}
+	}
+	&.menu{
+		transition: transform 0.5s cubic-bezier(.8,.12,.9,.37);
+		.media-desktop({
+			transform: translateX(-30%);
+		});
+		.media-phone-portrait({
+			transform: translateX(-90%);
+		});
+	}
+}
+
+.init, .sticky{
+	.app__header:after{
+		opacity:0;
+	}
+	.app__logo{
+		transform: translateZ(0) scale(1);
+		.media-phone-portrait({
+			transform: scale(0.25) translateZ(0) translateX(-105%);
+		});
+	}
+}
+
+.init{
+	.app__header:after{
+		transition:none;
+	}
+	.app__logo{
+		transition:none;
+	}
+}
+
+.logo__mobile{
+	display:none;
+	.media-phone-portrait({
+		display:block;
+		width: 100%;
+		height: 10rem;
+	});
 }
 
 .footer-links{
@@ -866,164 +998,27 @@ img{
   right:0;
 }
 
-.preloader{
-  width:100vw;
-  height:100vh;
-  position: fixed;
-  top:0;
-  left:0;
-  background: black;
-  z-index: 100;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-  #status{
-    width: 500px;
-    height: 500px;
-    background:white;
-    canvas{
-      width: 100%;
-      height: 100%;
-    }
-  }
-}
-
-html{
-	overflow:hidden;
-}
-
-body{
-	transition: transform 0.5s cubic-bezier(.02,.8,.24,.99);
-}
-
-body.menu{
-	transition: transform 0.5s cubic-bezier(.8,.12,.9,.37);
-	.media-desktop({
-		transform: translateX(-30%);
-	});
-	.media-phone-portrait({
-		transform: translateX(-90%);
-	});
-}
-
-.app__menu__button{
-  width: 2rem;
-  height: 2rem;
-  position:fixed;
-  top:0;
-  right:0;
-  z-index: 20;
-  background: white;
-  border-radius: 100%;
-}
-
-.app__menu__close-icon{
-	opacity:0;
-	position: absolute;
-	top:0;
-	width:100%;
-	height:100%;
-	z-index:2;
-	transition: opacity 0.4s ease;
-	body.menu & {
-		opacity:1;
-	}
-}
-
-.app__menu{
-  padding: 1rem;
-  position: absolute;
-  top:0;
-	right:0;
-  width: 30%;
-  height: 105vh;
-  background: @darkgrey;
-	transform: translateX(100%);
-	.media-phone-portrait({
-		width: 90%;
-	});
-	h3{
-		color: #ff9900;
-	}
-  a{
-		font-size: @size-0;
-    color: white;
-    display:block;
-  }
-  z-index: 10;
-}
-
-.app__logo{
-  width: 12rem;
-  height: 12rem;
-  position:fixed;
-  top:-0.3rem;
-  left:-0.2rem;
-  z-index: 20;
-  fill: black;
-  border-radius: 100%;
-  transform-origin: 0 0;
-  transition: transform 0.3s ease-out;
-	transform: scale(0.25);
-// 	outline: 1px solid transparent;
-// backface-visibility: hidden;
-	.media-phone-portrait({
-		transform: translateX(0%) scale(0.25);
-	});
-  .init & {
-    // transform: scale(3);
-		// .media-phone-portrait({
-		// 	transform: translateX(-105%);
-		// });
-  }
-}
-.app__header{
-	position: fixed;
-	height: 2.3rem;
-	width: 100%;
-	z-index:100;
-	&:after{
-		.pseudofill;
-		z-index:-1;
-		box-shadow: 0 0 1em rgba(0,0,0,0.2);
-		transition: all 0.3s ease-out;
-		background: white;
-		// .init &{
-		// 	opacity:0;
-		// }
-	}
-}
-
-.init, .sticky{
-	.app__header:after{
-		opacity:0;
-	}
-	.app__logo{
-		transform: translateZ(0) scale(1);
-		.media-phone-portrait({
-			transform: scale(0.25) translateZ(0) translateX(-105%);
-		});
-	}
-}
-
-.init{
-	.app__header:after{
-		transition:none;
-	}
-	.app__logo{
-		transition:none;
-	}
-}
-
-.logo__mobile{
-	display:none;
-	.media-phone-portrait({
-		display:block;
-		width: 100%;
-		height: 10rem;
-	});
-}
-
+// .preloader{
+//   width:100vw;
+//   height:100vh;
+//   position: fixed;
+//   top:0;
+//   left:0;
+//   background: black;
+//   z-index: 100;
+//   display:flex;
+//   align-items: center;
+//   justify-content: center;
+//   #status{
+//     width: 500px;
+//     height: 500px;
+//     background:white;
+//     canvas{
+//       width: 100%;
+//       height: 100%;
+//     }
+//   }
+// }
 
 
 .me-pic{

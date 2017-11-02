@@ -38,7 +38,7 @@
      @media (max-width: 899px) { @rules(); }
  }
 .media-phone-portrait(@rules) {
-  // iPhone 7 portrait + below  or iPhone 5 landscape + below will trigger mobile stack
+  // iPhone 7 portrait (not anymore I bumped it from 414 to 550 for better desktop dev... see how this plays out) + below  or iPhone 5 landscape + below will trigger mobile stack
      @media (max-width: 550px) and (orientation: portrait),
      (max-width: 480px) and (orientation: landscape){ @rules(); }
  }
