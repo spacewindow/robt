@@ -21,6 +21,14 @@ const data = [
     color: "#72b1a3"
   },
   {
+    id: "songs",
+    title: "Songs for the&nbsp;Fallen",
+    type: "responsive / website / CMS",
+    client: "Critical Stages",
+    description: "Responsive website to raise funds by showcasing the sites and sounds of this hit cabaret show",
+    color: "#c80511"
+  },
+  {
     id: "store-locator",
     title: "Store Locator",
     type: "mobile / web component",
@@ -37,12 +45,12 @@ const data = [
     color: "#fa83ab"
   },
   {
-    id: "songs",
-    title: "Songs for the&nbsp;Fallen",
-    type: "responsive / website / CMS",
-    client: "Critical Stages",
-    description: "Responsive website to raise funds by showcasing the sites and sounds of this hit cabaret show",
-    color: "#c80511"
+    id: "e-newsletters",
+    title: "E&#8209;Newsletters",
+    type: "responsive / html email",
+    client: "CGU Insurance",
+    description: "Drag-and-drop email templates leveraging the power of Salesforce Marketing Cloud",
+    color: "#0aa945"
   },
   {
     id: "wattyl",
@@ -51,14 +59,6 @@ const data = [
     client: "Wattyl Paints",
     description: "Telling the story of an iconic Australian brand with social engagement and lead capturing technology",
     color: "#02c8a0"
-  },
-  {
-    id: "e-newsletters",
-    title: "E&#8209;Newsletters",
-    type: "responsive / html email",
-    client: "CGU Insurance",
-    description: "Drag-and-drop email templates leveraging the power of Salesforce Marketing Cloud",
-    color: "#0aa945"
   },
   // {
   //   id: "motherboard",
