@@ -672,6 +672,38 @@ img{
 	});
 }
 
+.characters .section--split{
+	.media-desktop({
+		height: 28rem;
+		.mobile-player{
+			left:14%;
+			right:auto;
+		}
+		.mobile-runner{
+			right:10%;
+			left:auto;
+		}
+	});
+	.media-phone-portrait({
+		&.the-player{
+			.bottom-content{
+				order:1
+			}
+			.top-content{
+				order:2
+			}
+		}
+		.top-content > .video-slide,
+		.bottom-content > .video-slide
+		{
+			position:relative;
+			video{
+				position:relative;
+			}
+		}
+	});
+}
+
 .intro__text{
   p{
     // font-size: @size-0;

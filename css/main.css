@@ -1744,6 +1744,35 @@ img {
     margin: 1rem 1.5rem 0rem;
   }
 }
+@media (min-width: 481px) {
+  .characters .section--split {
+    height: 28rem;
+  }
+  .characters .section--split .mobile-player {
+    left: 14%;
+    right: auto;
+  }
+  .characters .section--split .mobile-runner {
+    right: 10%;
+    left: auto;
+  }
+}
+@media (max-width: 550px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
+  .characters .section--split.the-player .bottom-content {
+    order: 1;
+  }
+  .characters .section--split.the-player .top-content {
+    order: 2;
+  }
+  .characters .section--split .top-content > .video-slide,
+  .characters .section--split .bottom-content > .video-slide {
+    position: relative;
+  }
+  .characters .section--split .top-content > .video-slide video,
+  .characters .section--split .bottom-content > .video-slide video {
+    position: relative;
+  }
+}
 .intro__text p {
   max-width: 40em;
   font-weight: 400;
