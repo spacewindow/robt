@@ -527,6 +527,7 @@ element.style {
 	z-index: 2;
 	.media-phone-portrait({
 		height: 18rem;
+		padding: 2.5rem 0.5rem 0 0.5rem;
 	});
 }
 
@@ -547,7 +548,8 @@ element.style {
 	height: 20rem;
 	margin: 2rem auto 0;
 	.media-phone-portrait({
-		height: 10.8rem;
+		height: auto;
+		width: 100%;
 		margin: 1.5rem auto 0;
 	});
 }
@@ -918,7 +920,7 @@ img{
 		h2:after{
 			content: '';
 			position:absolute;
-			right: 1em;
+			right: 0;
 			top: 1.2em;
 			width: 0;
 			height: 0;
@@ -1232,6 +1234,7 @@ img{
 		width: ~"calc(30% - 3rem)";
 		padding-top: 1.5rem;
 		padding-bottom: 2rem;
+		margin-left: -1rem;
 		a{
 			position: relative;
 			display:flex;
@@ -1258,6 +1261,9 @@ img{
 		}
 		.top-content{
 			padding-bottom:0;
+		}
+		.bottom-content{
+			margin-left: 0.5rem;
 		}
 		h1, h2{
 			text-align:center;

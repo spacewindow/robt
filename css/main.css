@@ -1595,6 +1595,7 @@ element.style {
 @media (max-width: 550px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
   .project__header {
     height: 18rem;
+    padding: 2.5rem 0.5rem 0 0.5rem;
   }
 }
 .project__header__title {
@@ -1615,7 +1616,8 @@ element.style {
 }
 @media (max-width: 550px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
   .project__header__hero {
-    height: 10.8rem;
+    height: auto;
+    width: 100%;
     margin: 1.5rem auto 0;
   }
 }
@@ -1956,7 +1958,7 @@ img {
   #every-device h2:after {
     content: '';
     position: absolute;
-    right: 1em;
+    right: 0;
     top: 1.2em;
     width: 0;
     height: 0;
@@ -2224,6 +2226,7 @@ img {
   width: calc(30% - 3rem);
   padding-top: 1.5rem;
   padding-bottom: 2rem;
+  margin-left: -1rem;
 }
 .about .bottom-content a {
   position: relative;
@@ -2253,6 +2256,9 @@ img {
   }
   .about .top-content {
     padding-bottom: 0;
+  }
+  .about .bottom-content {
+    margin-left: 0.5rem;
   }
   .about h1,
   .about h2 {
