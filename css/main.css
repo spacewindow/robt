@@ -451,6 +451,9 @@ body.showgrid:before {
   flex-direction: row;
   justify-content: space-between;
 }
+section {
+  flex-shrink: 0;
+}
 @media (max-width: 550px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
 }
 .grid1 {

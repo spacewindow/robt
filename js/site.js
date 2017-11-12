@@ -231,7 +231,8 @@ function progress(element, offsetStart){ // element is the selector string
   var scrollTopStart = scrollElement.offset().top - offsetStart;
   var scrollTopEnd = scrollElement.height() / 2 + scrollTopStart;
 
-  var currentPosition = window.scrollY;
+  var currentPosition = window.pageYOffset;
+  console.log('IE POSITION', currentPosition);
   var progress;
   if (currentPosition < scrollTopStart) {
       progress = 0;

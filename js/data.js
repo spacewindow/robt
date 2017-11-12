@@ -17,7 +17,7 @@ const data = [
     title: "Mobile Ad Formats",
     type: "mobile / web component",
     client: "Playground XYZ",
-    description: "New canvases and easy drag-and-drop templates to change the way advertisers interact with customers on mobile",
+    description: "New canvases to enhance the way advertisers interact with potential customers on mobile",
     color: "#72b1a3"
   },
   {
@@ -25,7 +25,7 @@ const data = [
     title: "Songs for the&nbsp;Fallen",
     type: "responsive / website / CMS",
     client: "Critical Stages",
-    description: "Responsive website to raise funds by showcasing the sites and sounds of this hit cabaret show",
+    description: "A responsive website to showcase the sites and sounds of this hit cabaret show and raise funds for touring",
     color: "#c80511"
   },
   {
@@ -33,7 +33,7 @@ const data = [
     title: "Store Locator",
     type: "mobile / web component",
     client: "Playground XYZ",
-    description: "Ad product with Google Maps API intergration",
+    description: "Mobile ad product integrating the Google Maps API ",
     color: "#ff0000"
   },
   {
