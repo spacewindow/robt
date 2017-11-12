@@ -40,7 +40,7 @@ body{
 .app__menu__button{
   width: 2rem;
   height: 2rem;
-  position:fixed;
+  position:absolute;
   top:0;
   right:1rem;
   z-index: 20;
@@ -89,7 +89,7 @@ body{
 .app__logo{
   width: 12rem;
   height: 12rem;
-  position:fixed;
+  position:absolute;
   top:-0.3rem;
   left:-0.2rem;
   z-index: 20;
@@ -116,6 +116,10 @@ body{
 	width: 100%;
 	z-index:100;
 	transition: transform 0.5s 0.1s cubic-bezier(.02,.8,.24,.99);
+	overflow:visible;
+	.grid-cell{
+		overflow:visible;
+	}
 	&:after{
 		.pseudofill;
 		z-index:-1;
@@ -614,7 +618,7 @@ img{
 				width:auto;
 				left:auto;
 				right:15%;
-				top:2rem;
+				top:3rem;
 			}
 		}
 		.top-content, .bottom-content{
@@ -637,7 +641,7 @@ img{
 				width:auto;
 				right:auto;
 				left:15%;
-				top:2rem;
+				top:3rem;
 			}
 		}
 		.top-content, .bottom-content{
@@ -1087,7 +1091,10 @@ img{
 	width: 33.33%;
 	height: 18rem;
 	img{
+		display:block;
 		width: 85%;
+		flex-shrink:0; // required for IE Fix
+		// height: 58%;
 	}
 	.media-phone-portrait({
 		width: 50%;
@@ -1395,4 +1402,10 @@ li{
 			left: 1rem;
 		}
 	}
+}
+
+.section--tall-desk{
+	.media-desktop({
+		height:32rem !important;
+	});
 }
