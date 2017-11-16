@@ -1102,6 +1102,9 @@ html {
 body {
   background: #333333;
 }
+.body-loading {
+  display: none !important;
+}
 .app__svg-icons {
   display: none;
 }

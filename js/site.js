@@ -1,3 +1,6 @@
+//  note: body-loading gets removed on window.load
+$('body').addClass('body-loading');
+
 
 function makeSlider(divID) {
   var sliderDiv = $("#" + divID);
@@ -153,6 +156,10 @@ var cgu_mod_TL = new TimelineMax({paused: true});
 
 
 $(window).on('load', function() {
+
+  // stops FOUC
+
+  $('body').removeClass('body-loading');
 
   // JS version of media query
 
