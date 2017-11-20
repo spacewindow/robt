@@ -2372,6 +2372,9 @@ img {
     width: calc(58% - 2rem);
   }
 }
+.store-locator ul {
+  padding-left: 0.5em;
+}
 li {
   margin-bottom: 1rem;
   line-height: 1.2rem;
@@ -2383,7 +2386,7 @@ li {
   content: '•';
   color: red;
   position: absolute;
-  left: 1rem;
+  left: -0.3em;
 }
 @media (min-width: 481px) {
   .section--tall-desk {
