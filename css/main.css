@@ -675,17 +675,17 @@ section.tall {
 }
 @font-face {
   font-family: 'Aller';
-  src: url('../fonts/Aller-Light.ttf') format('truetype'), url();
   src: url('../fonts/Aller-Light.eot');
   src: url('../fonts/Aller-Light.eot?#iefix') format('embedded-opentype');
+  src: url('../fonts/Aller-Light.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'Aller';
-  src: url('../fonts/Aller-Bold.ttf') format('truetype');
   src: url('../fonts/Aller-Bold.eot');
   src: url('../fonts/Aller-Bold.eot?#iefix') format('embedded-opentype');
+  src: url('../fonts/Aller-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
@@ -1656,6 +1656,7 @@ img {
 }
 .slide {
   position: absolute;
+  max-width: 600px;
 }
 .slide img {
   width: 100%;
@@ -2104,6 +2105,7 @@ img {
 .work__thumb img {
   display: block;
   width: 85%;
+  max-width: 400px;
   flex-shrink: 0;
 }
 @media (max-width: 550px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
