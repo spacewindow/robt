@@ -85,8 +85,7 @@
 
       .project__header:before{
         background-image:
-        linear-gradient(to right, <%= gradient1 %>, <%= gradient2 %>),
-          radial-gradient(rgba(0,0,0,0), rgba(0,0,0,0.3));
+        linear-gradient(30deg, <%= gradient1 %> 10%, <%= gradient2 %> 100%);
       }
 
       .process{
@@ -97,12 +96,10 @@
 
     <% if(typeof pageData.current.type !== 'undefined') {%>
 
-      <section class="project__header" style="background-color: <%= pageData.current.color %>; background-image: url(/images/heros/hero-<%- pageData.current.id %>.png);">
+      <section class="project__header" style="background-color: <%= pageData.current.color %>; background-image: url(/images/hero-<%- pageData.current.id %>.jpg);">
         <div class="project__header__title">
             <h1><%- pageData.current.title %></h1>
             <h3><%= pageData.current.client %></h3>
-          <p><%= pageData.current.description %></p>
-          <img class="project__header__hero" src="/images/hero-slide-<%- pageData.current.id %>.png" alt="">
         </div>
       </section>
 

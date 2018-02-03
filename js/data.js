@@ -1,10 +1,10 @@
 const data = [
   {
-    id: "reporting",
-    title: "Reporting Dashboard",
+    id: "campaign-analytics",
+    title: "Campaign Analytics",
     type: "desktop / web app",
     client: "Playground XYZ",
-    description: "An interface for advertisers to monitor and report on their mobile advertising campaigns",
+    description: "Data visualisations to easily provide users with insights into the performance of their mobile advertising campaigns.",
     color: "#55adf8",
     roles: [
       "User Research",

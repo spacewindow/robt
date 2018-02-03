@@ -214,7 +214,7 @@ $(window).on('load', function() {
 
   }
 
-  if($('body').hasClass('index')){
+  // if($('body').hasClass('index')){
 
     function initClass(ev){
       if(window.pageYOffset>100){
@@ -227,7 +227,7 @@ $(window).on('load', function() {
 
     initClass();
     window.onscroll=initClass
-    }
+    // }
 
 });
 

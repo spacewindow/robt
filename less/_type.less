@@ -16,32 +16,40 @@
 }
 
 @font-face {
-  font-family: 'Aller';
-  src: url('../fonts/Aller-Light.eot');
-  src: url('../fonts/Aller-Light.eot?#iefix') format('embedded-opentype');
-  src: url('../fonts/Aller-Light.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
+    font-family: 'Merriweather';
+    src: url('../fonts/merriweather-bold-webfont.woff2') format('woff2'),
+         url('../fonts/merriweather-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Aller';
-  src: url('../fonts/Aller-Bold.eot');
-  src: url('../fonts/Aller-Bold.eot?#iefix') format('embedded-opentype');
-  src: url('../fonts/Aller-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
+    font-family: 'Merriweather';
+    src: url('../fonts/merriweather-bolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/merriweather-bolditalic-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
 }
 
-// @font-face {
-//   font-family: 'Aller';
-//   src: url('../fonts/Aller-Bold.ttf') format('truetype');
-//   font-weight: 900;
-//   font-style: normal;
-// }
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../fonts/merriweather-italic-webfont.woff2') format('woff2'),
+         url('../fonts/merriweather-italic-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
 
-@fontFamily: 'Aller', Helvetica, Arial, sans-serif;
-@headingFamily: 'Interstate', Helvetica, Arial, sans-serif;
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../fonts/merriweather-regular-webfont.woff2') format('woff2'),
+         url('../fonts/merriweather-regular-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+@fontFamily: 'Interstate', Helvetica, Arial, sans-serif;
+@headingFamily: 'Merriweather', Helvetica, Arial, sans-serif;
 
 body{
 	font-family: @fontFamily;

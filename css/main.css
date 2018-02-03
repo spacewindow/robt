@@ -674,28 +674,36 @@ section.tall {
   font-style: normal;
 }
 @font-face {
-  font-family: 'Aller';
-  src: url('../fonts/Aller-Light.eot');
-  src: url('../fonts/Aller-Light.eot?#iefix') format('embedded-opentype');
-  src: url('../fonts/Aller-Light.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Aller';
-  src: url('../fonts/Aller-Bold.eot');
-  src: url('../fonts/Aller-Bold.eot?#iefix') format('embedded-opentype');
-  src: url('../fonts/Aller-Bold.ttf') format('truetype');
+  font-family: 'Merriweather';
+  src: url('../fonts/merriweather-bold-webfont.woff2') format('woff2'), url('../fonts/merriweather-bold-webfont.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Merriweather';
+  src: url('../fonts/merriweather-bolditalic-webfont.woff2') format('woff2'), url('../fonts/merriweather-bolditalic-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Merriweather';
+  src: url('../fonts/merriweather-italic-webfont.woff2') format('woff2'), url('../fonts/merriweather-italic-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Merriweather';
+  src: url('../fonts/merriweather-regular-webfont.woff2') format('woff2'), url('../fonts/merriweather-regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
 body {
-  font-family: 'Aller', Helvetica, Arial, sans-serif;
+  font-family: 'Interstate', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 h1 {
   position: relative;
-  font-family: 'Interstate', Helvetica, Arial, sans-serif;
+  font-family: 'Merriweather', Helvetica, Arial, sans-serif;
   font-size: 1.8952rem;
   line-height: 2rem;
   letter-spacing: 0.03em;
@@ -704,13 +712,13 @@ h1 {
   text-align: center;
 }
 h2 {
-  font-family: 'Interstate', Helvetica, Arial, sans-serif;
+  font-family: 'Merriweather', Helvetica, Arial, sans-serif;
   font-size: 1.4216rem;
   line-height: 2rem;
   font-weight: 700;
 }
 h3 {
-  font-family: 'Interstate', Helvetica, Arial, sans-serif;
+  font-family: 'Merriweather', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 1.0664rem;
   font-weight: 700;
@@ -721,7 +729,7 @@ h3 {
 }
 h4,
 .size-1 {
-  font-family: 'Interstate', Helvetica, Arial, sans-serif;
+  font-family: 'Merriweather', Helvetica, Arial, sans-serif;
   font-size: 1.0664rem;
   line-height: 2rem;
 }
@@ -754,7 +762,7 @@ p {
 @media (min-width: 1200px) {
   h1 {
     position: relative;
-    font-family: 'Interstate', Helvetica, Arial, sans-serif;
+    font-family: 'Merriweather', Helvetica, Arial, sans-serif;
     font-size: 1.8952rem;
     line-height: 2rem;
     letter-spacing: 0.03em;
@@ -763,13 +771,13 @@ p {
     text-align: center;
   }
   h2 {
-    font-family: 'Interstate', Helvetica, Arial, sans-serif;
+    font-family: 'Merriweather', Helvetica, Arial, sans-serif;
     font-size: 1.4216rem;
     line-height: 2rem;
     font-weight: 700;
   }
   h3 {
-    font-family: 'Interstate', Helvetica, Arial, sans-serif;
+    font-family: 'Merriweather', Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-size: 1.0664rem;
     font-weight: 700;
@@ -780,7 +788,7 @@ p {
   }
   h4,
   .size-1 {
-    font-family: 'Interstate', Helvetica, Arial, sans-serif;
+    font-family: 'Merriweather', Helvetica, Arial, sans-serif;
     font-size: 1.0664rem;
     line-height: 2rem;
   }
@@ -811,7 +819,7 @@ p {
 @media (max-width: 899px) {
   h1 {
     position: relative;
-    font-family: 'Interstate', Helvetica, Arial, sans-serif;
+    font-family: 'Merriweather', Helvetica, Arial, sans-serif;
     font-size: 1.3824rem;
     line-height: 2rem;
     letter-spacing: 0.03em;
@@ -820,13 +828,13 @@ p {
     text-align: center;
   }
   h2 {
-    font-family: 'Interstate', Helvetica, Arial, sans-serif;
+    font-family: 'Merriweather', Helvetica, Arial, sans-serif;
     font-size: 1.152rem;
     line-height: 2rem;
     font-weight: 700;
   }
   h3 {
-    font-family: 'Interstate', Helvetica, Arial, sans-serif;
+    font-family: 'Merriweather', Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-size: 0.96rem;
     font-weight: 700;
@@ -837,7 +845,7 @@ p {
   }
   h4,
   .size-1 {
-    font-family: 'Interstate', Helvetica, Arial, sans-serif;
+    font-family: 'Merriweather', Helvetica, Arial, sans-serif;
     font-size: 0.96rem;
     line-height: 1rem;
   }
@@ -868,7 +876,7 @@ p {
 @media (max-width: 550px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
   h1 {
     position: relative;
-    font-family: 'Interstate', Helvetica, Arial, sans-serif;
+    font-family: 'Merriweather', Helvetica, Arial, sans-serif;
     font-size: 1.2096rem;
     line-height: 2rem;
     letter-spacing: 0.03em;
@@ -877,13 +885,13 @@ p {
     text-align: center;
   }
   h2 {
-    font-family: 'Interstate', Helvetica, Arial, sans-serif;
+    font-family: 'Merriweather', Helvetica, Arial, sans-serif;
     font-size: 1.008rem;
     line-height: 2rem;
     font-weight: 700;
   }
   h3 {
-    font-family: 'Interstate', Helvetica, Arial, sans-serif;
+    font-family: 'Merriweather', Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-size: 0.84rem;
     font-weight: 700;
@@ -894,7 +902,7 @@ p {
   }
   h4,
   .size-1 {
-    font-family: 'Interstate', Helvetica, Arial, sans-serif;
+    font-family: 'Merriweather', Helvetica, Arial, sans-serif;
     font-size: 0.84rem;
     line-height: 1rem;
   }
@@ -1183,17 +1191,16 @@ body {
   margin-bottom: 0.5em;
 }
 .app__logo {
-  width: 12rem;
-  height: 12rem;
+  width: 2.5rem;
+  height: 2.5rem;
   position: absolute;
-  top: -0.3rem;
-  left: -0.2rem;
+  top: 0rem;
+  left: 0rem;
   z-index: 20;
-  fill: black;
+  fill: #222222;
   border-radius: 100%;
   transform-origin: 0 0;
-  transition: transform 0.3s ease-out;
-  transform: scale(0.25);
+  transition: all 0.3s ease-out;
 }
 @media (max-width: 550px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
   .app__logo {
@@ -1201,12 +1208,7 @@ body {
   }
 }
 .init .app__logo {
-  transform: scale(3);
-}
-@media (max-width: 550px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
-  .init .app__logo {
-    transform: translateX(-105%);
-  }
+  fill: #ffffff;
 }
 .app__header {
   position: fixed;
@@ -1252,20 +1254,7 @@ body {
 .sticky .app__header:after {
   opacity: 0;
 }
-.init .app__logo,
-.sticky .app__logo {
-  transform: translateZ(0) scale(1);
-}
-@media (max-width: 550px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
-  .init .app__logo,
-  .sticky .app__logo {
-    transform: scale(0.25) translateZ(0) translateX(-105%);
-  }
-}
 .init .app__header:after {
-  transition: none;
-}
-.init .app__logo {
   transition: none;
 }
 .logo__mobile {
@@ -1281,7 +1270,7 @@ body {
 .footer-links {
   position: relative;
   height: 9rem;
-  font-family: 'Interstate', Helvetica, Arial, sans-serif;
+  font-family: 'Merriweather', Helvetica, Arial, sans-serif;
   color: #333333;
 }
 @media (max-width: 550px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
@@ -1602,6 +1591,14 @@ element.style {
   padding-top: 3rem;
   z-index: 2;
 }
+.project__header:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
 @media (max-width: 550px) and (orientation: portrait), (max-width: 480px) and (orientation: landscape) {
   .project__header {
     height: 18rem;
@@ -1610,9 +1607,23 @@ element.style {
 }
 .project__header__title {
   width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 2rem;
+}
+.project__header__title h1 {
+  text-align: left;
+  text-transform: none;
+  font-size: 2.5256rem;
+  font-weight: 400;
+  margin: 0.5rem 0;
 }
 .project__header__title h3 {
-  text-align: center;
+  text-align: left;
+  font-family: 'Interstate', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.0664rem;
 }
 .project__header__title p {
   text-align: center;
